@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "DHTPlanViewController.h"
+#import "DHTDoViewController.h"
+#import "DHTCheckViewController.h"
+#import "DHTActionViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +21,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    // plan
+    DHTPlanViewController *planVC = [[DHTPlanViewController alloc] init];
+    UINavigationController *navPlanController = [[UINavigationController alloc] initWithRootViewController:planVC];
+    
+    // do
+    DHTDoViewController *doVC = [[DHTDoViewController alloc] init];
+    UINavigationController *navDoController = [[UINavigationController alloc] initWithRootViewController:doVC];
+    
+    // check
+    DHTCheckViewController *checkVC = [[DHTCheckViewController alloc] init];
+    UINavigationController *navCheckController = [[UINavigationController alloc] initWithRootViewController:checkVC];
+    
+    // action
+    DHTActionViewController *actionVC = [[DHTActionViewController alloc] init];
+    UINavigationController *navActionController = [[UINavigationController alloc] initWithRootViewController:actionVC];
+    
+    // 将上面的navigationController整合进UITabBarController里面
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = @[navPlanController, navDoController, navCheckController, navActionController];
+    
+    // 将tabBarController设为rootViewController
+    self.window.rootViewController = tabBarController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

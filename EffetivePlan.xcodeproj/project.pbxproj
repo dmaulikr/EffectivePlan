@@ -18,6 +18,12 @@
 		213EE2811AFE13FE008FB47C /* DHTDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2801AFE13FE008FB47C /* DHTDo.m */; };
 		213EE2841AFE1410008FB47C /* DHTCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2831AFE1410008FB47C /* DHTCheck.m */; };
 		213EE2871AFE1429008FB47C /* DHTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2861AFE1429008FB47C /* DHTAction.m */; };
+		213EE28A1AFE54DB008FB47C /* DHTPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2891AFE54DB008FB47C /* DHTPhoneViewController.m */; };
+		213EE28D1AFE5554008FB47C /* DHTPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE28C1AFE5554008FB47C /* DHTPlanViewController.m */; };
+		213EE2901AFE556B008FB47C /* DHTDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE28F1AFE556B008FB47C /* DHTDoViewController.m */; };
+		213EE2931AFE559A008FB47C /* DHTCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2921AFE559A008FB47C /* DHTCheckViewController.m */; };
+		213EE2961AFE55AF008FB47C /* DHTActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2951AFE55AF008FB47C /* DHTActionViewController.m */; };
+		213EE2991AFE55EE008FB47C /* DHTPlanStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2981AFE55EE008FB47C /* DHTPlanStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,18 @@
 		213EE2831AFE1410008FB47C /* DHTCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTCheck.m; sourceTree = "<group>"; };
 		213EE2851AFE1429008FB47C /* DHTAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAction.h; sourceTree = "<group>"; };
 		213EE2861AFE1429008FB47C /* DHTAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAction.m; sourceTree = "<group>"; };
+		213EE2881AFE54DB008FB47C /* DHTPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPhoneViewController.h; sourceTree = "<group>"; };
+		213EE2891AFE54DB008FB47C /* DHTPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPhoneViewController.m; sourceTree = "<group>"; };
+		213EE28B1AFE5554008FB47C /* DHTPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlanViewController.h; sourceTree = "<group>"; };
+		213EE28C1AFE5554008FB47C /* DHTPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlanViewController.m; sourceTree = "<group>"; };
+		213EE28E1AFE556B008FB47C /* DHTDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTDoViewController.h; sourceTree = "<group>"; };
+		213EE28F1AFE556B008FB47C /* DHTDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTDoViewController.m; sourceTree = "<group>"; };
+		213EE2911AFE559A008FB47C /* DHTCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTCheckViewController.h; sourceTree = "<group>"; };
+		213EE2921AFE559A008FB47C /* DHTCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTCheckViewController.m; sourceTree = "<group>"; };
+		213EE2941AFE55AF008FB47C /* DHTActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTActionViewController.h; sourceTree = "<group>"; };
+		213EE2951AFE55AF008FB47C /* DHTActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTActionViewController.m; sourceTree = "<group>"; };
+		213EE2971AFE55EE008FB47C /* DHTPlanStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlanStore.h; sourceTree = "<group>"; };
+		213EE2981AFE55EE008FB47C /* DHTPlanStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlanStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +178,16 @@
 		213EE27A1AFE13B3008FB47C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				213EE2881AFE54DB008FB47C /* DHTPhoneViewController.h */,
+				213EE2891AFE54DB008FB47C /* DHTPhoneViewController.m */,
+				213EE28B1AFE5554008FB47C /* DHTPlanViewController.h */,
+				213EE28C1AFE5554008FB47C /* DHTPlanViewController.m */,
+				213EE28E1AFE556B008FB47C /* DHTDoViewController.h */,
+				213EE28F1AFE556B008FB47C /* DHTDoViewController.m */,
+				213EE2911AFE559A008FB47C /* DHTCheckViewController.h */,
+				213EE2921AFE559A008FB47C /* DHTCheckViewController.m */,
+				213EE2941AFE55AF008FB47C /* DHTActionViewController.h */,
+				213EE2951AFE55AF008FB47C /* DHTActionViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -167,6 +195,8 @@
 		213EE27B1AFE13CE008FB47C /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				213EE2971AFE55EE008FB47C /* DHTPlanStore.h */,
+				213EE2981AFE55EE008FB47C /* DHTPlanStore.m */,
 			);
 			name = Store;
 			sourceTree = "<group>";
@@ -271,11 +301,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				213EE2931AFE559A008FB47C /* DHTCheckViewController.m in Sources */,
+				213EE2901AFE556B008FB47C /* DHTDoViewController.m in Sources */,
+				213EE28D1AFE5554008FB47C /* DHTPlanViewController.m in Sources */,
 				213EE25B1AFE1134008FB47C /* ViewController.m in Sources */,
 				213EE2811AFE13FE008FB47C /* DHTDo.m in Sources */,
+				213EE2961AFE55AF008FB47C /* DHTActionViewController.m in Sources */,
 				213EE2581AFE1134008FB47C /* AppDelegate.m in Sources */,
 				213EE2551AFE1134008FB47C /* main.m in Sources */,
+				213EE28A1AFE54DB008FB47C /* DHTPhoneViewController.m in Sources */,
 				213EE2871AFE1429008FB47C /* DHTAction.m in Sources */,
+				213EE2991AFE55EE008FB47C /* DHTPlanStore.m in Sources */,
 				213EE27E1AFE13EF008FB47C /* DHTPlan.m in Sources */,
 				213EE2841AFE1410008FB47C /* DHTCheck.m in Sources */,
 			);
@@ -474,6 +510,7 @@
 				213EE2741AFE1134008FB47C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		213EE2751AFE1134008FB47C /* Build configuration list for PBXNativeTarget "EffetivePlanTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +519,7 @@
 				213EE2771AFE1134008FB47C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
