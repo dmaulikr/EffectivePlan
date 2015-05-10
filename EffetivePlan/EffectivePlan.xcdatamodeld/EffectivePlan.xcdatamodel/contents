@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DHTAction" representedClassName="DHTAction" syncable="YES"/>
+    <entity name="DHTCheck" representedClassName="DHTCheck" syncable="YES"/>
+    <entity name="DHTDo" representedClassName="DHTDo" syncable="YES"/>
+    <entity name="DHTPlan" representedClassName="DHTPlan" syncable="YES">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="instruction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="planToAction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DHTAction" syncable="YES"/>
+        <relationship name="planToCheck" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DHTCheck" syncable="YES"/>
+        <relationship name="planToDo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DHTDo" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DHTPlan" positionX="-45" positionY="0" width="128" height="135"/>
+        <element name="DHTDo" positionX="-18" positionY="45" width="128" height="45"/>
+        <element name="DHTCheck" positionX="9" positionY="63" width="128" height="45"/>
+        <element name="DHTAction" positionX="27" positionY="81" width="128" height="45"/>
+    </elements>
+</model>

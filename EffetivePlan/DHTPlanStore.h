@@ -7,7 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DHTPlan.h"
 
 @interface DHTPlanStore : NSObject
+
+@property (nonatomic, strong) NSMutableArray *planList;
+
++ (instancetype)sharedStore;
+
+- (NSArray *)allPlans;
+
+- (DHTPlan *)planAtIndex:(NSInteger) index;
+
+- (void)insertPlan:(DHTPlan *)plan;
+
+- (BOOL)saveChanges;
 
 @end

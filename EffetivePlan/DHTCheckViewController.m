@@ -33,6 +33,7 @@
         self.tabBarItem.title = @"C";
         UIImage *image = [UIImage imageNamed:@"Time1.png"];
         self.tabBarItem.image = image;
+        self.title = @"check";
     }
     
     return self;

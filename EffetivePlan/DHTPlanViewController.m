@@ -7,8 +7,12 @@
 //
 
 #import "DHTPlanViewController.h"
+#import "DHTPlanCell.h"
+#import "DHTPlanStore.h"
 
 @interface DHTPlanViewController ()
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -17,6 +21,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.tableView = [[UITableView alloc] init];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    UINib *nib = [UINib nibWithNibName:@"DHTPlanCell" bundle:nil];
+    [self.tableView registerNib:nib  forCellReuseIdentifier:@"DHTPlanCell"];
+    
+//    [[DHTPlanStore sharedStore] insertPlan:nil];
+    self.view = self.tableView;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,9 +47,29 @@
         self.tabBarItem.title = @"P";
         UIImage *image = [UIImage imageNamed:@"Time1.png"];
         self.tabBarItem.image = image;
+        self.title = @"plan";
     }
     
     return self;
+}
+
+
+#pragma mark - UITableView Delegate/DataSource -
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[DHTPlanStore sharedStore] allPlans].count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DHTPlanCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DHTPlanCell" forIndexPath:indexPath];
+    
+    DHTPlan *plan = [[DHTPlanStore sharedStore] planAtIndex:indexPath.row];
+    
+    cell.titleLabel.text = plan.title;
+    cell.instructionLabel.text = plan.instruction;
+    
+    return cell;
 }
 
 /*

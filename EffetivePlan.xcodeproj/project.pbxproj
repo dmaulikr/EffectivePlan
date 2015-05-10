@@ -14,16 +14,19 @@
 		213EE2601AFE1134008FB47C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 213EE25F1AFE1134008FB47C /* Images.xcassets */; };
 		213EE2631AFE1134008FB47C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213EE2611AFE1134008FB47C /* LaunchScreen.xib */; };
 		213EE26F1AFE1134008FB47C /* EffetivePlanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE26E1AFE1134008FB47C /* EffetivePlanTests.m */; };
-		213EE27E1AFE13EF008FB47C /* DHTPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE27D1AFE13EF008FB47C /* DHTPlan.m */; };
-		213EE2811AFE13FE008FB47C /* DHTDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2801AFE13FE008FB47C /* DHTDo.m */; };
-		213EE2841AFE1410008FB47C /* DHTCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2831AFE1410008FB47C /* DHTCheck.m */; };
-		213EE2871AFE1429008FB47C /* DHTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2861AFE1429008FB47C /* DHTAction.m */; };
 		213EE28A1AFE54DB008FB47C /* DHTPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2891AFE54DB008FB47C /* DHTPhoneViewController.m */; };
 		213EE28D1AFE5554008FB47C /* DHTPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE28C1AFE5554008FB47C /* DHTPlanViewController.m */; };
 		213EE2901AFE556B008FB47C /* DHTDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE28F1AFE556B008FB47C /* DHTDoViewController.m */; };
 		213EE2931AFE559A008FB47C /* DHTCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2921AFE559A008FB47C /* DHTCheckViewController.m */; };
 		213EE2961AFE55AF008FB47C /* DHTActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2951AFE55AF008FB47C /* DHTActionViewController.m */; };
 		213EE2991AFE55EE008FB47C /* DHTPlanStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2981AFE55EE008FB47C /* DHTPlanStore.m */; };
+		213EE2DA1AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2D81AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld */; };
+		213EE2DD1AFF8D85008FB47C /* DHTPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2DC1AFF8D85008FB47C /* DHTPlan.m */; };
+		213EE2E01AFF9102008FB47C /* DHTDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2DF1AFF9102008FB47C /* DHTDo.m */; };
+		213EE2E31AFF9103008FB47C /* DHTCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2E21AFF9103008FB47C /* DHTCheck.m */; };
+		213EE2E61AFF9103008FB47C /* DHTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2E51AFF9103008FB47C /* DHTAction.m */; };
+		213EE2EA1AFF95C0008FB47C /* DHTPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2E81AFF95C0008FB47C /* DHTPlanCell.m */; };
+		213EE2EB1AFF95C0008FB47C /* DHTPlanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213EE2E91AFF95C0008FB47C /* DHTPlanCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +53,6 @@
 		213EE2681AFE1134008FB47C /* EffetivePlanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EffetivePlanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		213EE26D1AFE1134008FB47C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		213EE26E1AFE1134008FB47C /* EffetivePlanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EffetivePlanTests.m; sourceTree = "<group>"; };
-		213EE27C1AFE13EF008FB47C /* DHTPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlan.h; sourceTree = "<group>"; };
-		213EE27D1AFE13EF008FB47C /* DHTPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlan.m; sourceTree = "<group>"; };
-		213EE27F1AFE13FE008FB47C /* DHTDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTDo.h; sourceTree = "<group>"; };
-		213EE2801AFE13FE008FB47C /* DHTDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTDo.m; sourceTree = "<group>"; };
-		213EE2821AFE1410008FB47C /* DHTCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTCheck.h; sourceTree = "<group>"; };
-		213EE2831AFE1410008FB47C /* DHTCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTCheck.m; sourceTree = "<group>"; };
-		213EE2851AFE1429008FB47C /* DHTAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAction.h; sourceTree = "<group>"; };
-		213EE2861AFE1429008FB47C /* DHTAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAction.m; sourceTree = "<group>"; };
 		213EE2881AFE54DB008FB47C /* DHTPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPhoneViewController.h; sourceTree = "<group>"; };
 		213EE2891AFE54DB008FB47C /* DHTPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPhoneViewController.m; sourceTree = "<group>"; };
 		213EE28B1AFE5554008FB47C /* DHTPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlanViewController.h; sourceTree = "<group>"; };
@@ -70,6 +65,18 @@
 		213EE2951AFE55AF008FB47C /* DHTActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTActionViewController.m; sourceTree = "<group>"; };
 		213EE2971AFE55EE008FB47C /* DHTPlanStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlanStore.h; sourceTree = "<group>"; };
 		213EE2981AFE55EE008FB47C /* DHTPlanStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlanStore.m; sourceTree = "<group>"; };
+		213EE2D91AFF8D4A008FB47C /* EffectivePlan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EffectivePlan.xcdatamodel; sourceTree = "<group>"; };
+		213EE2DB1AFF8D85008FB47C /* DHTPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlan.h; sourceTree = "<group>"; };
+		213EE2DC1AFF8D85008FB47C /* DHTPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlan.m; sourceTree = "<group>"; };
+		213EE2DE1AFF9102008FB47C /* DHTDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTDo.h; sourceTree = "<group>"; };
+		213EE2DF1AFF9102008FB47C /* DHTDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTDo.m; sourceTree = "<group>"; };
+		213EE2E11AFF9103008FB47C /* DHTCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTCheck.h; sourceTree = "<group>"; };
+		213EE2E21AFF9103008FB47C /* DHTCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTCheck.m; sourceTree = "<group>"; };
+		213EE2E41AFF9103008FB47C /* DHTAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAction.h; sourceTree = "<group>"; };
+		213EE2E51AFF9103008FB47C /* DHTAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAction.m; sourceTree = "<group>"; };
+		213EE2E71AFF95C0008FB47C /* DHTPlanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlanCell.h; sourceTree = "<group>"; };
+		213EE2E81AFF95C0008FB47C /* DHTPlanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlanCell.m; sourceTree = "<group>"; };
+		213EE2E91AFF95C0008FB47C /* DHTPlanCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DHTPlanCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +139,7 @@
 			children = (
 				213EE2531AFE1134008FB47C /* Info.plist */,
 				213EE2541AFE1134008FB47C /* main.m */,
+				213EE2D81AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -156,14 +164,14 @@
 		213EE2781AFE1392008FB47C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				213EE27C1AFE13EF008FB47C /* DHTPlan.h */,
-				213EE27D1AFE13EF008FB47C /* DHTPlan.m */,
-				213EE27F1AFE13FE008FB47C /* DHTDo.h */,
-				213EE2801AFE13FE008FB47C /* DHTDo.m */,
-				213EE2821AFE1410008FB47C /* DHTCheck.h */,
-				213EE2831AFE1410008FB47C /* DHTCheck.m */,
-				213EE2851AFE1429008FB47C /* DHTAction.h */,
-				213EE2861AFE1429008FB47C /* DHTAction.m */,
+				213EE2DB1AFF8D85008FB47C /* DHTPlan.h */,
+				213EE2DC1AFF8D85008FB47C /* DHTPlan.m */,
+				213EE2E41AFF9103008FB47C /* DHTAction.h */,
+				213EE2E51AFF9103008FB47C /* DHTAction.m */,
+				213EE2E11AFF9103008FB47C /* DHTCheck.h */,
+				213EE2E21AFF9103008FB47C /* DHTCheck.m */,
+				213EE2DE1AFF9102008FB47C /* DHTDo.h */,
+				213EE2DF1AFF9102008FB47C /* DHTDo.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -171,6 +179,9 @@
 		213EE2791AFE13A7008FB47C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				213EE2E71AFF95C0008FB47C /* DHTPlanCell.h */,
+				213EE2E81AFF95C0008FB47C /* DHTPlanCell.m */,
+				213EE2E91AFF95C0008FB47C /* DHTPlanCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -284,6 +295,7 @@
 				213EE25E1AFE1134008FB47C /* Main.storyboard in Resources */,
 				213EE2631AFE1134008FB47C /* LaunchScreen.xib in Resources */,
 				213EE2601AFE1134008FB47C /* Images.xcassets in Resources */,
+				213EE2EB1AFF95C0008FB47C /* DHTPlanCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,17 +315,19 @@
 			files = (
 				213EE2931AFE559A008FB47C /* DHTCheckViewController.m in Sources */,
 				213EE2901AFE556B008FB47C /* DHTDoViewController.m in Sources */,
+				213EE2EA1AFF95C0008FB47C /* DHTPlanCell.m in Sources */,
 				213EE28D1AFE5554008FB47C /* DHTPlanViewController.m in Sources */,
+				213EE2DD1AFF8D85008FB47C /* DHTPlan.m in Sources */,
+				213EE2E61AFF9103008FB47C /* DHTAction.m in Sources */,
 				213EE25B1AFE1134008FB47C /* ViewController.m in Sources */,
-				213EE2811AFE13FE008FB47C /* DHTDo.m in Sources */,
 				213EE2961AFE55AF008FB47C /* DHTActionViewController.m in Sources */,
 				213EE2581AFE1134008FB47C /* AppDelegate.m in Sources */,
 				213EE2551AFE1134008FB47C /* main.m in Sources */,
 				213EE28A1AFE54DB008FB47C /* DHTPhoneViewController.m in Sources */,
-				213EE2871AFE1429008FB47C /* DHTAction.m in Sources */,
+				213EE2E31AFF9103008FB47C /* DHTCheck.m in Sources */,
+				213EE2E01AFF9102008FB47C /* DHTDo.m in Sources */,
+				213EE2DA1AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld in Sources */,
 				213EE2991AFE55EE008FB47C /* DHTPlanStore.m in Sources */,
-				213EE27E1AFE13EF008FB47C /* DHTPlan.m in Sources */,
-				213EE2841AFE1410008FB47C /* DHTCheck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +536,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		213EE2D81AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				213EE2D91AFF8D4A008FB47C /* EffectivePlan.xcdatamodel */,
+			);
+			currentVersion = 213EE2D91AFF8D4A008FB47C /* EffectivePlan.xcdatamodel */;
+			path = EffectivePlan.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 213EE2471AFE1134008FB47C /* Project object */;
 }
