@@ -24,6 +24,30 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - public method -
+
+- (void)setRightNavBarButtonWithType:(NavBarButtonType)buttonType
+{
+    UIBarButtonItem *rightItem = nil;
+    
+    switch (buttonType) {
+        case NavBarButtonAdd:
+            rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(rightBarButtonClicked:)];
+            break;
+            
+        default:
+            break;
+    }
+    
+    self.navigationItem.rightBarButtonItem = rightItem;
+}
+
+
+- (void)rightBarButtonClicked:(id)sender
+{
+    [self.navDelegate rightButtonIsTouched];
+}
 /*
 #pragma mark - Navigation
 

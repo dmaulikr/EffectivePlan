@@ -27,6 +27,9 @@
 		213EE2E61AFF9103008FB47C /* DHTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2E51AFF9103008FB47C /* DHTAction.m */; };
 		213EE2EA1AFF95C0008FB47C /* DHTPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2E81AFF95C0008FB47C /* DHTPlanCell.m */; };
 		213EE2EB1AFF95C0008FB47C /* DHTPlanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213EE2E91AFF95C0008FB47C /* DHTPlanCell.xib */; };
+		213EE2EE1B00DDD2008FB47C /* DHTAddPlanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2ED1B00DDD2008FB47C /* DHTAddPlanView.m */; };
+		213EE2F11B00DE2D008FB47C /* DHTAddPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2F01B00DE2D008FB47C /* DHTAddPlanViewController.m */; };
+		D5BE7FA370ABA24558D45B14 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBB2382B44E27267FB58F6E /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,13 @@
 		213EE2E71AFF95C0008FB47C /* DHTPlanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlanCell.h; sourceTree = "<group>"; };
 		213EE2E81AFF95C0008FB47C /* DHTPlanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlanCell.m; sourceTree = "<group>"; };
 		213EE2E91AFF95C0008FB47C /* DHTPlanCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DHTPlanCell.xib; sourceTree = "<group>"; };
+		213EE2EC1B00DDD2008FB47C /* DHTAddPlanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAddPlanView.h; sourceTree = "<group>"; };
+		213EE2ED1B00DDD2008FB47C /* DHTAddPlanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAddPlanView.m; sourceTree = "<group>"; };
+		213EE2EF1B00DE2D008FB47C /* DHTAddPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAddPlanViewController.h; sourceTree = "<group>"; };
+		213EE2F01B00DE2D008FB47C /* DHTAddPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAddPlanViewController.m; sourceTree = "<group>"; };
+		36A71913765E461B29C9549A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		ABA89D58D8C18068D6387B9F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BBBB2382B44E27267FB58F6E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5BE7FA370ABA24558D45B14 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +114,8 @@
 				213EE2511AFE1134008FB47C /* EffetivePlan */,
 				213EE26B1AFE1134008FB47C /* EffetivePlanTests */,
 				213EE2501AFE1134008FB47C /* Products */,
+				FCBB2370E7C2CA92D77716BA /* Pods */,
+				C2C0898AC45E6CD776409958 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,6 +195,8 @@
 				213EE2E71AFF95C0008FB47C /* DHTPlanCell.h */,
 				213EE2E81AFF95C0008FB47C /* DHTPlanCell.m */,
 				213EE2E91AFF95C0008FB47C /* DHTPlanCell.xib */,
+				213EE2EC1B00DDD2008FB47C /* DHTAddPlanView.h */,
+				213EE2ED1B00DDD2008FB47C /* DHTAddPlanView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -199,6 +214,8 @@
 				213EE2921AFE559A008FB47C /* DHTCheckViewController.m */,
 				213EE2941AFE55AF008FB47C /* DHTActionViewController.h */,
 				213EE2951AFE55AF008FB47C /* DHTActionViewController.m */,
+				213EE2EF1B00DE2D008FB47C /* DHTAddPlanViewController.h */,
+				213EE2F01B00DE2D008FB47C /* DHTAddPlanViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -212,6 +229,23 @@
 			name = Store;
 			sourceTree = "<group>";
 		};
+		C2C0898AC45E6CD776409958 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBBB2382B44E27267FB58F6E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCBB2370E7C2CA92D77716BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				36A71913765E461B29C9549A /* Pods.debug.xcconfig */,
+				ABA89D58D8C18068D6387B9F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -219,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 213EE2721AFE1134008FB47C /* Build configuration list for PBXNativeTarget "EffetivePlan" */;
 			buildPhases = (
+				B9A926FDE7C7407D1B048AEB /* Check Pods Manifest.lock */,
 				213EE24B1AFE1134008FB47C /* Sources */,
 				213EE24C1AFE1134008FB47C /* Frameworks */,
 				213EE24D1AFE1134008FB47C /* Resources */,
+				3F32360E03381954A61777FA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,6 +344,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3F32360E03381954A61777FA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9A926FDE7C7407D1B048AEB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		213EE24B1AFE1134008FB47C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -324,6 +393,8 @@
 				213EE2581AFE1134008FB47C /* AppDelegate.m in Sources */,
 				213EE2551AFE1134008FB47C /* main.m in Sources */,
 				213EE28A1AFE54DB008FB47C /* DHTPhoneViewController.m in Sources */,
+				213EE2EE1B00DDD2008FB47C /* DHTAddPlanView.m in Sources */,
+				213EE2F11B00DE2D008FB47C /* DHTAddPlanViewController.m in Sources */,
 				213EE2E31AFF9103008FB47C /* DHTCheck.m in Sources */,
 				213EE2E01AFF9102008FB47C /* DHTDo.m in Sources */,
 				213EE2DA1AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld in Sources */,
@@ -453,6 +524,7 @@
 		};
 		213EE2731AFE1134008FB47C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A71913765E461B29C9549A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EffetivePlan/Info.plist;
@@ -463,6 +535,7 @@
 		};
 		213EE2741AFE1134008FB47C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABA89D58D8C18068D6387B9F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EffetivePlan/Info.plist;

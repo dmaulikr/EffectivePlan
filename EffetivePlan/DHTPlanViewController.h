@@ -8,6 +8,6 @@
 
 #import "DHTPhoneViewController.h"
 
-@interface DHTPlanViewController : DHTPhoneViewController<UITableViewDelegate, UITableViewDataSource>
+@interface DHTPlanViewController : DHTPhoneViewController<UITableViewDelegate, UITableViewDataSource, NavBarButtonDelegate>
 
 @end

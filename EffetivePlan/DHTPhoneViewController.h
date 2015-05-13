@@ -8,6 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    NavBarButtonAdd
+} NavBarButtonType;
+
+@protocol NavBarButtonDelegate <NSObject>
+
+@optional
+- (void)rightButtonIsTouched;
+
+@end
+
 @interface DHTPhoneViewController : UIViewController
+
+@property (nonatomic, assign) id<NavBarButtonDelegate> navDelegate;
+
+- (void)setRightNavBarButtonWithType:(NavBarButtonType)buttonType;
 
 @end

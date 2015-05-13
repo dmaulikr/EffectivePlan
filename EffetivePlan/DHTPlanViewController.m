@@ -9,6 +9,7 @@
 #import "DHTPlanViewController.h"
 #import "DHTPlanCell.h"
 #import "DHTPlanStore.h"
+#import "DHTAddPlanViewController.h"
 
 @interface DHTPlanViewController ()
 
@@ -47,12 +48,37 @@
         self.tabBarItem.title = @"P";
         UIImage *image = [UIImage imageNamed:@"Time1.png"];
         self.tabBarItem.image = image;
-        self.title = @"plan";
+        self.navigationItem.title = @"plan";
+        
+//        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPlan)];
+//        
+//        self.navigationItem.rightBarButtonItem = bbi;
+        [self setRightNavBarButtonWithType:NavBarButtonAdd];
+        self.navDelegate = self;
     }
     
     return self;
 }
 
+#pragma mark - NavBarButtonDelegate -
+
+- (void)rightButtonIsTouched
+{
+    [self addPlan];
+}
+
+//- (void)rightBarButtonClicked
+//{
+//    [self addPlan];
+//}
+
+#pragma mark - my method -
+- (void)addPlan
+{
+    DHTAddPlanViewController *apVC = [[DHTAddPlanViewController alloc] init];
+    
+    [self.navigationController pushViewController:apVC animated:YES];
+}
 
 #pragma mark - UITableView Delegate/DataSource -
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
