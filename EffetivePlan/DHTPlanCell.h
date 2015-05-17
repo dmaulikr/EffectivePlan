@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DHTPhoneTableViewCell.h"
 
-@interface DHTPlanCell : UITableViewCell
+@interface DHTPlanCell : DHTPhoneTableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *instructionLabel;

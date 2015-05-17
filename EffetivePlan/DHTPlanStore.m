@@ -7,6 +7,7 @@
 //
 
 #import "DHTPlanStore.h"
+#import "DHTDo.h"
 @import CoreData;
 
 @interface DHTPlanStore ()
@@ -72,16 +73,49 @@
     return [self.planList objectAtIndex:index];
 }
 
+- (DHTPlan *)getNewPlan
+{
+    NSEntityDescription *d = [NSEntityDescription entityForName:@"DHTPlan" inManagedObjectContext:self.context];
+    return [[DHTPlan alloc] initWithEntity:d insertIntoManagedObjectContext:self.context];
+}
+
 - (void)insertPlan:(DHTPlan *)plan
 {
-    DHTPlan *storedPlan = [NSEntityDescription insertNewObjectForEntityForName:@"DHTPlan" inManagedObjectContext:self.context];
-    storedPlan.title = plan.title;
-    storedPlan.instruction = plan.instruction;
-//    storedPlan.title = @"hello";
-//    storedPlan.instruction = @"test";
+    double planId;
+    if ([self.planList count] == 0) {
+        planId = 1.0;
+    } else {
+        planId = [[[self.planList lastObject] planId] floatValue] + 1.0;
+    }
+//    DHTPlan *storedPlan = [NSEntityDescription insertNewObjectForEntityForName:@"DHTPlan" inManagedObjectContext:self.context];
+//    storedPlan.title = plan.title;
+//    storedPlan.instruction = plan.instruction;
+    plan.planId = [NSNumber numberWithDouble:planId];
+    plan.dateCreated = [[NSDate alloc] init];
     
-    [self.planList addObject:storedPlan];
+    [self.planList addObject:plan];
 }
+
+- (void)modifyPlan:(DHTPlan *)plan
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *e = [NSEntityDescription entityForName:@"DHTPlan" inManagedObjectContext:self.context];
+
+    request.entity = e;
+    NSPredicate *p = [NSPredicate predicateWithFormat:@"planId == %f", [plan.planId doubleValue]];
+    [request setPredicate:p];
+    
+    NSError *requestError = nil;
+    NSArray *plans = [self.context executeFetchRequest:request error:&requestError];
+    if ([plans count] > 0) {
+        DHTPlan *modifyPlan = [plans firstObject];
+        modifyPlan.title = plan.title;
+        modifyPlan.instruction = plan.instruction;
+    } else {
+        NSLog(@"couldn't find the plan ");
+    }
+}
+
 
 /**
  *  保存数据到core data
@@ -137,6 +171,11 @@
     }
 }
 
+- (DHTDo *)getNewDo
+{
+    NSEntityDescription *e = [NSEntityDescription entityForName:@"DHTDo" inManagedObjectContext:self.context];
+    return [[DHTDo alloc] initWithEntity:e insertIntoManagedObjectContext:self.context];
+}
 
 
 @end

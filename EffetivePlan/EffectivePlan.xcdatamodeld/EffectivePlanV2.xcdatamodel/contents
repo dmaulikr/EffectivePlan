@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DHTAction" representedClassName="DHTAction" syncable="YES">
+        <attribute name="aContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="actionId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isDone" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="actionToPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DHTPlan" inverseName="planToAction" inverseEntity="DHTPlan" syncable="YES"/>
+    </entity>
+    <entity name="DHTCheck" representedClassName="DHTCheck" syncable="YES">
+        <attribute name="checkId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isDone" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="summarize" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="checkToPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DHTPlan" inverseName="planToCheck" inverseEntity="DHTPlan" syncable="YES"/>
+    </entity>
+    <entity name="DHTDo" representedClassName="DHTDo" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="doId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="isDone" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="doToPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DHTPlan" inverseName="planToDo" inverseEntity="DHTPlan" syncable="YES"/>
+    </entity>
+    <entity name="DHTPlan" representedClassName="DHTPlan" syncable="YES">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="instruction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="planId" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="planToAction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DHTAction" inverseName="actionToPlan" inverseEntity="DHTAction" syncable="YES"/>
+        <relationship name="planToCheck" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DHTCheck" inverseName="checkToPlan" inverseEntity="DHTCheck" syncable="YES"/>
+        <relationship name="planToDo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DHTDo" inverseName="doToPlan" inverseEntity="DHTDo" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DHTAction" positionX="27" positionY="81" width="128" height="120"/>
+        <element name="DHTCheck" positionX="9" positionY="63" width="128" height="120"/>
+        <element name="DHTDo" positionX="-18" positionY="45" width="128" height="120"/>
+        <element name="DHTPlan" positionX="-243" positionY="-99" width="128" height="165"/>
+    </elements>
+</model>

@@ -21,14 +21,17 @@
 		213EE2961AFE55AF008FB47C /* DHTActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2951AFE55AF008FB47C /* DHTActionViewController.m */; };
 		213EE2991AFE55EE008FB47C /* DHTPlanStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2981AFE55EE008FB47C /* DHTPlanStore.m */; };
 		213EE2DA1AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2D81AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld */; };
-		213EE2DD1AFF8D85008FB47C /* DHTPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2DC1AFF8D85008FB47C /* DHTPlan.m */; };
-		213EE2E01AFF9102008FB47C /* DHTDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2DF1AFF9102008FB47C /* DHTDo.m */; };
-		213EE2E31AFF9103008FB47C /* DHTCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2E21AFF9103008FB47C /* DHTCheck.m */; };
-		213EE2E61AFF9103008FB47C /* DHTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2E51AFF9103008FB47C /* DHTAction.m */; };
 		213EE2EA1AFF95C0008FB47C /* DHTPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2E81AFF95C0008FB47C /* DHTPlanCell.m */; };
 		213EE2EB1AFF95C0008FB47C /* DHTPlanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213EE2E91AFF95C0008FB47C /* DHTPlanCell.xib */; };
 		213EE2EE1B00DDD2008FB47C /* DHTAddPlanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2ED1B00DDD2008FB47C /* DHTAddPlanView.m */; };
 		213EE2F11B00DE2D008FB47C /* DHTAddPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2F01B00DE2D008FB47C /* DHTAddPlanViewController.m */; };
+		21D7BD281B0732EC00C4C94F /* DHTDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD271B0732EC00C4C94F /* DHTDo.m */; };
+		21D7BD2B1B0732ED00C4C94F /* DHTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD2A1B0732ED00C4C94F /* DHTAction.m */; };
+		21D7BD2E1B0732ED00C4C94F /* DHTPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD2D1B0732ED00C4C94F /* DHTPlan.m */; };
+		21D7BD311B0732ED00C4C94F /* DHTCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD301B0732ED00C4C94F /* DHTCheck.m */; };
+		21D7BD351B075EA600C4C94F /* DHTDoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD341B075EA600C4C94F /* DHTDoCell.m */; };
+		21D7BD391B0760AF00C4C94F /* UIView+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD381B0760AF00C4C94F /* UIView+Create.m */; };
+		21D7BD3C1B07762800C4C94F /* DHTPhoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */; };
 		D5BE7FA370ABA24558D45B14 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBB2382B44E27267FB58F6E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,14 +72,6 @@
 		213EE2971AFE55EE008FB47C /* DHTPlanStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlanStore.h; sourceTree = "<group>"; };
 		213EE2981AFE55EE008FB47C /* DHTPlanStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlanStore.m; sourceTree = "<group>"; };
 		213EE2D91AFF8D4A008FB47C /* EffectivePlan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EffectivePlan.xcdatamodel; sourceTree = "<group>"; };
-		213EE2DB1AFF8D85008FB47C /* DHTPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlan.h; sourceTree = "<group>"; };
-		213EE2DC1AFF8D85008FB47C /* DHTPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlan.m; sourceTree = "<group>"; };
-		213EE2DE1AFF9102008FB47C /* DHTDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTDo.h; sourceTree = "<group>"; };
-		213EE2DF1AFF9102008FB47C /* DHTDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTDo.m; sourceTree = "<group>"; };
-		213EE2E11AFF9103008FB47C /* DHTCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTCheck.h; sourceTree = "<group>"; };
-		213EE2E21AFF9103008FB47C /* DHTCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTCheck.m; sourceTree = "<group>"; };
-		213EE2E41AFF9103008FB47C /* DHTAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAction.h; sourceTree = "<group>"; };
-		213EE2E51AFF9103008FB47C /* DHTAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAction.m; sourceTree = "<group>"; };
 		213EE2E71AFF95C0008FB47C /* DHTPlanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlanCell.h; sourceTree = "<group>"; };
 		213EE2E81AFF95C0008FB47C /* DHTPlanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlanCell.m; sourceTree = "<group>"; };
 		213EE2E91AFF95C0008FB47C /* DHTPlanCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DHTPlanCell.xib; sourceTree = "<group>"; };
@@ -84,6 +79,21 @@
 		213EE2ED1B00DDD2008FB47C /* DHTAddPlanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAddPlanView.m; sourceTree = "<group>"; };
 		213EE2EF1B00DE2D008FB47C /* DHTAddPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAddPlanViewController.h; sourceTree = "<group>"; };
 		213EE2F01B00DE2D008FB47C /* DHTAddPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAddPlanViewController.m; sourceTree = "<group>"; };
+		21D7BD251B06365000C4C94F /* EffectivePlanV2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EffectivePlanV2.xcdatamodel; sourceTree = "<group>"; };
+		21D7BD261B0732EC00C4C94F /* DHTDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTDo.h; sourceTree = "<group>"; };
+		21D7BD271B0732EC00C4C94F /* DHTDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTDo.m; sourceTree = "<group>"; };
+		21D7BD291B0732ED00C4C94F /* DHTAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAction.h; sourceTree = "<group>"; };
+		21D7BD2A1B0732ED00C4C94F /* DHTAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAction.m; sourceTree = "<group>"; };
+		21D7BD2C1B0732ED00C4C94F /* DHTPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlan.h; sourceTree = "<group>"; };
+		21D7BD2D1B0732ED00C4C94F /* DHTPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlan.m; sourceTree = "<group>"; };
+		21D7BD2F1B0732ED00C4C94F /* DHTCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTCheck.h; sourceTree = "<group>"; };
+		21D7BD301B0732ED00C4C94F /* DHTCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTCheck.m; sourceTree = "<group>"; };
+		21D7BD331B075EA600C4C94F /* DHTDoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTDoCell.h; sourceTree = "<group>"; };
+		21D7BD341B075EA600C4C94F /* DHTDoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTDoCell.m; sourceTree = "<group>"; };
+		21D7BD371B0760AF00C4C94F /* UIView+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Create.h"; sourceTree = "<group>"; };
+		21D7BD381B0760AF00C4C94F /* UIView+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Create.m"; sourceTree = "<group>"; };
+		21D7BD3A1B07762800C4C94F /* DHTPhoneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPhoneTableViewCell.h; sourceTree = "<group>"; };
+		21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPhoneTableViewCell.m; sourceTree = "<group>"; };
 		36A71913765E461B29C9549A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ABA89D58D8C18068D6387B9F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BBBB2382B44E27267FB58F6E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +141,8 @@
 		213EE2511AFE1134008FB47C /* EffetivePlan */ = {
 			isa = PBXGroup;
 			children = (
+				21D7BD361B07600E00C4C94F /* Category */,
+				21D7BD321B07365700C4C94F /* base */,
 				213EE27B1AFE13CE008FB47C /* Store */,
 				213EE27A1AFE13B3008FB47C /* Controller */,
 				213EE2791AFE13A7008FB47C /* View */,
@@ -177,14 +189,14 @@
 		213EE2781AFE1392008FB47C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				213EE2DB1AFF8D85008FB47C /* DHTPlan.h */,
-				213EE2DC1AFF8D85008FB47C /* DHTPlan.m */,
-				213EE2E41AFF9103008FB47C /* DHTAction.h */,
-				213EE2E51AFF9103008FB47C /* DHTAction.m */,
-				213EE2E11AFF9103008FB47C /* DHTCheck.h */,
-				213EE2E21AFF9103008FB47C /* DHTCheck.m */,
-				213EE2DE1AFF9102008FB47C /* DHTDo.h */,
-				213EE2DF1AFF9102008FB47C /* DHTDo.m */,
+				21D7BD2F1B0732ED00C4C94F /* DHTCheck.h */,
+				21D7BD301B0732ED00C4C94F /* DHTCheck.m */,
+				21D7BD2C1B0732ED00C4C94F /* DHTPlan.h */,
+				21D7BD2D1B0732ED00C4C94F /* DHTPlan.m */,
+				21D7BD291B0732ED00C4C94F /* DHTAction.h */,
+				21D7BD2A1B0732ED00C4C94F /* DHTAction.m */,
+				21D7BD261B0732EC00C4C94F /* DHTDo.h */,
+				21D7BD271B0732EC00C4C94F /* DHTDo.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -197,6 +209,8 @@
 				213EE2E91AFF95C0008FB47C /* DHTPlanCell.xib */,
 				213EE2EC1B00DDD2008FB47C /* DHTAddPlanView.h */,
 				213EE2ED1B00DDD2008FB47C /* DHTAddPlanView.m */,
+				21D7BD331B075EA600C4C94F /* DHTDoCell.h */,
+				21D7BD341B075EA600C4C94F /* DHTDoCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -204,8 +218,6 @@
 		213EE27A1AFE13B3008FB47C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				213EE2881AFE54DB008FB47C /* DHTPhoneViewController.h */,
-				213EE2891AFE54DB008FB47C /* DHTPhoneViewController.m */,
 				213EE28B1AFE5554008FB47C /* DHTPlanViewController.h */,
 				213EE28C1AFE5554008FB47C /* DHTPlanViewController.m */,
 				213EE28E1AFE556B008FB47C /* DHTDoViewController.h */,
@@ -227,6 +239,26 @@
 				213EE2981AFE55EE008FB47C /* DHTPlanStore.m */,
 			);
 			name = Store;
+			sourceTree = "<group>";
+		};
+		21D7BD321B07365700C4C94F /* base */ = {
+			isa = PBXGroup;
+			children = (
+				213EE2881AFE54DB008FB47C /* DHTPhoneViewController.h */,
+				213EE2891AFE54DB008FB47C /* DHTPhoneViewController.m */,
+				21D7BD3A1B07762800C4C94F /* DHTPhoneTableViewCell.h */,
+				21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */,
+			);
+			name = base;
+			sourceTree = "<group>";
+		};
+		21D7BD361B07600E00C4C94F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				21D7BD371B0760AF00C4C94F /* UIView+Create.h */,
+				21D7BD381B0760AF00C4C94F /* UIView+Create.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 		C2C0898AC45E6CD776409958 /* Frameworks */ = {
@@ -383,22 +415,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				213EE2931AFE559A008FB47C /* DHTCheckViewController.m in Sources */,
+				21D7BD2B1B0732ED00C4C94F /* DHTAction.m in Sources */,
+				21D7BD281B0732EC00C4C94F /* DHTDo.m in Sources */,
+				21D7BD391B0760AF00C4C94F /* UIView+Create.m in Sources */,
 				213EE2901AFE556B008FB47C /* DHTDoViewController.m in Sources */,
 				213EE2EA1AFF95C0008FB47C /* DHTPlanCell.m in Sources */,
 				213EE28D1AFE5554008FB47C /* DHTPlanViewController.m in Sources */,
-				213EE2DD1AFF8D85008FB47C /* DHTPlan.m in Sources */,
-				213EE2E61AFF9103008FB47C /* DHTAction.m in Sources */,
 				213EE25B1AFE1134008FB47C /* ViewController.m in Sources */,
 				213EE2961AFE55AF008FB47C /* DHTActionViewController.m in Sources */,
 				213EE2581AFE1134008FB47C /* AppDelegate.m in Sources */,
 				213EE2551AFE1134008FB47C /* main.m in Sources */,
 				213EE28A1AFE54DB008FB47C /* DHTPhoneViewController.m in Sources */,
 				213EE2EE1B00DDD2008FB47C /* DHTAddPlanView.m in Sources */,
+				21D7BD311B0732ED00C4C94F /* DHTCheck.m in Sources */,
 				213EE2F11B00DE2D008FB47C /* DHTAddPlanViewController.m in Sources */,
-				213EE2E31AFF9103008FB47C /* DHTCheck.m in Sources */,
-				213EE2E01AFF9102008FB47C /* DHTDo.m in Sources */,
 				213EE2DA1AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld in Sources */,
+				21D7BD351B075EA600C4C94F /* DHTDoCell.m in Sources */,
 				213EE2991AFE55EE008FB47C /* DHTPlanStore.m in Sources */,
+				21D7BD2E1B0732ED00C4C94F /* DHTPlan.m in Sources */,
+				21D7BD3C1B07762800C4C94F /* DHTPhoneTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,9 +649,10 @@
 		213EE2D81AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				21D7BD251B06365000C4C94F /* EffectivePlanV2.xcdatamodel */,
 				213EE2D91AFF8D4A008FB47C /* EffectivePlan.xcdatamodel */,
 			);
-			currentVersion = 213EE2D91AFF8D4A008FB47C /* EffectivePlan.xcdatamodel */;
+			currentVersion = 21D7BD251B06365000C4C94F /* EffectivePlanV2.xcdatamodel */;
 			path = EffectivePlan.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -10,5 +10,8 @@
 
 @interface DHTAddPlanView : UIView
 
+@property (nonatomic, strong) UITextField *titleField;
+
+@property (nonatomic, strong) UITextField *instructionField;
 
 @end

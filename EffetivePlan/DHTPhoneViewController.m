@@ -35,7 +35,8 @@
         case NavBarButtonAdd:
             rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(rightBarButtonClicked:)];
             break;
-            
+        case NavBarButtonDone:
+            rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(rightBarButtonClicked:)];
         default:
             break;
     }
@@ -46,7 +47,8 @@
 
 - (void)rightBarButtonClicked:(id)sender
 {
-    [self.navDelegate rightButtonIsTouched];
+    NSLog(@"base method clicked");
+//    [self.navDelegate rightButtonIsTouched];
 }
 /*
 #pragma mark - Navigation

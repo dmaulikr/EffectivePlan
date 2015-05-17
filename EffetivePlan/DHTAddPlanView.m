@@ -7,12 +7,10 @@
 //
 
 #import "DHTAddPlanView.h"
+#import "UIView+Create.h"
 
 @interface DHTAddPlanView ()
 
-@property (nonatomic, strong) UITextField *titleField;
-
-@property (nonatomic, strong) UITextField *instructionField;
 
 @end
 @implementation DHTAddPlanView
@@ -31,13 +29,11 @@
 
 - (void)initUI
 {
-    self.titleField = [[UITextField alloc] initWithFrame:CGRectZero];
-    self.titleField.translatesAutoresizingMaskIntoConstraints = NO;
+    self.titleField = [UITextField autolayoutView];
     self.titleField.placeholder = @"标题";
     [self addSubview:self.titleField];
     
-    self.instructionField = [[UITextField alloc] initWithFrame:CGRectZero];
-    self.instructionField.translatesAutoresizingMaskIntoConstraints = NO;
+    self.instructionField = [UITextField autolayoutView];
     self.instructionField.placeholder = @"描述";
     [self addSubview:self.instructionField];
     

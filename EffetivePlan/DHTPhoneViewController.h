@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-    NavBarButtonAdd
+    NavBarButtonAdd, // add
+    NavBarButtonDone // done
 } NavBarButtonType;
 
 @protocol NavBarButtonDelegate <NSObject>
@@ -21,8 +22,19 @@ typedef enum {
 
 @interface DHTPhoneViewController : UIViewController
 
-@property (nonatomic, assign) id<NavBarButtonDelegate> navDelegate;
-
+//@property (nonatomic, assign) id<NavBarButtonDelegate> navDelegate;
+/**
+ *  设置navigationBar的右边按钮样式
+ *
+ *  @param buttonType 按钮样式NavBarButtonType
+ */
 - (void)setRightNavBarButtonWithType:(NavBarButtonType)buttonType;
+
+/**
+ *  右边button被点击
+ *
+ *  @param sender 触发的对象
+ */
+- (void)rightBarButtonClicked:(id)sender;
 
 @end
