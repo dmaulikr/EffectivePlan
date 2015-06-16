@@ -29,7 +29,7 @@
     self.tableView.dataSource = self;
     
     UINib *nib = [UINib nibWithNibName:@"DHTPlanCell" bundle:nil];
-    [self.tableView registerNib:nib  forCellReuseIdentifier:@"DHTPlanCell"];
+    [self.tableView registerNib:nib  forCellReuseIdentifier:[DHTPlanCell cellReuseIdentifier]];
     
     DHTPlan *plan = [[DHTPlanStore sharedStore] getNewPlan];
     plan.title = @"hello";

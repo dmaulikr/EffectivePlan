@@ -20,9 +20,19 @@
 //    // Configure the view for the selected state
 //}
 
-//+ (NSString *)cellReuseIdentifier
-//{
-//    
-//}
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier];
+    if (self) {
+        //
+    }
+    
+    return self;
+}
+
++ (NSString *)cellReuseIdentifier
+{
+    return [NSString stringWithUTF8String:object_getClassName(self)];
+}
 
 @end

@@ -8,6 +8,6 @@
 
 #import "DHTPhoneViewController.h"
 
-@interface DHTCheckViewController : DHTPhoneViewController
+@interface DHTCheckViewController : DHTPhoneViewController<UITableViewDelegate, UITableViewDataSource>
 
 @end

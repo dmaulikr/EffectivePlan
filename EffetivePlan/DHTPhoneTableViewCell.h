@@ -14,6 +14,6 @@
 /**
  *  获取cell的唯一标识符
  */
-//+ (NSString *)cellReuseIdentifier;
++ (NSString *)cellReuseIdentifier;
 
 @end

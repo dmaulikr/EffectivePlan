@@ -7,8 +7,19 @@
 //
 
 #import "DHTCheckViewController.h"
+#import "DHTPhoneTableViewCell.h"
+#import "DHTPlan.h"
+#import "DHTPlanStore.h"
+#import "DHTAddCheckViewController.h"
 
 @interface DHTCheckViewController ()
+
+@property (nonatomic, strong) UITableView *tableView;
+
+/**
+ *  处于check泳道的plan列表
+ */
+@property (nonatomic, strong) NSMutableArray *planList;
 
 @end
 
@@ -17,6 +28,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 100.f)];
+    
+    [refreshControl addTarget:self action:@selector(planRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:refreshControl];
+    [self.tableView registerClass:[DHTPhoneTableViewCell class] forCellReuseIdentifier:[DHTPhoneTableViewCell cellReuseIdentifier]];
+    [self.view addSubview:self.tableView];
+}
+
+- (void)planRefresh:(id)sender
+{
+    NSLog(@"plan refresh");
+    [sender endRefreshing];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.planList = [NSMutableArray arrayWithArray:[[DHTPlanStore sharedStore] allPlans]];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,6 +73,33 @@
     return self;
 }
 
+#pragma mark - UITableViewDelegate/DataSource -
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.planList.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DHTPhoneTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[DHTPhoneTableViewCell cellReuseIdentifier]];
+    
+    DHTPlan *plan = self.planList[indexPath.row];
+    cell.textLabel.text = plan.title;
+//    cell.detailTextLabel.text = @"check";
+    
+    return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DHTPlan *selectedPlan = self.planList[indexPath.row];
+    DHTAddCheckViewController *acVC = [[DHTAddCheckViewController alloc] init];
+    acVC.planToBeChecked = selectedPlan;
+    
+    [self.navigationController pushViewController:acVC animated:YES];
+}
 
 /*
 #pragma mark - Navigation
