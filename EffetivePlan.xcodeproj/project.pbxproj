@@ -35,6 +35,7 @@
 		21D7BD351B075EA600C4C94F /* DHTDoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD341B075EA600C4C94F /* DHTDoCell.m */; };
 		21D7BD391B0760AF00C4C94F /* UIView+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD381B0760AF00C4C94F /* UIView+Create.m */; };
 		21D7BD3C1B07762800C4C94F /* DHTPhoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */; };
+		21FF24F11CBE21A100D405D2 /* DHTAPIBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF24F01CBE21A100D405D2 /* DHTAPIBaseManager.m */; };
 		D5BE7FA370ABA24558D45B14 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBB2382B44E27267FB58F6E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,8 @@
 		21D7BD381B0760AF00C4C94F /* UIView+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Create.m"; sourceTree = "<group>"; };
 		21D7BD3A1B07762800C4C94F /* DHTPhoneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPhoneTableViewCell.h; sourceTree = "<group>"; };
 		21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPhoneTableViewCell.m; sourceTree = "<group>"; };
+		21FF24EF1CBE21A100D405D2 /* DHTAPIBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAPIBaseManager.h; sourceTree = "<group>"; };
+		21FF24F01CBE21A100D405D2 /* DHTAPIBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAPIBaseManager.m; sourceTree = "<group>"; };
 		36A71913765E461B29C9549A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ABA89D58D8C18068D6387B9F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BBBB2382B44E27267FB58F6E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +287,15 @@
 			name = Category;
 			sourceTree = "<group>";
 		};
+		21FF24EE1CBE216400D405D2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				21FF24EF1CBE21A100D405D2 /* DHTAPIBaseManager.h */,
+				21FF24F01CBE21A100D405D2 /* DHTAPIBaseManager.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		C2C0898AC45E6CD776409958 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +325,7 @@
 				213EE24C1AFE1134008FB47C /* Frameworks */,
 				213EE24D1AFE1134008FB47C /* Resources */,
 				3F32360E03381954A61777FA /* Copy Pods Resources */,
+				50FDED5568537E94A703EF8A /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -415,6 +428,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		50FDED5568537E94A703EF8A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B9A926FDE7C7407D1B048AEB /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -448,6 +476,7 @@
 				213EE2961AFE55AF008FB47C /* DHTActionViewController.m in Sources */,
 				213EE2581AFE1134008FB47C /* AppDelegate.m in Sources */,
 				213EE2551AFE1134008FB47C /* main.m in Sources */,
+				21FF24F11CBE21A100D405D2 /* DHTAPIBaseManager.m in Sources */,
 				213EE28A1AFE54DB008FB47C /* DHTPhoneViewController.m in Sources */,
 				213EE2EE1B00DDD2008FB47C /* DHTAddPlanView.m in Sources */,
 				214982571B0B92CD00FB032B /* DHTAddDoViewController.m in Sources */,
