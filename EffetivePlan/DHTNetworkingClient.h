@@ -13,4 +13,6 @@
 
 + (instancetype)sharedClient;
 
+- (void)fetchData;
+
 @end

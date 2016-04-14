@@ -28,6 +28,9 @@
 		213EE2EE1B00DDD2008FB47C /* DHTAddPlanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2ED1B00DDD2008FB47C /* DHTAddPlanView.m */; };
 		213EE2F11B00DE2D008FB47C /* DHTAddPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2F01B00DE2D008FB47C /* DHTAddPlanViewController.m */; };
 		214982571B0B92CD00FB032B /* DHTAddDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214982561B0B92CD00FB032B /* DHTAddDoViewController.m */; };
+		21C73C521CBFDE5C00C6E25F /* DHTAPIBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C511CBFDE5C00C6E25F /* DHTAPIBaseManager.m */; };
+		21C73C551CBFE5CC00C6E25F /* DHTApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C541CBFE5CC00C6E25F /* DHTApiProxy.m */; };
+		21C73C581CBFE7DC00C6E25F /* DHTURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C571CBFE7DC00C6E25F /* DHTURLResponse.m */; };
 		21D7BD281B0732EC00C4C94F /* DHTDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD271B0732EC00C4C94F /* DHTDo.m */; };
 		21D7BD2B1B0732ED00C4C94F /* DHTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD2A1B0732ED00C4C94F /* DHTAction.m */; };
 		21D7BD2E1B0732ED00C4C94F /* DHTPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD2D1B0732ED00C4C94F /* DHTPlan.m */; };
@@ -35,7 +38,6 @@
 		21D7BD351B075EA600C4C94F /* DHTDoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD341B075EA600C4C94F /* DHTDoCell.m */; };
 		21D7BD391B0760AF00C4C94F /* UIView+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD381B0760AF00C4C94F /* UIView+Create.m */; };
 		21D7BD3C1B07762800C4C94F /* DHTPhoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */; };
-		21FF24F11CBE21A100D405D2 /* DHTAPIBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF24F01CBE21A100D405D2 /* DHTAPIBaseManager.m */; };
 		D5BE7FA370ABA24558D45B14 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBB2382B44E27267FB58F6E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,12 @@
 		213EE2F01B00DE2D008FB47C /* DHTAddPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAddPlanViewController.m; sourceTree = "<group>"; };
 		214982551B0B92CD00FB032B /* DHTAddDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAddDoViewController.h; sourceTree = "<group>"; };
 		214982561B0B92CD00FB032B /* DHTAddDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAddDoViewController.m; sourceTree = "<group>"; };
+		21C73C501CBFDE5C00C6E25F /* DHTAPIBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAPIBaseManager.h; sourceTree = "<group>"; };
+		21C73C511CBFDE5C00C6E25F /* DHTAPIBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAPIBaseManager.m; sourceTree = "<group>"; };
+		21C73C531CBFE5CC00C6E25F /* DHTApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTApiProxy.h; sourceTree = "<group>"; };
+		21C73C541CBFE5CC00C6E25F /* DHTApiProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTApiProxy.m; sourceTree = "<group>"; };
+		21C73C561CBFE7DC00C6E25F /* DHTURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTURLResponse.h; sourceTree = "<group>"; };
+		21C73C571CBFE7DC00C6E25F /* DHTURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTURLResponse.m; sourceTree = "<group>"; };
 		21D7BD251B06365000C4C94F /* EffectivePlanV2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EffectivePlanV2.xcdatamodel; sourceTree = "<group>"; };
 		21D7BD261B0732EC00C4C94F /* DHTDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTDo.h; sourceTree = "<group>"; };
 		21D7BD271B0732EC00C4C94F /* DHTDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTDo.m; sourceTree = "<group>"; };
@@ -104,8 +112,6 @@
 		21D7BD381B0760AF00C4C94F /* UIView+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Create.m"; sourceTree = "<group>"; };
 		21D7BD3A1B07762800C4C94F /* DHTPhoneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPhoneTableViewCell.h; sourceTree = "<group>"; };
 		21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPhoneTableViewCell.m; sourceTree = "<group>"; };
-		21FF24EF1CBE21A100D405D2 /* DHTAPIBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAPIBaseManager.h; sourceTree = "<group>"; };
-		21FF24F01CBE21A100D405D2 /* DHTAPIBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAPIBaseManager.m; sourceTree = "<group>"; };
 		36A71913765E461B29C9549A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ABA89D58D8C18068D6387B9F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BBBB2382B44E27267FB58F6E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,8 +139,14 @@
 		21269A7F1B173D2500B43227 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				21C73C501CBFDE5C00C6E25F /* DHTAPIBaseManager.h */,
+				21C73C511CBFDE5C00C6E25F /* DHTAPIBaseManager.m */,
 				21269A801B173DA500B43227 /* DHTNetworkingClient.h */,
 				21269A811B173DA500B43227 /* DHTNetworkingClient.m */,
+				21C73C531CBFE5CC00C6E25F /* DHTApiProxy.h */,
+				21C73C541CBFE5CC00C6E25F /* DHTApiProxy.m */,
+				21C73C561CBFE7DC00C6E25F /* DHTURLResponse.h */,
+				21C73C571CBFE7DC00C6E25F /* DHTURLResponse.m */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -285,15 +297,6 @@
 				21D7BD381B0760AF00C4C94F /* UIView+Create.m */,
 			);
 			name = Category;
-			sourceTree = "<group>";
-		};
-		21FF24EE1CBE216400D405D2 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				21FF24EF1CBE21A100D405D2 /* DHTAPIBaseManager.h */,
-				21FF24F01CBE21A100D405D2 /* DHTAPIBaseManager.m */,
-			);
-			name = Networking;
 			sourceTree = "<group>";
 		};
 		C2C0898AC45E6CD776409958 /* Frameworks */ = {
@@ -476,10 +479,12 @@
 				213EE2961AFE55AF008FB47C /* DHTActionViewController.m in Sources */,
 				213EE2581AFE1134008FB47C /* AppDelegate.m in Sources */,
 				213EE2551AFE1134008FB47C /* main.m in Sources */,
-				21FF24F11CBE21A100D405D2 /* DHTAPIBaseManager.m in Sources */,
+				21C73C581CBFE7DC00C6E25F /* DHTURLResponse.m in Sources */,
+				21C73C551CBFE5CC00C6E25F /* DHTApiProxy.m in Sources */,
 				213EE28A1AFE54DB008FB47C /* DHTPhoneViewController.m in Sources */,
 				213EE2EE1B00DDD2008FB47C /* DHTAddPlanView.m in Sources */,
 				214982571B0B92CD00FB032B /* DHTAddDoViewController.m in Sources */,
+				21C73C521CBFDE5C00C6E25F /* DHTAPIBaseManager.m in Sources */,
 				21269A4C1B13694F00B43227 /* DHTAddCheckViewController.m in Sources */,
 				21D7BD311B0732ED00C4C94F /* DHTCheck.m in Sources */,
 				213EE2F11B00DE2D008FB47C /* DHTAddPlanViewController.m in Sources */,

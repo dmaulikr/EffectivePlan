@@ -11,6 +11,7 @@
 #import "DHTPlanStore.h"
 #import "DHTAddPlanViewController.h"
 #import "DHTDo.h"
+#import "DHTNetworkingClient.h"
 
 @interface DHTPlanViewController ()
 
@@ -23,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self fetchData];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.tableView.delegate = self;
@@ -104,6 +107,13 @@
 //{
 //    [self addPlan];
 //}
+
+#pragma mark -- Private Methods --
+
+- (void)fetchData
+{
+    [[DHTNetworkingClient sharedClient] fetchData];
+}
 
 #pragma mark - my method -
 - (void)addNewPlan
