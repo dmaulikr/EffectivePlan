@@ -26,6 +26,10 @@
     if (self) {
         _delegate = nil;
         _paramsSource = nil;
+        
+        if ([self conformsToProtocol:@protocol(DHTAPIManager)]) {
+            self.child = (id<DHTAPIManager>)self;
+        }
     }
     
     return self;

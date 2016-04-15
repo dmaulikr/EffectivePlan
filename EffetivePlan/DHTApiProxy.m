@@ -94,7 +94,7 @@
 
 - (NSMutableDictionary *)dipatchTable
 {
-    if (_dipatchTable) {
+    if (!_dipatchTable) {
         _dipatchTable = [NSMutableDictionary dictionary];
     }
     
@@ -103,7 +103,7 @@
 
 - (AFURLSessionManager *)manager
 {
-    if (_manager) {
+    if (!_manager) {
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         _manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     }

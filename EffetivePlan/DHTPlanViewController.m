@@ -165,7 +165,7 @@
 
 - (DHTGetPlanManager *)getPlanManager
 {
-    if (_getPlanManager) {
+    if (!_getPlanManager) {
         _getPlanManager = [[DHTGetPlanManager alloc] init];
         _getPlanManager.delegate = self;
 //        _getPlanManager.paramsSource = self;

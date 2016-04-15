@@ -59,7 +59,7 @@ NSString * const kDHTServicePlan = @"kDHTServicePlan";
 
 - (NSCache *)serviceStorager
 {
-    if (_serviceStorager) {
+    if (!_serviceStorager) {
         _serviceStorager = [[NSCache alloc] init];
         _serviceStorager.countLimit = kDHTServiceCacheCountLimit;
     }
