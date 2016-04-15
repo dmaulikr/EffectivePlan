@@ -12,10 +12,13 @@
 #import "DHTAddPlanViewController.h"
 #import "DHTDo.h"
 #import "DHTNetworkingClient.h"
+#import "DHTGetPlanManager.h"
 
-@interface DHTPlanViewController ()
+@interface DHTPlanViewController () <DHTAPIManagerApiCallBackDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, strong) DHTGetPlanManager *getPlanManager;
 
 @end
 
@@ -96,23 +99,15 @@
     [self addNewPlan];
 }
 
-//#pragma mark - NavBarButtonDelegate -
-
-//- (void)rightButtonIsTouched
-//{
-//    [self addNewPlan];
-//}
-
-//- (void)rightBarButtonClicked
-//{
-//    [self addPlan];
-//}
-
 #pragma mark -- Private Methods --
 
 - (void)fetchData
 {
-    [[DHTNetworkingClient sharedClient] fetchData];
+//    [[DHTNetworkingClient sharedClient] fetchData];
+    
+    NSInteger requestId = [self.getPlanManager loadData];
+    
+    NSLog(@"request id : %i", (int)requestId);
 }
 
 #pragma mark - my method -
@@ -151,6 +146,32 @@
     apVC.plan = plan;
     
     [self.navigationController pushViewController:apVC animated:YES];
+}
+
+#pragma mark -- DHTAPIManagerApiCallBackDelegate --
+
+- (void)managerCallAPIDidSuccess:(DHTAPIBaseManager *)manager
+{
+    id data = [manager fetchDataWithReformer:nil];
+    NSLog(@"managerData : %@", data);
+}
+
+- (void)managerCallAPIDidFailed:(DHTAPIBaseManager *)manager
+{
+    
+}
+
+#pragma mark -- Getters && Setters --
+
+- (DHTGetPlanManager *)getPlanManager
+{
+    if (_getPlanManager) {
+        _getPlanManager = [[DHTGetPlanManager alloc] init];
+        _getPlanManager.delegate = self;
+//        _getPlanManager.paramsSource = self;
+    }
+    
+    return _getPlanManager;
 }
 
 /*

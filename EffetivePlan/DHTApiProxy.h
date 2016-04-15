@@ -15,6 +15,6 @@ typedef void(^DHTAPCallBack)(DHTURLResponse *response);
 
 + (instancetype)sharedInstance;
 
-- (NSInteger)callGETWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)identifier methodName:(NSString *)methodName successCallback:(DHTAPCallBack)successBlock fail:(DHTAPCallBack)fail;
+- (NSInteger)callGETWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)serviceIdentifier methodName:(NSString *)methodName successCallback:(DHTAPCallBack)successBlock fail:(DHTAPCallBack)fail;
 
 @end
