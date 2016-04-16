@@ -9,5 +9,6 @@
 #ifndef DHTNetworking_h
 #define DHTNetworking_h
 
+#import "DHTAPIBaseManager.h"
 
 #endif /* DHTNetworking_h */

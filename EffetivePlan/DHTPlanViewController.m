@@ -13,12 +13,15 @@
 #import "DHTDo.h"
 #import "DHTNetworkingClient.h"
 #import "DHTGetPlanManager.h"
+#import "DHTPlanListReformer.h"
 
 @interface DHTPlanViewController () <DHTAPIManagerApiCallBackDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UITableView *tbvPlan;
 
 @property (nonatomic, strong) DHTGetPlanManager *getPlanManager;
+
+@property (nonatomic, strong) DHTPlanListReformer *planListReformer;
 
 @end
 
@@ -30,12 +33,10 @@
     
     [self fetchData];
     
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+    self.tbvPlan = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     
     UINib *nib = [UINib nibWithNibName:@"DHTPlanCell" bundle:nil];
-    [self.tableView registerNib:nib  forCellReuseIdentifier:[DHTPlanCell cellReuseIdentifier]];
+    [self.tbvPlan registerNib:nib  forCellReuseIdentifier:[DHTPlanCell cellReuseIdentifier]];
     
     DHTPlan *plan = [[DHTPlanStore sharedStore] getNewPlan];
     plan.title = @"hello";
@@ -59,13 +60,12 @@
     [[DHTPlanStore sharedStore] insertPlan:plan1];
     
     
-    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.tbvPlan];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -119,41 +119,42 @@
 }
 
 
-#pragma mark - UITableView Delegate/DataSource -
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [[DHTPlanStore sharedStore] allPlans].count;
-}
+//#pragma mark - UITableView Delegate/DataSource -
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    return [[DHTPlanStore sharedStore] allPlans].count;
+//}
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    DHTPlanCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DHTPlanCell" forIndexPath:indexPath];
+//    
+//    DHTPlan *plan = [[DHTPlanStore sharedStore] planAtIndex:indexPath.row];
+//    
+//    cell.titleLabel.text = plan.title;
+//    cell.instructionLabel.text = plan.instruction;
+//    
+//    return cell;
+//}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    DHTPlanCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DHTPlanCell" forIndexPath:indexPath];
-    
-    DHTPlan *plan = [[DHTPlanStore sharedStore] planAtIndex:indexPath.row];
-    
-    cell.titleLabel.text = plan.title;
-    cell.instructionLabel.text = plan.instruction;
-    
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    DHTAddPlanViewController *apVC = [[DHTAddPlanViewController alloc] init];
-    
-    DHTPlan *plan = [[DHTPlanStore sharedStore] planAtIndex:indexPath.row];
-    
-    apVC.plan = plan;
-    
-    [self.navigationController pushViewController:apVC animated:YES];
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    DHTAddPlanViewController *apVC = [[DHTAddPlanViewController alloc] init];
+//    
+//    DHTPlan *plan = [[DHTPlanStore sharedStore] planAtIndex:indexPath.row];
+//    
+//    apVC.plan = plan;
+//    
+//    [self.navigationController pushViewController:apVC animated:YES];
+//}
 
 #pragma mark -- DHTAPIManagerApiCallBackDelegate --
 
 - (void)managerCallAPIDidSuccess:(DHTAPIBaseManager *)manager
 {
-    id data = [manager fetchDataWithReformer:nil];
-    NSLog(@"managerData : %@", data);
+    [manager fetchDataWithReformer:self.planListReformer];
+    [self.tbvPlan performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
+    
 }
 
 - (void)managerCallAPIDidFailed:(DHTAPIBaseManager *)manager
@@ -172,6 +173,17 @@
     }
     
     return _getPlanManager;
+}
+
+- (DHTPlanListReformer *)planListReformer
+{
+    if (!_planListReformer) {
+        _planListReformer = [[DHTPlanListReformer alloc] init];
+        self.tbvPlan.dataSource = _planListReformer;
+        self.tbvPlan.delegate = _planListReformer;
+    }
+    
+    return _planListReformer;
 }
 
 /*

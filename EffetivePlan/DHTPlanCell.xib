@@ -1,37 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DHTPlanCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="KGk-i7-Jjw" customClass="DHTPlanCell">
+            <rect key="frame" x="0.0" y="0.0" width="384" height="76"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="384" height="75.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GF9-1c-Rla">
-                        <rect key="frame" x="14" y="0.0" width="28" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GF9-1c-Rla" userLabel="lblTitle">
+                        <rect key="frame" x="0.0" y="0.0" width="384" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="KAv-2L-x0e"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="instruction" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQT-bu-q8J">
-                        <rect key="frame" x="14" y="22" width="298" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="instruction" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQT-bu-q8J" userLabel="lblDescription">
+                        <rect key="frame" x="0.0" y="30" width="384" height="45.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="lQT-bu-q8J" firstAttribute="top" secondItem="GF9-1c-Rla" secondAttribute="bottom" id="9zc-Ki-Vv0"/>
+                    <constraint firstAttribute="trailing" secondItem="lQT-bu-q8J" secondAttribute="trailing" id="IZX-cT-TUj"/>
+                    <constraint firstItem="GF9-1c-Rla" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Zwp-J4-Hre"/>
+                    <constraint firstItem="GF9-1c-Rla" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bIb-oH-Ztm"/>
+                    <constraint firstItem="lQT-bu-q8J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eYF-Rf-OTp"/>
+                    <constraint firstAttribute="bottom" secondItem="lQT-bu-q8J" secondAttribute="bottom" id="ok1-gT-220"/>
+                    <constraint firstAttribute="trailing" secondItem="GF9-1c-Rla" secondAttribute="trailing" id="qnP-gN-srt"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="instructionLabel" destination="lQT-bu-q8J" id="CMR-d1-fSd"/>
-                <outlet property="titleLabel" destination="GF9-1c-Rla" id="Ywg-QE-cIq"/>
+                <outlet property="lblDescription" destination="lQT-bu-q8J" id="RbL-Rj-s9e"/>
+                <outlet property="lblTitle" destination="GF9-1c-Rla" id="IlU-bV-s63"/>
             </connections>
-            <point key="canvasLocation" x="305" y="383"/>
+            <point key="canvasLocation" x="337" y="399"/>
         </tableViewCell>
     </objects>
 </document>

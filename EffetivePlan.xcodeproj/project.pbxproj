@@ -31,6 +31,7 @@
 		21C73C521CBFDE5C00C6E25F /* DHTAPIBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C511CBFDE5C00C6E25F /* DHTAPIBaseManager.m */; };
 		21C73C551CBFE5CC00C6E25F /* DHTApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C541CBFE5CC00C6E25F /* DHTApiProxy.m */; };
 		21C73C581CBFE7DC00C6E25F /* DHTURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C571CBFE7DC00C6E25F /* DHTURLResponse.m */; };
+		21C73C5C1CC21CF900C6E25F /* DHTPlanListReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C5B1CC21CF900C6E25F /* DHTPlanListReformer.m */; };
 		21D7BD281B0732EC00C4C94F /* DHTDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD271B0732EC00C4C94F /* DHTDo.m */; };
 		21D7BD2B1B0732ED00C4C94F /* DHTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD2A1B0732ED00C4C94F /* DHTAction.m */; };
 		21D7BD2E1B0732ED00C4C94F /* DHTPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD2D1B0732ED00C4C94F /* DHTPlan.m */; };
@@ -102,6 +103,9 @@
 		21C73C541CBFE5CC00C6E25F /* DHTApiProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTApiProxy.m; sourceTree = "<group>"; };
 		21C73C561CBFE7DC00C6E25F /* DHTURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTURLResponse.h; sourceTree = "<group>"; };
 		21C73C571CBFE7DC00C6E25F /* DHTURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTURLResponse.m; sourceTree = "<group>"; };
+		21C73C5A1CC21CF900C6E25F /* DHTPlanListReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlanListReformer.h; sourceTree = "<group>"; };
+		21C73C5B1CC21CF900C6E25F /* DHTPlanListReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlanListReformer.m; sourceTree = "<group>"; };
+		21C73C5E1CC28C8F00C6E25F /* APPMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPMacro.h; sourceTree = "<group>"; };
 		21D7BD251B06365000C4C94F /* EffectivePlanV2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EffectivePlanV2.xcdatamodel; sourceTree = "<group>"; };
 		21D7BD261B0732EC00C4C94F /* DHTDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTDo.h; sourceTree = "<group>"; };
 		21D7BD271B0732EC00C4C94F /* DHTDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTDo.m; sourceTree = "<group>"; };
@@ -260,9 +264,6 @@
 		213EE2791AFE13A7008FB47C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				213EE2E71AFF95C0008FB47C /* DHTPlanCell.h */,
-				213EE2E81AFF95C0008FB47C /* DHTPlanCell.m */,
-				213EE2E91AFF95C0008FB47C /* DHTPlanCell.xib */,
 				213EE2EC1B00DDD2008FB47C /* DHTAddPlanView.h */,
 				213EE2ED1B00DDD2008FB47C /* DHTAddPlanView.m */,
 				21D7BD331B075EA600C4C94F /* DHTDoCell.h */,
@@ -299,6 +300,25 @@
 			name = Store;
 			sourceTree = "<group>";
 		};
+		21C73C591CC21BC900C6E25F /* reformers */ = {
+			isa = PBXGroup;
+			children = (
+				21C73C5A1CC21CF900C6E25F /* DHTPlanListReformer.h */,
+				21C73C5B1CC21CF900C6E25F /* DHTPlanListReformer.m */,
+			);
+			name = reformers;
+			sourceTree = "<group>";
+		};
+		21C73C5F1CC291D400C6E25F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				213EE2E71AFF95C0008FB47C /* DHTPlanCell.h */,
+				213EE2E81AFF95C0008FB47C /* DHTPlanCell.m */,
+				213EE2E91AFF95C0008FB47C /* DHTPlanCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		21D7BD321B07365700C4C94F /* base */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +326,7 @@
 				213EE2891AFE54DB008FB47C /* DHTPhoneViewController.m */,
 				21D7BD3A1B07762800C4C94F /* DHTPhoneTableViewCell.h */,
 				21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */,
+				21C73C5E1CC28C8F00C6E25F /* APPMacro.h */,
 			);
 			name = base;
 			sourceTree = "<group>";
@@ -350,6 +371,8 @@
 		21FF25061CC08FC000D405D2 /* Plan */ = {
 			isa = PBXGroup;
 			children = (
+				21C73C5F1CC291D400C6E25F /* Views */,
+				21C73C591CC21BC900C6E25F /* reformers */,
 				21FF250F1CC0CB2900D405D2 /* Controllers */,
 				21FF250B1CC0C4C800D405D2 /* Managers */,
 				21FF25071CC08FCB00D405D2 /* Services */,
@@ -578,6 +601,7 @@
 				213EE2F11B00DE2D008FB47C /* DHTAddPlanViewController.m in Sources */,
 				21269A821B173DA500B43227 /* DHTNetworkingClient.m in Sources */,
 				213EE2DA1AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld in Sources */,
+				21C73C5C1CC21CF900C6E25F /* DHTPlanListReformer.m in Sources */,
 				21D7BD351B075EA600C4C94F /* DHTDoCell.m in Sources */,
 				21FF250E1CC0C55400D405D2 /* DHTGetPlanManager.m in Sources */,
 				213EE2991AFE55EE008FB47C /* DHTPlanStore.m in Sources */,

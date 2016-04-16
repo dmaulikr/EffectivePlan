@@ -8,6 +8,13 @@
 
 #import "DHTPlanCell.h"
 
+@interface DHTPlanCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
+
+@property (weak, nonatomic) IBOutlet UILabel *lblDescription;
+
+@end
 @implementation DHTPlanCell
 
 //- (void)awakeFromNib {
@@ -19,5 +26,15 @@
 //
 //    // Configure the view for the selected state
 //}
+- (void)configureCellWithData:(NSDictionary *)dict
+{
+    // TODO
+    NSString *title = [dict objectForKey:@"title"];
+    NSString *description = [dict objectForKey:@"description"];
+    
+    self.lblTitle.text = title;
+    self.lblDescription.text = description;
+    
+}
 
 @end

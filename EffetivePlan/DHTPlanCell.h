@@ -11,7 +11,6 @@
 
 @interface DHTPlanCell : DHTPhoneTableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *instructionLabel;
+- (void)configureCellWithData:(NSDictionary *)dict;
 
 @end
