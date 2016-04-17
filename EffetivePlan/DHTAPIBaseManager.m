@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong, readwrite) id fetchedRawData;
 
+@property (nonatomic, assign) DHTManagerErrorType errorType;
 
 @end
 @implementation DHTAPIBaseManager
@@ -97,6 +98,7 @@
         [self successedOnCallingApi:response];
     } fail:^(DHTURLResponse *response) {
         //
+        [self failedOnCallingApi:nil withErrorType:DHTManagerErrorTypeDefault];
     }];
     
     
@@ -115,6 +117,13 @@
     }
     
     [self.delegate managerCallAPIDidSuccess:self];
+}
+
+- (void)failedOnCallingApi:(DHTURLResponse *)response withErrorType:(DHTManagerErrorType)errorType
+{
+    self.errorType = errorType;
+    
+    [self.delegate managerCallAPIDidFailed:self];
 }
 
 @end

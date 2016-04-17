@@ -16,6 +16,13 @@ typedef NS_ENUM(NSInteger, DHTResponseStatus) {
     DHTResponseStatusErrorNoNetwork
 };
 
+typedef NS_ENUM(NSInteger, DHTManagerErrorType) {
+    DHTManagerErrorTypeDefault,
+    DHTManagerErrorTypeTimeOut,
+    DHTManagerErrorTypeNoNetwork,
+    DHTManagerErrorTypeNoContent
+};
+
 static NSTimeInterval kDHTNetworkingTimeoutSeconds = 20.0f;
 static NSUInteger kDHTServiceCacheCountLimit = 5;
 
