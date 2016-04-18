@@ -39,6 +39,9 @@
 		21D7BD351B075EA600C4C94F /* DHTDoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD341B075EA600C4C94F /* DHTDoCell.m */; };
 		21D7BD391B0760AF00C4C94F /* UIView+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD381B0760AF00C4C94F /* UIView+Create.m */; };
 		21D7BD3C1B07762800C4C94F /* DHTPhoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */; };
+		21F999491CC4B1A9005CBF92 /* DHTLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F999481CC4B1A9005CBF92 /* DHTLogger.m */; };
+		21F9994D1CC4B5E9005CBF92 /* NSMutableString+DHTNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F9994C1CC4B5E9005CBF92 /* NSMutableString+DHTNetworkingMethods.m */; };
+		21F999501CC4B722005CBF92 /* NSObject+DHTNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F9994F1CC4B722005CBF92 /* NSObject+DHTNetworkingMethods.m */; };
 		21FF24F51CC0810000D405D2 /* DHTRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF24F41CC0810000D405D2 /* DHTRequestGenerator.m */; };
 		21FF25011CC0898800D405D2 /* DHTService.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF25001CC0898800D405D2 /* DHTService.m */; };
 		21FF25041CC08C2900D405D2 /* DHTServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF25031CC08C2900D405D2 /* DHTServiceFactory.m */; };
@@ -121,6 +124,12 @@
 		21D7BD381B0760AF00C4C94F /* UIView+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Create.m"; sourceTree = "<group>"; };
 		21D7BD3A1B07762800C4C94F /* DHTPhoneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPhoneTableViewCell.h; sourceTree = "<group>"; };
 		21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPhoneTableViewCell.m; sourceTree = "<group>"; };
+		21F999471CC4B1A9005CBF92 /* DHTLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTLogger.h; sourceTree = "<group>"; };
+		21F999481CC4B1A9005CBF92 /* DHTLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTLogger.m; sourceTree = "<group>"; };
+		21F9994B1CC4B5E9005CBF92 /* NSMutableString+DHTNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+DHTNetworkingMethods.h"; sourceTree = "<group>"; };
+		21F9994C1CC4B5E9005CBF92 /* NSMutableString+DHTNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+DHTNetworkingMethods.m"; sourceTree = "<group>"; };
+		21F9994E1CC4B722005CBF92 /* NSObject+DHTNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DHTNetworkingMethods.h"; sourceTree = "<group>"; };
+		21F9994F1CC4B722005CBF92 /* NSObject+DHTNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DHTNetworkingMethods.m"; sourceTree = "<group>"; };
 		21FF24F31CC0810000D405D2 /* DHTRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTRequestGenerator.h; sourceTree = "<group>"; };
 		21FF24F41CC0810000D405D2 /* DHTRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTRequestGenerator.m; sourceTree = "<group>"; };
 		21FF24F91CC087F800D405D2 /* DHTNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTNetworking.h; sourceTree = "<group>"; };
@@ -160,6 +169,8 @@
 		21269A7F1B173D2500B43227 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				21F9994A1CC4B5AA005CBF92 /* Categories */,
+				21F999461CC4B168005CBF92 /* Components */,
 				21FF24FB1CC0894F00D405D2 /* Services */,
 				21FF24F21CC0809F00D405D2 /* Assistants */,
 				21C73C501CBFDE5C00C6E25F /* DHTAPIBaseManager.h */,
@@ -338,6 +349,26 @@
 				21D7BD381B0760AF00C4C94F /* UIView+Create.m */,
 			);
 			name = Category;
+			sourceTree = "<group>";
+		};
+		21F999461CC4B168005CBF92 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				21F999471CC4B1A9005CBF92 /* DHTLogger.h */,
+				21F999481CC4B1A9005CBF92 /* DHTLogger.m */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		21F9994A1CC4B5AA005CBF92 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				21F9994B1CC4B5E9005CBF92 /* NSMutableString+DHTNetworkingMethods.h */,
+				21F9994C1CC4B5E9005CBF92 /* NSMutableString+DHTNetworkingMethods.m */,
+				21F9994E1CC4B722005CBF92 /* NSObject+DHTNetworkingMethods.h */,
+				21F9994F1CC4B722005CBF92 /* NSObject+DHTNetworkingMethods.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		21FF24F21CC0809F00D405D2 /* Assistants */ = {
@@ -587,9 +618,12 @@
 				213EE28D1AFE5554008FB47C /* DHTPlanViewController.m in Sources */,
 				213EE25B1AFE1134008FB47C /* ViewController.m in Sources */,
 				213EE2961AFE55AF008FB47C /* DHTActionViewController.m in Sources */,
+				21F999491CC4B1A9005CBF92 /* DHTLogger.m in Sources */,
+				21F9994D1CC4B5E9005CBF92 /* NSMutableString+DHTNetworkingMethods.m in Sources */,
 				213EE2581AFE1134008FB47C /* AppDelegate.m in Sources */,
 				213EE2551AFE1134008FB47C /* main.m in Sources */,
 				21C73C581CBFE7DC00C6E25F /* DHTURLResponse.m in Sources */,
+				21F999501CC4B722005CBF92 /* NSObject+DHTNetworkingMethods.m in Sources */,
 				21C73C551CBFE5CC00C6E25F /* DHTApiProxy.m in Sources */,
 				213EE28A1AFE54DB008FB47C /* DHTPhoneViewController.m in Sources */,
 				213EE2EE1B00DDD2008FB47C /* DHTAddPlanView.m in Sources */,

@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "DHTNetworkingConfiguration.h"
 #import "DHTServiceFactory.h"
+#import "DHTLogger.h"
 
 @interface DHTRequestGenerator ()
 
@@ -38,6 +39,8 @@
     NSString *urlString = [NSString stringWithFormat:@"%@/%@", service.apiBaseUrl, methodName];
     
     NSURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"GET" URLString:urlString parameters:requestParams error:nil];
+    
+    [DHTLogger logDebugInfoWithRequest:request apiName:methodName service:service requestParams:requestParams httpMethod:@"GET"];
     
     return request;
 }

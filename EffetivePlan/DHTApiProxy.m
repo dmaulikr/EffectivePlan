@@ -10,6 +10,7 @@
 #import "DHTRequestGenerator.h"
 #import "AFNetworking.h"
 #import "DHTURLResponse.h"
+#import "DHTLogger.h"
 
 
 @interface DHTApiProxy ()
@@ -61,6 +62,12 @@
                                                                                 request:request
                                                                            responseData:responseObject
                                                                                  status:DHTResponseStatusErrorNoNetwork];
+            
+            [DHTLogger logDebugInfoWithResponse:(NSHTTPURLResponse *)response
+                                 responseString:responseObject
+                                        request:request
+                                          error:error];
+            
             fail ? fail (myResponse) : nil;
         } else {
             DHTURLResponse *myResponse = [[DHTURLResponse alloc] initWithResponseString:response.description
@@ -68,6 +75,12 @@
                                                                                 request:request
                                                                            responseData:responseObject
                                                                                  status:DHTResponseStatusSuccess];
+            
+            [DHTLogger logDebugInfoWithResponse:(NSHTTPURLResponse *)response
+                                 responseString:responseObject
+                                        request:request
+                                          error:nil];
+            
             success ? success (myResponse) : nil;
         }
     }];
