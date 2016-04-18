@@ -15,6 +15,11 @@
 
 @property (nonatomic, assign) DHTManagerErrorType errorType;
 
+@property (nonatomic, strong) NSMutableArray *requestIdList;
+
+@property (nonatomic, assign, readwrite) BOOL isLoading;
+
+
 @end
 @implementation DHTAPIBaseManager
 
@@ -38,7 +43,7 @@
 
 - (void)dealloc
 {
-    
+    self.requestIdList = nil;
 }
 
 #pragma mark -- Public Methods --
@@ -65,6 +70,21 @@
 
 
 #pragma mark -- Methods For Child --
+
+- (void)cleanData
+{
+    IMP childIMP = [self.child methodForSelector:@selector(cleanData)];
+    IMP selfIMP = [self methodForSelector:@selector(cleanData)];
+    
+    if (selfIMP == childIMP) {
+        self.fetchedRawData = nil;
+        self.errorType = DHTManagerErrorTypeDefault;
+    } else {
+        if ([self.child respondsToSelector:@selector(cleanData)]) {
+            [self.child cleanData];
+        }
+    }
+}
 
 - (NSDictionary *)reformSource:(NSDictionary *)params
 {
@@ -101,8 +121,23 @@
         [self failedOnCallingApi:nil withErrorType:DHTManagerErrorTypeDefault];
     }];
     
+    [self.requestIdList addObject:@(requestId)];
     
     return requestId;
+}
+
+
+- (void)removeRequestIdWithRequestId:(NSInteger)requestId
+{
+    NSNumber *requestIdToRemove = nil;
+    
+    for (NSNumber *storedRequestId in self.requestIdList) {
+        if (storedRequestId.integerValue == requestId) {
+            requestIdToRemove = storedRequestId;
+        }
+    }
+    
+    [self.requestIdList removeObject:requestIdToRemove];
 }
 
 
@@ -116,6 +151,7 @@
         self.fetchedRawData = [response.responseData copy];
     }
     
+    [self removeRequestIdWithRequestId:response.requestId];
     [self.delegate managerCallAPIDidSuccess:self];
 }
 
@@ -123,7 +159,24 @@
 {
     self.errorType = errorType;
     
+    [self removeRequestIdWithRequestId:response.requestId];
     [self.delegate managerCallAPIDidFailed:self];
+}
+
+#pragma mark -- Getters && Setters --
+
+- (NSMutableArray *)requestIdList
+{
+    if (!_requestIdList) {
+        _requestIdList = [NSMutableArray array];
+    }
+    
+    return _requestIdList;
+}
+
+- (BOOL)isLoading
+{
+    return self.requestIdList.count > 0;
 }
 
 @end

@@ -57,6 +57,8 @@
 //- ()requestType;
 
 @optional
+- (void)cleanData;
+
 - (NSDictionary *)reformParams:(NSDictionary *)params;
 
 @end
@@ -124,6 +126,10 @@
 //@property (nonatomic, weak) id<> interceptor;
 
 @property (nonatomic, weak) NSObject<DHTAPIManager> *child; // 因为类里面用到了NSObject的方法，所以id改为NSObject
+
+
+@property (nonatomic, assign, readonly) BOOL isLoading;
+
 
 - (id)fetchDataWithReformer:(id<DHTAPIManagerCallbackDataReformer>)reformer;
 
