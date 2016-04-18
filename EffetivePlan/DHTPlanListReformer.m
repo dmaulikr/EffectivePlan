@@ -10,6 +10,8 @@
 #import "DHTPlanCell.h"
 #import "DHTGetPlanManager.h"
 #import "APPMacro.h"
+#import "DHTAddPlanViewController.h"
+
 
 static NSString *kPlanCellIdentifier = @"DHTPlanCell";
 
@@ -46,6 +48,18 @@ static NSString *kPlanCellIdentifier = @"DHTPlanCell";
     return 100;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    DHTAddPlanViewController *apVC = [[DHTAddPlanViewController alloc] init];
+    
+//    DHTPlan *plan = [[DHTPlanStore sharedStore] planAtIndex:indexPath.row];
+//
+//    apVC.plan = plan;
+//    NSLog(@"%@", CURRENT_VIEW_CONTROLLER);
+//    [CURRENT_VIEW_CONTROLLER.navigationController pushViewController:apVC animated:YES];
+}
+//CURRENT_VIEW_CONTROLLER
+
 #pragma mark -- DHTAPIManagerCallbackDataReformer --
 
 - (id)manager:(DHTAPIBaseManager *)manager reformData:(NSDictionary *)data
@@ -58,6 +72,7 @@ static NSString *kPlanCellIdentifier = @"DHTPlanCell";
     
     return nil;
 }
+
 
 
 - (NSArray *)planList

@@ -14,4 +14,6 @@
 
 - (NSURLRequest *)generateGETWithServiceIdentifier:(NSString *)serviceIdentifier params:(NSDictionary *)requestParams methodName:(NSString *)methodName;
 
+- (NSURLRequest *)generatePOSTWithServiceIdentifier:(NSString *)serviceIdentifier params:(NSDictionary *)requestParams methodName:(NSString *)methodName;
+
 @end

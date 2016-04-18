@@ -1,19 +1,18 @@
 //
-//  DHTGetPlanManager.m
+//  DHTUpdatePlan.m
 //  EffetivePlan
 //
-//  Created by happyo on 16/4/15.
+//  Created by happyo on 16/4/18.
 //  Copyright © 2016年 happyo. All rights reserved.
 //
 
-#import "DHTGetPlanManager.h"
-#import "DHTNetworkingConfiguration.h"
+#import "DHTUpdatePlan.h"
 
-@implementation DHTGetPlanManager
+@implementation DHTUpdatePlan
 
 - (NSString *)methodName
 {
-    return @"getAllPlan";
+    return @"updatePlan";
 }
 
 - (NSString *)serviceType

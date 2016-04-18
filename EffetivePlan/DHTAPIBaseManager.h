@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DHTNetworkingConfiguration.h"
 @class DHTAPIBaseManager;
 
 
@@ -54,7 +55,7 @@
 
 - (NSString *)serviceType; // serviceIdentifier
 
-//- ()requestType;
+- (DHTRequestType)requestType;
 
 @optional
 - (void)cleanData;

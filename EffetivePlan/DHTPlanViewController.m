@@ -35,6 +35,9 @@
     
     self.tbvPlan = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     
+    self.tbvPlan.dataSource = self.planListReformer;
+    self.tbvPlan.delegate = self.planListReformer;
+    
 //    UINib *nib = [UINib nibWithNibName:@"DHTPlanCell" bundle:nil];
 //    [self.tbvPlan registerNib:nib  forCellReuseIdentifier:[DHTPlanCell cellReuseIdentifier]];
 //    
@@ -186,8 +189,6 @@
 {
     if (!_planListReformer) {
         _planListReformer = [[DHTPlanListReformer alloc] init];
-        self.tbvPlan.dataSource = _planListReformer;
-        self.tbvPlan.delegate = _planListReformer;
     }
     
     return _planListReformer;

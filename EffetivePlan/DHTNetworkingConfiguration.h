@@ -23,6 +23,11 @@ typedef NS_ENUM(NSInteger, DHTManagerErrorType) {
     DHTManagerErrorTypeNoContent
 };
 
+typedef NS_ENUM(NSInteger, DHTRequestType) {
+    DHTRequestTypeGET,
+    DHTRequestTypePOST
+};
+
 static NSTimeInterval kDHTNetworkingTimeoutSeconds = 20.0f;
 static NSUInteger kDHTServiceCacheCountLimit = 5;
 

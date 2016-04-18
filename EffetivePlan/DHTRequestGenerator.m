@@ -45,6 +45,19 @@
     return request;
 }
 
+- (NSURLRequest *)generatePOSTWithServiceIdentifier:(NSString *)serviceIdentifier params:(NSDictionary *)requestParams methodName:(NSString *)methodName
+{
+    DHTService *service = [[DHTServiceFactory sharedInstance] serviceWithIdentifier:serviceIdentifier];
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@/%@", service.apiBaseUrl, methodName];
+    
+    NSURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"POST" URLString:urlString parameters:requestParams error:nil];
+    
+    [DHTLogger logDebugInfoWithRequest:request apiName:methodName service:service requestParams:requestParams httpMethod:@"GET"];
+    
+    return request;
+}
+
 
 #pragma mark -- Getters && Setters --
 - (AFHTTPRequestSerializer *)httpRequestSerializer

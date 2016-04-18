@@ -9,6 +9,17 @@
 #import "DHTAPIBaseManager.h"
 #import "DHTApiProxy.h"
 
+#define DHTCallApi(METHOD_NAME, REQUEST_ID)                                         \
+{                                                                                   \
+    REQUEST_ID = [[DHTApiProxy sharedInstance] call##METHOD_NAME##WithParams:params serviceIdentifier:self.child.serviceType methodName:self.child.methodName successCallback:^(DHTURLResponse *response) {\
+        [self successedOnCallingApi:response];                                      \
+    } fail:^(DHTURLResponse *response) {                                            \
+        [self failedOnCallingApi:nil withErrorType:DHTManagerErrorTypeDefault];     \
+    }];                                                                             \
+                                                                                    \
+    [self.requestIdList addObject:@(REQUEST_ID)];                                   \
+}\
+
 @interface DHTAPIBaseManager ()
 
 @property (nonatomic, strong, readwrite) id fetchedRawData;
@@ -113,15 +124,16 @@
 {
     NSInteger requestId = 0;
     
-    requestId = [[DHTApiProxy sharedInstance] callGETWithParams:params serviceIdentifier:self.child.serviceType methodName:self.child.methodName successCallback:^(DHTURLResponse *response) {
-        //
-        [self successedOnCallingApi:response];
-    } fail:^(DHTURLResponse *response) {
-        //
-        [self failedOnCallingApi:nil withErrorType:DHTManagerErrorTypeDefault];
-    }];
-    
-    [self.requestIdList addObject:@(requestId)];
+    switch (self.child.requestType) {
+        case DHTRequestTypeGET:
+            DHTCallApi(GET, requestId);
+            break;
+            
+        case DHTRequestTypePOST:
+            DHTCallApi(POST, requestId);
+        default:
+            break;
+    }
     
     return requestId;
 }

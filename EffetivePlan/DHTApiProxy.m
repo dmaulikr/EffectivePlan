@@ -46,6 +46,16 @@
     return [requestId integerValue];
 }
 
+- (NSInteger)callPOSTWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)serviceIdentifier methodName:(NSString *)methodName successCallback:(DHTAPCallBack)successBlock fail:(DHTAPCallBack)failBlock
+{
+    NSURLRequest *request = [[DHTRequestGenerator sharedInstance] generatePOSTWithServiceIdentifier:serviceIdentifier params:params methodName:methodName];
+    
+    NSNumber *requestId = [self callApiWithRequest:request success:successBlock fail:failBlock];
+    
+    return [requestId integerValue];
+}
+
+
 
 #pragma mark -- Private Methods --
 

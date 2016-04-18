@@ -42,6 +42,7 @@
 		21F999491CC4B1A9005CBF92 /* DHTLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F999481CC4B1A9005CBF92 /* DHTLogger.m */; };
 		21F9994D1CC4B5E9005CBF92 /* NSMutableString+DHTNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F9994C1CC4B5E9005CBF92 /* NSMutableString+DHTNetworkingMethods.m */; };
 		21F999501CC4B722005CBF92 /* NSObject+DHTNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F9994F1CC4B722005CBF92 /* NSObject+DHTNetworkingMethods.m */; };
+		21F999531CC4C962005CBF92 /* DHTUpdatePlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F999521CC4C962005CBF92 /* DHTUpdatePlan.m */; };
 		21FF24F51CC0810000D405D2 /* DHTRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF24F41CC0810000D405D2 /* DHTRequestGenerator.m */; };
 		21FF25011CC0898800D405D2 /* DHTService.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF25001CC0898800D405D2 /* DHTService.m */; };
 		21FF25041CC08C2900D405D2 /* DHTServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF25031CC08C2900D405D2 /* DHTServiceFactory.m */; };
@@ -130,6 +131,8 @@
 		21F9994C1CC4B5E9005CBF92 /* NSMutableString+DHTNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+DHTNetworkingMethods.m"; sourceTree = "<group>"; };
 		21F9994E1CC4B722005CBF92 /* NSObject+DHTNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DHTNetworkingMethods.h"; sourceTree = "<group>"; };
 		21F9994F1CC4B722005CBF92 /* NSObject+DHTNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DHTNetworkingMethods.m"; sourceTree = "<group>"; };
+		21F999511CC4C962005CBF92 /* DHTUpdatePlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTUpdatePlan.h; sourceTree = "<group>"; };
+		21F999521CC4C962005CBF92 /* DHTUpdatePlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTUpdatePlan.m; sourceTree = "<group>"; };
 		21FF24F31CC0810000D405D2 /* DHTRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTRequestGenerator.h; sourceTree = "<group>"; };
 		21FF24F41CC0810000D405D2 /* DHTRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTRequestGenerator.m; sourceTree = "<group>"; };
 		21FF24F91CC087F800D405D2 /* DHTNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTNetworking.h; sourceTree = "<group>"; };
@@ -292,8 +295,6 @@
 				213EE2921AFE559A008FB47C /* DHTCheckViewController.m */,
 				213EE2941AFE55AF008FB47C /* DHTActionViewController.h */,
 				213EE2951AFE55AF008FB47C /* DHTActionViewController.m */,
-				213EE2EF1B00DE2D008FB47C /* DHTAddPlanViewController.h */,
-				213EE2F01B00DE2D008FB47C /* DHTAddPlanViewController.m */,
 				214982551B0B92CD00FB032B /* DHTAddDoViewController.h */,
 				214982561B0B92CD00FB032B /* DHTAddDoViewController.m */,
 				21269A4A1B13694F00B43227 /* DHTAddCheckViewController.h */,
@@ -425,6 +426,8 @@
 			children = (
 				21FF250C1CC0C55400D405D2 /* DHTGetPlanManager.h */,
 				21FF250D1CC0C55400D405D2 /* DHTGetPlanManager.m */,
+				21F999511CC4C962005CBF92 /* DHTUpdatePlan.h */,
+				21F999521CC4C962005CBF92 /* DHTUpdatePlan.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -434,6 +437,8 @@
 			children = (
 				213EE28B1AFE5554008FB47C /* DHTPlanViewController.h */,
 				213EE28C1AFE5554008FB47C /* DHTPlanViewController.m */,
+				213EE2EF1B00DE2D008FB47C /* DHTAddPlanViewController.h */,
+				213EE2F01B00DE2D008FB47C /* DHTAddPlanViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -619,6 +624,7 @@
 				213EE25B1AFE1134008FB47C /* ViewController.m in Sources */,
 				213EE2961AFE55AF008FB47C /* DHTActionViewController.m in Sources */,
 				21F999491CC4B1A9005CBF92 /* DHTLogger.m in Sources */,
+				21F999531CC4C962005CBF92 /* DHTUpdatePlan.m in Sources */,
 				21F9994D1CC4B5E9005CBF92 /* NSMutableString+DHTNetworkingMethods.m in Sources */,
 				213EE2581AFE1134008FB47C /* AppDelegate.m in Sources */,
 				213EE2551AFE1134008FB47C /* main.m in Sources */,
