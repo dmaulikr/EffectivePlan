@@ -17,7 +17,7 @@
 
 - (NSString *)onlineApiBaseUrl
 {
-    return @"http://localhost:8080";
+    return @"http://localhost:8080/plan";
 }
 
 - (NSString *)offlineApiBaseUrl

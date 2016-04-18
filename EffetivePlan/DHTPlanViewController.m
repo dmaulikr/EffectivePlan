@@ -35,29 +35,29 @@
     
     self.tbvPlan = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     
-    UINib *nib = [UINib nibWithNibName:@"DHTPlanCell" bundle:nil];
-    [self.tbvPlan registerNib:nib  forCellReuseIdentifier:[DHTPlanCell cellReuseIdentifier]];
-    
-    DHTPlan *plan = [[DHTPlanStore sharedStore] getNewPlan];
-    plan.title = @"hello";
-    plan.instruction = @"world";
-    DHTDo *doplan = [[DHTPlanStore sharedStore] getNewDo];
-    doplan.doId = [NSNumber numberWithDouble:1.0];
-    doplan.content = @"oc";
-    [plan addPlanToDoObject:doplan];
-    
-    [[DHTPlanStore sharedStore] insertPlan:plan];
-    
-    
-    DHTPlan *plan1 = [[DHTPlanStore sharedStore] getNewPlan];
-    plan1.title = @"hello1";
-    plan1.instruction = @"world1";
-    DHTDo *doplan1 = [[DHTPlanStore sharedStore] getNewDo];
-    doplan1.doId = [NSNumber numberWithDouble:1.0];
-    doplan1.content = @"oc1";
-    [plan1 addPlanToDoObject:doplan1];
-    
-    [[DHTPlanStore sharedStore] insertPlan:plan1];
+//    UINib *nib = [UINib nibWithNibName:@"DHTPlanCell" bundle:nil];
+//    [self.tbvPlan registerNib:nib  forCellReuseIdentifier:[DHTPlanCell cellReuseIdentifier]];
+//    
+//    DHTPlan *plan = [[DHTPlanStore sharedStore] getNewPlan];
+//    plan.title = @"hello";
+//    plan.instruction = @"world";
+//    DHTDo *doplan = [[DHTPlanStore sharedStore] getNewDo];
+//    doplan.doId = [NSNumber numberWithDouble:1.0];
+//    doplan.content = @"oc";
+//    [plan addPlanToDoObject:doplan];
+//    
+//    [[DHTPlanStore sharedStore] insertPlan:plan];
+//    
+//    
+//    DHTPlan *plan1 = [[DHTPlanStore sharedStore] getNewPlan];
+//    plan1.title = @"hello1";
+//    plan1.instruction = @"world1";
+//    DHTDo *doplan1 = [[DHTPlanStore sharedStore] getNewDo];
+//    doplan1.doId = [NSNumber numberWithDouble:1.0];
+//    doplan1.content = @"oc1";
+//    [plan1 addPlanToDoObject:doplan1];
+//    
+//    [[DHTPlanStore sharedStore] insertPlan:plan1];
     
     
     [self.view addSubview:self.tbvPlan];
@@ -161,6 +161,13 @@
 {
     
 }
+
+#pragma mark -- DHTAPIManagerParamsSourceDelegate --
+
+//- (NSDictionary *)paramsForApi:(DHTAPIBaseManager *)manager
+//{
+//    return @{@"title" : @"happyo"};
+//}
 
 #pragma mark -- Getters && Setters --
 

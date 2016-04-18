@@ -13,7 +13,7 @@
 
 - (NSString *)methodName
 {
-    return @"hello";
+    return @"getAllPlan";
 }
 
 - (NSString *)serviceType
