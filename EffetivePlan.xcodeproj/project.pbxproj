@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		211A46B61CE8775500FDE13A /* DHTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 211A46B51CE8775500FDE13A /* DHTMediator.m */; };
+		211A46BB1CE89FB700FDE13A /* DHTMediator+DHTMediatorPlanActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 211A46BA1CE89FB700FDE13A /* DHTMediator+DHTMediatorPlanActions.m */; };
+		211A46BF1CE8A1DC00FDE13A /* Target_Plan.m in Sources */ = {isa = PBXBuildFile; fileRef = 211A46BE1CE8A1DC00FDE13A /* Target_Plan.m */; };
 		21269A4C1B13694F00B43227 /* DHTAddCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21269A4B1B13694F00B43227 /* DHTAddCheckViewController.m */; };
 		21269A821B173DA500B43227 /* DHTNetworkingClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 21269A811B173DA500B43227 /* DHTNetworkingClient.m */; };
 		213EE2551AFE1134008FB47C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2541AFE1134008FB47C /* main.m */; };
@@ -62,6 +65,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		211A46B41CE8775500FDE13A /* DHTMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTMediator.h; sourceTree = "<group>"; };
+		211A46B51CE8775500FDE13A /* DHTMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTMediator.m; sourceTree = "<group>"; };
+		211A46B91CE89FB700FDE13A /* DHTMediator+DHTMediatorPlanActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHTMediator+DHTMediatorPlanActions.h"; sourceTree = "<group>"; };
+		211A46BA1CE89FB700FDE13A /* DHTMediator+DHTMediatorPlanActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DHTMediator+DHTMediatorPlanActions.m"; sourceTree = "<group>"; };
+		211A46BD1CE8A1DC00FDE13A /* Target_Plan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target_Plan.h; sourceTree = "<group>"; };
+		211A46BE1CE8A1DC00FDE13A /* Target_Plan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_Plan.m; sourceTree = "<group>"; };
 		21269A4A1B13694F00B43227 /* DHTAddCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAddCheckViewController.h; sourceTree = "<group>"; };
 		21269A4B1B13694F00B43227 /* DHTAddCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAddCheckViewController.m; sourceTree = "<group>"; };
 		21269A801B173DA500B43227 /* DHTNetworkingClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTNetworkingClient.h; sourceTree = "<group>"; };
@@ -169,6 +178,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		211A46B31CE8772B00FDE13A /* DHTMediator */ = {
+			isa = PBXGroup;
+			children = (
+				211A46B71CE89F6400FDE13A /* Categories */,
+				211A46B41CE8775500FDE13A /* DHTMediator.h */,
+				211A46B51CE8775500FDE13A /* DHTMediator.m */,
+			);
+			name = DHTMediator;
+			sourceTree = "<group>";
+		};
+		211A46B71CE89F6400FDE13A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				211A46B81CE89F7700FDE13A /* Plan */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		211A46B81CE89F7700FDE13A /* Plan */ = {
+			isa = PBXGroup;
+			children = (
+				211A46B91CE89FB700FDE13A /* DHTMediator+DHTMediatorPlanActions.h */,
+				211A46BA1CE89FB700FDE13A /* DHTMediator+DHTMediatorPlanActions.m */,
+			);
+			name = Plan;
+			sourceTree = "<group>";
+		};
+		211A46BC1CE8A1B900FDE13A /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				211A46BD1CE8A1DC00FDE13A /* Target_Plan.h */,
+				211A46BE1CE8A1DC00FDE13A /* Target_Plan.m */,
+			);
+			name = Actions;
+			sourceTree = "<group>";
+		};
 		21269A7F1B173D2500B43227 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +258,7 @@
 		213EE2511AFE1134008FB47C /* EffetivePlan */ = {
 			isa = PBXGroup;
 			children = (
+				211A46B31CE8772B00FDE13A /* DHTMediator */,
 				21FF25051CC08FB200D405D2 /* src */,
 				21269A7F1B173D2500B43227 /* Networking */,
 				21D7BD361B07600E00C4C94F /* Category */,
@@ -403,6 +449,7 @@
 		21FF25061CC08FC000D405D2 /* Plan */ = {
 			isa = PBXGroup;
 			children = (
+				211A46BC1CE8A1B900FDE13A /* Actions */,
 				21C73C5F1CC291D400C6E25F /* Views */,
 				21C73C591CC21BC900C6E25F /* reformers */,
 				21FF250F1CC0CB2900D405D2 /* Controllers */,
@@ -617,6 +664,7 @@
 				21D7BD281B0732EC00C4C94F /* DHTDo.m in Sources */,
 				21D7BD391B0760AF00C4C94F /* UIView+Create.m in Sources */,
 				213EE2901AFE556B008FB47C /* DHTDoViewController.m in Sources */,
+				211A46B61CE8775500FDE13A /* DHTMediator.m in Sources */,
 				213EE2EA1AFF95C0008FB47C /* DHTPlanCell.m in Sources */,
 				21FF24F51CC0810000D405D2 /* DHTRequestGenerator.m in Sources */,
 				21FF250A1CC08FF400D405D2 /* DHTServicePlan.m in Sources */,
@@ -638,12 +686,14 @@
 				21C73C521CBFDE5C00C6E25F /* DHTAPIBaseManager.m in Sources */,
 				21269A4C1B13694F00B43227 /* DHTAddCheckViewController.m in Sources */,
 				21D7BD311B0732ED00C4C94F /* DHTCheck.m in Sources */,
+				211A46BB1CE89FB700FDE13A /* DHTMediator+DHTMediatorPlanActions.m in Sources */,
 				213EE2F11B00DE2D008FB47C /* DHTAddPlanViewController.m in Sources */,
 				21269A821B173DA500B43227 /* DHTNetworkingClient.m in Sources */,
 				213EE2DA1AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld in Sources */,
 				21C73C5C1CC21CF900C6E25F /* DHTPlanListReformer.m in Sources */,
 				21D7BD351B075EA600C4C94F /* DHTDoCell.m in Sources */,
 				21FF250E1CC0C55400D405D2 /* DHTGetPlanManager.m in Sources */,
+				211A46BF1CE8A1DC00FDE13A /* Target_Plan.m in Sources */,
 				213EE2991AFE55EE008FB47C /* DHTPlanStore.m in Sources */,
 				21D7BD2E1B0732ED00C4C94F /* DHTPlan.m in Sources */,
 				21D7BD3C1B07762800C4C94F /* DHTPhoneTableViewCell.m in Sources */,
