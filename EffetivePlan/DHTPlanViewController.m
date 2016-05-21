@@ -57,15 +57,15 @@
     self = [super init];
     if (self) {
         // 设定plan页面的标签名和图片
-        self.tabBarItem.title = @"P";
-        UIImage *image = [UIImage imageNamed:@"Time1.png"];
-        self.tabBarItem.image = image;
-        self.navigationItem.title = @"plan";
+//        self.tabBarItem.title = @"P";
+//        UIImage *image = [UIImage imageNamed:@"Time1.png"];
+//        self.tabBarItem.image = image;
+//        self.navigationItem.title = @"plan";
         
 //        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPlan)];
 //        
 //        self.navigationItem.rightBarButtonItem = bbi;
-        [self setRightNavBarButtonWithType:NavBarButtonAdd];
+//        [self setRightNavBarButtonWithType:NavBarButtonAdd];
 //        self.navDelegate = self;
     }
     

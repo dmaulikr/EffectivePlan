@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -15,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GF9-1c-Rla" userLabel="lblTitle">
-                        <rect key="frame" x="0.0" y="0.0" width="384" height="30"/>
+                        <rect key="frame" x="0.0" y="0.0" width="192" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="KAv-2L-x0e"/>
                         </constraints>
@@ -29,18 +30,29 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShO-7u-iEZ" userLabel="lblDate">
+                        <rect key="frame" x="192" y="0.0" width="192" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="lQT-bu-q8J" firstAttribute="top" secondItem="GF9-1c-Rla" secondAttribute="bottom" id="9zc-Ki-Vv0"/>
                     <constraint firstAttribute="trailing" secondItem="lQT-bu-q8J" secondAttribute="trailing" id="IZX-cT-TUj"/>
+                    <constraint firstItem="ShO-7u-iEZ" firstAttribute="leading" secondItem="GF9-1c-Rla" secondAttribute="trailing" id="Itm-jx-AKq"/>
+                    <constraint firstAttribute="trailing" secondItem="ShO-7u-iEZ" secondAttribute="trailing" id="JjH-Ng-awK"/>
                     <constraint firstItem="GF9-1c-Rla" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Zwp-J4-Hre"/>
                     <constraint firstItem="GF9-1c-Rla" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bIb-oH-Ztm"/>
+                    <constraint firstItem="GF9-1c-Rla" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/2" id="bJm-kR-dEO"/>
+                    <constraint firstItem="ShO-7u-iEZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cNV-V1-9he"/>
                     <constraint firstItem="lQT-bu-q8J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eYF-Rf-OTp"/>
+                    <constraint firstItem="lQT-bu-q8J" firstAttribute="top" secondItem="ShO-7u-iEZ" secondAttribute="bottom" id="ohk-4D-klW"/>
                     <constraint firstAttribute="bottom" secondItem="lQT-bu-q8J" secondAttribute="bottom" id="ok1-gT-220"/>
-                    <constraint firstAttribute="trailing" secondItem="GF9-1c-Rla" secondAttribute="trailing" id="qnP-gN-srt"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="lblDate" destination="ShO-7u-iEZ" id="BSI-iE-CLY"/>
                 <outlet property="lblDescription" destination="lQT-bu-q8J" id="RbL-Rj-s9e"/>
                 <outlet property="lblTitle" destination="GF9-1c-Rla" id="IlU-bV-s63"/>
             </connections>

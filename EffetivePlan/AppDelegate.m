@@ -12,6 +12,8 @@
 #import "DHTCheckViewController.h"
 #import "DHTActionViewController.h"
 #import "DHTPlanStore.h"
+#import "RDVTabBarController.h"
+#import "RDVTabBarItem.h"
 
 @interface AppDelegate ()
 
@@ -41,8 +43,28 @@
     UINavigationController *navActionController = [[UINavigationController alloc] initWithRootViewController:actionVC];
     
     // 将上面的navigationController整合进UITabBarController里面
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    RDVTabBarController *tabBarController = [[RDVTabBarController alloc] init];
     tabBarController.viewControllers = @[navPlanController, navDoController, navCheckController, navActionController];
+    
+//    UIImage *finishedImage = [UIImage imageNamed:@"Time1"];
+//    UIImage *unfinishedImage = [UIImage imageNamed:@"Time1"];
+    NSArray *tabBarItemImages = @[@"first", @"second", @"third", @"four"];
+    
+    RDVTabBar *tabBar = [tabBarController tabBar];
+    
+    [tabBar setFrame:CGRectMake(CGRectGetMinX(tabBar.frame), CGRectGetMinY(tabBar.frame), CGRectGetWidth(tabBar.frame), 63)];
+    
+    NSInteger index = 0;
+    for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {
+//        [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
+        UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"tb_%@_selected",
+                                                      [tabBarItemImages objectAtIndex:index]]];
+        UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"tb_%@_normal",
+                                                        [tabBarItemImages objectAtIndex:index]]];
+        [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
+        
+        index++;
+    }
     
     // 将tabBarController设为rootViewController
     self.window.rootViewController = tabBarController;

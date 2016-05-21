@@ -14,15 +14,65 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RDVTabBarController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>REFormattedNumberField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RETableViewManager-RETableViewManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RETableViewManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>REValidation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>4C7AE9F58C7082F11448589A7205F4DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88A53816E05F91432FCEEB6831C086C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6D66FE7D3AD8963382F17E79643E1B8</key>
+		<key>BA46F04CC318BC4A4AE7EB632A61B7D3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB90DCD750251A88BF62B13ED74A1629</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EBA7F3B393BB0744CB2FBF0B9E14E2EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2C6DBB4A74D2D97BAC0D381DE687D7B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -64,10 +64,6 @@
     self = [super init];
     if (self) {
         // 设定check页面的标签名和图片
-        self.tabBarItem.title = @"C";
-        UIImage *image = [UIImage imageNamed:@"Time1.png"];
-        self.tabBarItem.image = image;
-        self.title = @"check";
     }
     
     return self;

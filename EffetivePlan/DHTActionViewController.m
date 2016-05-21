@@ -69,10 +69,7 @@
     self = [super init];
     if (self) {
         // 设定plan页面的标签名和图片
-        self.tabBarItem.title = @"A";
-        UIImage *image = [UIImage imageNamed:@"Time1.png"];
-        self.tabBarItem.image = image;
-        self.title = @"action";
+
     }
     
     return self;

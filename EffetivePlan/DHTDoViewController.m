@@ -56,10 +56,10 @@
     self = [super init];
     if (self) {
         // 设定do页面的标签名和图片
-        self.tabBarItem.title = @"D";
-        UIImage *image = [UIImage imageNamed:@"Time1.png"];
-        self.tabBarItem.image = image;
-        self.title = @"do";
+//        self.tabBarItem.title = @"D";
+//        UIImage *image = [UIImage imageNamed:@"Time1.png"];
+//        self.tabBarItem.image = image;
+//        self.title = @"do";
     }
     
     return self;
