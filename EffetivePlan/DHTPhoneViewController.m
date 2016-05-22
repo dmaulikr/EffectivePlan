@@ -7,8 +7,9 @@
 //
 
 #import "DHTPhoneViewController.h"
+#import "RDVTabBarController.h"
 
-@interface DHTPhoneViewController ()
+@interface DHTPhoneViewController () <UINavigationControllerDelegate>
 
 @end
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationController.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,7 +28,7 @@
 }
 
 
-#pragma mark - public method -
+#pragma mark -- Public Method --
 
 - (void)setRightNavBarButtonWithType:(NavBarButtonType)buttonType
 {
@@ -50,14 +53,18 @@
     NSLog(@"base method clicked");
 //    [self.navDelegate rightButtonIsTouched];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+#pragma mark -- UINavigationControllerDelegate --
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if (viewController.hidesBottomBarWhenPushed) {
+        [ROOT_TABBAR_CONTROLLER setTabBarHidden:YES animated:YES];
+    } else {
+        [ROOT_TABBAR_CONTROLLER setTabBarHidden:NO animated:YES];
+    }
 }
-*/
+
 
 @end
