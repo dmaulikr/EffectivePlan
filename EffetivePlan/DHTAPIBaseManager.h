@@ -136,6 +136,10 @@
 
 - (NSInteger)loadData;
 
+- (void)cancelAllRequests;
+
+- (void)cancelRequestWithRequestId:(NSInteger)requestId;
+
 @end
 
 

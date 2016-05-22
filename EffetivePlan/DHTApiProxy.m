@@ -17,7 +17,7 @@
 
 @property (nonatomic, assign) NSNumber *recordedRequestId;
 
-@property (nonatomic, strong) NSMutableDictionary *dipatchTable;
+@property (nonatomic, strong) NSMutableDictionary *dispatchTable;
 
 
 @property (nonatomic, strong) AFURLSessionManager *manager;
@@ -55,6 +55,19 @@
     return [requestId integerValue];
 }
 
+- (void)cancelRequestWithRequestId:(NSNumber *)requestId
+{
+    NSURLSessionTask *requestSessionTask = self.dispatchTable[requestId];
+    [requestSessionTask cancel];
+    [self.dispatchTable removeObjectForKey:requestId];
+}
+
+- (void)cancelRequestWithRequestIdList:(NSArray *)requestIdList
+{
+    for (NSNumber *requestId in requestIdList) {
+        [self cancelRequestWithRequestId:requestId];
+    }
+}
 
 
 #pragma mark -- Private Methods --
@@ -66,6 +79,15 @@
     
     // 执行网络请求，替换网络框架也只需要改这一个类
     NSURLSessionDataTask *task = [self.manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        
+        NSURLSessionDataTask *storedTask = self.dispatchTable[requestId];
+        if (storedTask == nil) {
+            // 如果这个operation是被cancel的，那就不用处理回调了。
+            return;
+        } else {
+            [self.dispatchTable removeObjectForKey:requestId];
+        }
+        
         if (error) {
             DHTURLResponse *myResponse = [[DHTURLResponse alloc] initWithResponseString:response.description
                                                                               requestId:requestId
@@ -97,6 +119,8 @@
     
     [task resume];
     
+    self.dispatchTable[requestId] = task;
+    
     return requestId;
 }
 
@@ -115,13 +139,13 @@
 
 #pragma mark -- Getters && Setters --
 
-- (NSMutableDictionary *)dipatchTable
+- (NSMutableDictionary *)dispatchTable
 {
-    if (!_dipatchTable) {
-        _dipatchTable = [NSMutableDictionary dictionary];
+    if (!_dispatchTable) {
+        _dispatchTable = [NSMutableDictionary dictionary];
     }
     
-    return _dipatchTable;
+    return _dispatchTable;
 }
 
 - (AFURLSessionManager *)manager

@@ -11,7 +11,6 @@
 #import "DHTPlanStore.h"
 #import "DHTAddPlanViewController.h"
 #import "DHTDo.h"
-#import "DHTNetworkingClient.h"
 #import "DHTGetPlanManager.h"
 #import "DHTPlanListReformer.h"
 
@@ -84,6 +83,8 @@
 //    [[DHTNetworkingClient sharedClient] fetchData];
     
     NSInteger requestId = [self.getPlanManager loadData];
+    
+//    [self.getPlanManager cancelRequestWithRequestId:requestId];
     
     NSLog(@"request id : %i", (int)requestId);
 }

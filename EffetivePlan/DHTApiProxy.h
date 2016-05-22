@@ -19,4 +19,8 @@ typedef void(^DHTAPCallBack)(DHTURLResponse *response);
 
 - (NSInteger)callPOSTWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)serviceIdentifier methodName:(NSString *)methodName successCallback:(DHTAPCallBack)successBlock fail:(DHTAPCallBack)failBlock;
 
+- (void)cancelRequestWithRequestId:(NSNumber *)requestId;
+
+- (void)cancelRequestWithRequestIdList:(NSArray *)requestIdList;
+
 @end

@@ -54,6 +54,7 @@
 
 - (void)dealloc
 {
+    [self cancelAllRequests];
     self.requestIdList = nil;
 }
 
@@ -77,6 +78,18 @@
     NSInteger requestId = [self loadDataWithParams:params];
     
     return requestId;
+}
+
+- (void)cancelAllRequests
+{
+    [[DHTApiProxy sharedInstance] cancelRequestWithRequestIdList:self.requestIdList];
+    [self.requestIdList removeAllObjects];
+}
+
+- (void)cancelRequestWithRequestId:(NSInteger)requestId
+{
+    [[DHTApiProxy sharedInstance] cancelRequestWithRequestId:@(requestId)];
+    [self removeRequestIdWithRequestId:requestId];
 }
 
 
@@ -119,6 +132,7 @@
 }
 
 #pragma mark -- Private Methods --
+
 
 - (NSInteger)loadDataWithParams:(NSDictionary *)params
 {

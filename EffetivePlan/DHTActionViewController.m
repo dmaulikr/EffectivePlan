@@ -7,7 +7,6 @@
 //
 
 #import "DHTActionViewController.h"
-#import "DHTNetworkingClient.h"
 
 @interface DHTActionViewController ()
 
