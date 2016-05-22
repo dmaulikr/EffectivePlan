@@ -71,6 +71,7 @@
 		211A46BD1CE8A1DC00FDE13A /* Target_Plan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target_Plan.h; sourceTree = "<group>"; };
 		211A46BE1CE8A1DC00FDE13A /* Target_Plan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_Plan.m; sourceTree = "<group>"; };
 		211A46C01CF1AA6900FDE13A /* DHTPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlanViewController.m; sourceTree = "<group>"; };
+		211A46C21CF1AF7B00FDE13A /* DHTPlanListReformerKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTPlanListReformerKeys.h; sourceTree = "<group>"; };
 		21269A4A1B13694F00B43227 /* DHTAddCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAddCheckViewController.h; sourceTree = "<group>"; };
 		21269A4B1B13694F00B43227 /* DHTAddCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAddCheckViewController.m; sourceTree = "<group>"; };
 		213EE24F1AFE1134008FB47C /* EffetivePlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffetivePlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -358,6 +359,7 @@
 			children = (
 				21C73C5A1CC21CF900C6E25F /* DHTPlanListReformer.h */,
 				21C73C5B1CC21CF900C6E25F /* DHTPlanListReformer.m */,
+				211A46C21CF1AF7B00FDE13A /* DHTPlanListReformerKeys.h */,
 			);
 			name = reformers;
 			sourceTree = "<group>";

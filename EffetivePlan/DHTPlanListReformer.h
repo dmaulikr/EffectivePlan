@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "DHTNetworking.h"
+#import "DHTPlanListReformerKeys.h"
 
 @interface DHTPlanListReformer : NSObject <DHTAPIManagerCallbackDataReformer, UITableViewDataSource, UITableViewDelegate>
 

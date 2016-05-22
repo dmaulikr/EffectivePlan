@@ -7,6 +7,7 @@
 //
 
 #import "DHTPlanCell.h"
+#import "DHTPlanListReformerKeys.h"
 
 @interface DHTPlanCell ()
 
@@ -22,14 +23,9 @@
 
 - (void)configureCellWithData:(NSDictionary *)dict
 {
-    // TODO
-    NSString *title = [dict objectForKey:@"title"];
-    NSString *description = [dict objectForKey:@"description"];
-    NSString *date = [dict objectForKey:@"createdDate"];
-    
-    self.lblTitle.text = title;
-    self.lblDescription.text = description;
-    self.lblDate.text = date;
+    self.lblTitle.text = [dict objectForKey:kPlanListDataKeyTitle];
+    self.lblDescription.text = [dict objectForKey:kPlanListDataKeyDescription];
+    self.lblDate.text = [dict objectForKey:kPlanListDataKeyCreatedDate];
 }
 
 @end

@@ -89,7 +89,6 @@
     NSLog(@"request id : %i", (int)requestId);
 }
 
-#pragma mark - my method -
 - (void)addNewPlan
 {
     DHTAddPlanViewController *apVC = [[DHTAddPlanViewController alloc] init];
@@ -98,42 +97,12 @@
 }
 
 
-//#pragma mark - UITableView Delegate/DataSource -
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    return [[DHTPlanStore sharedStore] allPlans].count;
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    DHTPlanCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DHTPlanCell" forIndexPath:indexPath];
-//    
-//    DHTPlan *plan = [[DHTPlanStore sharedStore] planAtIndex:indexPath.row];
-//    
-//    cell.titleLabel.text = plan.title;
-//    cell.instructionLabel.text = plan.instruction;
-//    
-//    return cell;
-//}
-
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    DHTAddPlanViewController *apVC = [[DHTAddPlanViewController alloc] init];
-//    
-//    DHTPlan *plan = [[DHTPlanStore sharedStore] planAtIndex:indexPath.row];
-//    
-//    apVC.plan = plan;
-//    
-//    [self.navigationController pushViewController:apVC animated:YES];
-//}
-
 #pragma mark -- DHTAPIManagerApiCallBackDelegate --
 
 - (void)managerCallAPIDidSuccess:(DHTAPIBaseManager *)manager
 {
     [manager fetchDataWithReformer:self.planListReformer];
     [self.tbvPlan performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
-    
 }
 
 - (void)managerCallAPIDidFailed:(DHTAPIBaseManager *)manager
@@ -170,14 +139,5 @@
     return _planListReformer;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

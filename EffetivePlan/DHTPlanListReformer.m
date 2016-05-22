@@ -12,6 +12,11 @@
 #import "APPMacro.h"
 #import "DHTMediator+DHTMediatorPlanActions.h"
 
+NSString * const kPlanListDataKeyTitle = @"title";
+NSString * const kPlanListDataKeyDescription = @"description";
+NSString * const kPlanListDataKeyCreatedDate = @"createdDate";
+
+
 static NSString *kPlanCellIdentifier = @"DHTPlanCell";
 
 @interface DHTPlanListReformer ()
@@ -52,20 +57,42 @@ static NSString *kPlanCellIdentifier = @"DHTPlanCell";
     [[DHTMediator sharedInstance] DHTMediator_showAddPlanViewController];
 }
 
+#pragma mark -- Private Methods --
+
+- (NSDictionary *)reformData:(NSDictionary *)originData fromManager:(DHTAPIBaseManager *)manager
+{
+    NSDictionary *reformDict = nil;
+    
+    if ([manager isKindOfClass:[DHTGetPlanManager class]]) {
+        reformDict = @{
+            kPlanListDataKeyTitle : originData[@"title"],
+            kPlanListDataKeyDescription :originData[@"description"],
+            kPlanListDataKeyCreatedDate : originData[@"createdDate"]
+        };
+    }
+    
+    return reformDict;
+}
+
 #pragma mark -- DHTAPIManagerCallbackDataReformer --
 
 - (id)manager:(DHTAPIBaseManager *)manager reformData:(NSDictionary *)data
 {
     if ([manager isKindOfClass:[DHTGetPlanManager class]]) {
-        self.planList = [data objectForKey:@"dataList"];
+        NSArray *dataList = [data objectForKey:@"dataList"];
+        NSMutableArray *reformDataList = [NSMutableArray array];
         
-        return self.planList;
+        for (NSDictionary *dict in dataList) {
+            [reformDataList addObject:[self reformData:dict fromManager:manager]];
+        }
+        
+        self.planList = reformDataList;
     }
     
     return nil;
 }
 
-
+#pragma mark -- Getters && Setters --
 
 - (NSArray *)planList
 {
