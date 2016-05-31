@@ -7,7 +7,6 @@
 //
 
 #import "DHTPersistanceDataBase.h"
-#import <sqlite3.h>
 #import "DHTPersistanceConfiguration.h"
 
 

@@ -16,7 +16,8 @@ static NSString * const kDHTPersistanceErrorDomain = @"kDHTPersistanceErrorDomai
 
 typedef NS_ENUM (NSInteger, DHTPersistanceErrorCode) {
     DHTPersistanceErrorCodeOpenError,
-    DHTPersistanceErrorCodeCreateError
+    DHTPersistanceErrorCodeCreateError,
+    DHTPersistanceErrorCodeQueryStringError
 };
 
 #endif /* DHTPersistanceConfiguration_h */
