@@ -7,7 +7,7 @@
 //
 
 #import "DHTPersistanceQueryCommand.h"
-#import "DHTPersistanceDataBase.h"
+#import "DHTPersistanceDatabasePool.h"
 #import "DHTPersistanceConfiguration.h"
 
 @interface DHTPersistanceQueryCommand ()
@@ -20,6 +20,28 @@
 
 @end
 @implementation DHTPersistanceQueryCommand
+
+- (instancetype)initWithDatabase:(DHTPersistanceDataBase *)database
+{
+    self = [super init];
+    
+    if (self) {
+        self.database = database;
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithDatabaseName:(NSString *)databaseName
+{
+    self = [super init];
+    
+    if (self) {
+        self.databaseName = databaseName;
+    }
+    
+    return self;
+}
 
 - (BOOL)excuteWithError:(NSError *__autoreleasing *)error
 {
@@ -114,6 +136,17 @@
     sqlite3_finalize(statement);
     
     return resultsArray;
+}
+
+#pragma mark -- Getters && Setters --
+
+- (DHTPersistanceDataBase *)database
+{
+    if (!_database) {
+        _database = [[DHTPersistanceDatabasePool sharedInstance] databaseWithName:self.databaseName];
+    }
+    
+    return _database;
 }
 
 @end

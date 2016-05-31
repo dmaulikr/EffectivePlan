@@ -19,4 +19,6 @@
 
 - (instancetype)initWithDatabaseName:(NSString *)databaseName error:(NSError **)error;
 
+- (void)closeDatabase;
+
 @end

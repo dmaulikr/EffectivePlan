@@ -53,4 +53,17 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [self closeDatabase];
+}
+
+- (void)closeDatabase
+{
+    sqlite3_close(self.database);
+    self.database = 0x00;
+    self.databaseName = nil;
+    self.databaseFilePath = nil;
+}
+
 @end
