@@ -7,11 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DHTPersistanceDatabasePool.h"
 
 @interface DHTPersistanceQueryCommand : NSObject
+
+@property (nonatomic, strong, readonly) NSMutableString *sqlString;
+
+- (instancetype)initWithDatabase:(DHTPersistanceDataBase *)database;
+
+- (instancetype)initWithDatabaseName:(NSString *)databaseName;
 
 - (BOOL)excuteWithError:(NSError **)error;
 
 - (NSArray *)fetchWithError:(NSError **)error;
+
+- (DHTPersistanceQueryCommand *)resetQueryCommand;
 
 @end

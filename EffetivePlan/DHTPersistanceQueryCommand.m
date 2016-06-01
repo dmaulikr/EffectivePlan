@@ -7,7 +7,6 @@
 //
 
 #import "DHTPersistanceQueryCommand.h"
-#import "DHTPersistanceDatabasePool.h"
 #import "DHTPersistanceConfiguration.h"
 
 @interface DHTPersistanceQueryCommand ()
@@ -16,7 +15,7 @@
 
 @property (nonatomic, copy) NSString *databaseName;
 
-@property (nonatomic, copy) NSString *sqlString;
+@property (nonatomic, strong) NSMutableString *sqlString;
 
 @end
 @implementation DHTPersistanceQueryCommand
@@ -72,6 +71,7 @@
         const char *errmsg = sqlite3_errmsg(self.database.database);
         NSString *errorString = [NSString stringWithFormat:@"Query Error: \n query string : %@ \n error message : %@ \n", self.sqlString, [NSString stringWithUTF8String:errmsg]];
         *error = [NSError errorWithDomain:kDHTPersistanceErrorDomain code:DHTPersistanceErrorCodeQueryStringError userInfo:@{NSLocalizedDescriptionKey:errorString}];
+        sqlite3_finalize(statement);
         
         return resultsArray;
     }
@@ -136,6 +136,13 @@
     sqlite3_finalize(statement);
     
     return resultsArray;
+}
+
+- (DHTPersistanceQueryCommand *)resetQueryCommand
+{
+    self.sqlString = nil;
+    
+    return self;
 }
 
 #pragma mark -- Getters && Setters --

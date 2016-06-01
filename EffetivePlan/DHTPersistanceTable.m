@@ -8,6 +8,8 @@
 
 #import "DHTPersistanceTable.h"
 #import "DHTPersistanceDataBase.h"
+#import "DHTPersistanceQueryCommand+SchemaManipulate.h"
+
 
 @interface DHTPersistanceTable ()
 
@@ -23,9 +25,21 @@
     
     if (self && [self conformsToProtocol:@protocol(DHTPersistanceTableProtocol)]) {
         //
-        self.child = (DHTPersistanceTable<DHTPersistanceTableProtocol> *)self;
+        self.child = (DHTPersistanceTable <DHTPersistanceTableProtocol> *)self;
         
+        DHTPersistanceQueryCommand *queryCommand = [[DHTPersistanceQueryCommand alloc] initWithDatabaseName:self.child.databaseName];
         
+        [queryCommand createTableWithName:self.child.tableName columns:self.child.columnInfo];
+        
+        NSError *error = nil;
+        [queryCommand excuteWithError:&error];
+        
+        if (error) {
+            NSLog(@"Error at [%s]:[%d]:%@", __FILE__, __LINE__, error);
+        }
+    } else {
+        NSException *exception = [NSException exceptionWithName:@"DHTPersistanceTable init error" reason:@"the child class must conforms to protocol: <DHTPersistanceTableProtocol>" userInfo:nil];
+        @throw exception;
     }
     
     return self;
