@@ -9,7 +9,6 @@
 #import "DHTPlanListReformer.h"
 #import "DHTPlanCell.h"
 #import "DHTGetPlanManager.h"
-#import "APPMacro.h"
 #import "DHTMediator+DHTMediatorPlanActions.h"
 
 NSString * const kPlanListDataKeyTitle = @"title";

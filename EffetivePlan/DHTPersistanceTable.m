@@ -42,7 +42,7 @@
         @throw exception;
     }
     
-    return self;
+    return self;  
 }
 
 

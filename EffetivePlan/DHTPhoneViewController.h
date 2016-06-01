@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "APPMacro.h"
 
 typedef enum {
     NavBarButtonAdd, // add

@@ -13,6 +13,7 @@
 #import "DHTDo.h"
 #import "DHTGetPlanManager.h"
 #import "DHTPlanListReformer.h"
+#import "DHTPlanDataCenter.h"
 
 @interface DHTPlanViewController () <DHTAPIManagerApiCallBackDelegate>
 
@@ -31,6 +32,8 @@
     // Do any additional setup after loading the view.
     
     [self fetchData];
+    
+    [[[DHTPlanDataCenter alloc] init] insertTest];
     
     self.tbvPlan = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     

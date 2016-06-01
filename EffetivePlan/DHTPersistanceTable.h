@@ -22,4 +22,6 @@
 
 @interface DHTPersistanceTable : NSObject
 
+@property (nonatomic, weak, readonly) id<DHTPersistanceTableProtocol> child;
+
 @end

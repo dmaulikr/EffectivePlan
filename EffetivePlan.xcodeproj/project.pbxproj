@@ -34,6 +34,10 @@
 		214982571B0B92CD00FB032B /* DHTAddDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214982561B0B92CD00FB032B /* DHTAddDoViewController.m */; };
 		215974DC1CFC744A004C62C7 /* DHTPersistanceTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 215974DB1CFC744A004C62C7 /* DHTPersistanceTable.m */; };
 		215974E01CFDBB8A004C62C7 /* DHTPersistanceQueryCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 215974DF1CFDBB8A004C62C7 /* DHTPersistanceQueryCommand.m */; };
+		219091C21CFF32FA00D59F97 /* DHTPersistanceTable+Insert.m in Sources */ = {isa = PBXBuildFile; fileRef = 219091C11CFF32FA00D59F97 /* DHTPersistanceTable+Insert.m */; };
+		219091CA1CFF37CA00D59F97 /* DHTPlanDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 219091C91CFF37CA00D59F97 /* DHTPlanDataCenter.m */; };
+		219091CE1CFF385800D59F97 /* DHTPlanTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 219091CD1CFF385800D59F97 /* DHTPlanTable.m */; };
+		219091D61CFF403A00D59F97 /* DHTPlanRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 219091D51CFF403A00D59F97 /* DHTPlanRecord.m */; };
 		21C73C521CBFDE5C00C6E25F /* DHTAPIBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C511CBFDE5C00C6E25F /* DHTAPIBaseManager.m */; };
 		21C73C551CBFE5CC00C6E25F /* DHTApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C541CBFE5CC00C6E25F /* DHTApiProxy.m */; };
 		21C73C581CBFE7DC00C6E25F /* DHTURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C571CBFE7DC00C6E25F /* DHTURLResponse.m */; };
@@ -124,6 +128,16 @@
 		215974DB1CFC744A004C62C7 /* DHTPersistanceTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPersistanceTable.m; sourceTree = "<group>"; };
 		215974DE1CFDBB8A004C62C7 /* DHTPersistanceQueryCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPersistanceQueryCommand.h; sourceTree = "<group>"; };
 		215974DF1CFDBB8A004C62C7 /* DHTPersistanceQueryCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPersistanceQueryCommand.m; sourceTree = "<group>"; };
+		219091C01CFF32FA00D59F97 /* DHTPersistanceTable+Insert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHTPersistanceTable+Insert.h"; sourceTree = "<group>"; };
+		219091C11CFF32FA00D59F97 /* DHTPersistanceTable+Insert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DHTPersistanceTable+Insert.m"; sourceTree = "<group>"; };
+		219091C51CFF33F400D59F97 /* DHTPersistanceRecordProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTPersistanceRecordProtocol.h; sourceTree = "<group>"; };
+		219091C81CFF37CA00D59F97 /* DHTPlanDataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlanDataCenter.h; sourceTree = "<group>"; };
+		219091C91CFF37CA00D59F97 /* DHTPlanDataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlanDataCenter.m; sourceTree = "<group>"; };
+		219091CC1CFF385800D59F97 /* DHTPlanTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlanTable.h; sourceTree = "<group>"; };
+		219091CD1CFF385800D59F97 /* DHTPlanTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlanTable.m; sourceTree = "<group>"; };
+		219091D21CFF3AED00D59F97 /* EffectivePlan-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EffectivePlan-prefix.pch"; sourceTree = "<group>"; };
+		219091D41CFF403A00D59F97 /* DHTPlanRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlanRecord.h; sourceTree = "<group>"; };
+		219091D51CFF403A00D59F97 /* DHTPlanRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlanRecord.m; sourceTree = "<group>"; };
 		21C73C501CBFDE5C00C6E25F /* DHTAPIBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAPIBaseManager.h; sourceTree = "<group>"; };
 		21C73C511CBFDE5C00C6E25F /* DHTAPIBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAPIBaseManager.m; sourceTree = "<group>"; };
 		21C73C531CBFE5CC00C6E25F /* DHTApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTApiProxy.h; sourceTree = "<group>"; };
@@ -323,6 +337,7 @@
 				213EE2531AFE1134008FB47C /* Info.plist */,
 				213EE2541AFE1134008FB47C /* main.m */,
 				213EE2D81AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld */,
+				219091D21CFF3AED00D59F97 /* EffectivePlan-prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -399,6 +414,7 @@
 		215974D91CFC7430004C62C7 /* Table */ = {
 			isa = PBXGroup;
 			children = (
+				219091BF1CFF32CB00D59F97 /* Insert */,
 				215974DA1CFC744A004C62C7 /* DHTPersistanceTable.h */,
 				215974DB1CFC744A004C62C7 /* DHTPersistanceTable.m */,
 			);
@@ -427,14 +443,60 @@
 			name = DataBase;
 			sourceTree = "<group>";
 		};
-		21C73C591CC21BC900C6E25F /* reformers */ = {
+		219091BF1CFF32CB00D59F97 /* Insert */ = {
+			isa = PBXGroup;
+			children = (
+				219091C01CFF32FA00D59F97 /* DHTPersistanceTable+Insert.h */,
+				219091C11CFF32FA00D59F97 /* DHTPersistanceTable+Insert.m */,
+			);
+			name = Insert;
+			sourceTree = "<group>";
+		};
+		219091C31CFF337400D59F97 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				219091C51CFF33F400D59F97 /* DHTPersistanceRecordProtocol.h */,
+			);
+			name = Record;
+			sourceTree = "<group>";
+		};
+		219091C71CFF37A500D59F97 /* DataCenter */ = {
+			isa = PBXGroup;
+			children = (
+				219091D31CFF402000D59F97 /* Record */,
+				219091CB1CFF381F00D59F97 /* Tables */,
+				219091C81CFF37CA00D59F97 /* DHTPlanDataCenter.h */,
+				219091C91CFF37CA00D59F97 /* DHTPlanDataCenter.m */,
+			);
+			name = DataCenter;
+			sourceTree = "<group>";
+		};
+		219091CB1CFF381F00D59F97 /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				219091CC1CFF385800D59F97 /* DHTPlanTable.h */,
+				219091CD1CFF385800D59F97 /* DHTPlanTable.m */,
+			);
+			name = Tables;
+			sourceTree = "<group>";
+		};
+		219091D31CFF402000D59F97 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				219091D41CFF403A00D59F97 /* DHTPlanRecord.h */,
+				219091D51CFF403A00D59F97 /* DHTPlanRecord.m */,
+			);
+			name = Record;
+			sourceTree = "<group>";
+		};
+		21C73C591CC21BC900C6E25F /* Reformers */ = {
 			isa = PBXGroup;
 			children = (
 				21C73C5A1CC21CF900C6E25F /* DHTPlanListReformer.h */,
 				21C73C5B1CC21CF900C6E25F /* DHTPlanListReformer.m */,
 				211A46C21CF1AF7B00FDE13A /* DHTPlanListReformerKeys.h */,
 			);
-			name = reformers;
+			name = Reformers;
 			sourceTree = "<group>";
 		};
 		21C73C5F1CC291D400C6E25F /* Views */ = {
@@ -471,6 +533,7 @@
 		21F926F21CFC1A1000D68072 /* DHTPersistance */ = {
 			isa = PBXGroup;
 			children = (
+				219091C31CFF337400D59F97 /* Record */,
 				215974E11CFDBED4004C62C7 /* DataBase */,
 				215974DD1CFDB873004C62C7 /* QueryCommand */,
 				215974D91CFC7430004C62C7 /* Table */,
@@ -531,9 +594,10 @@
 		21FF25061CC08FC000D405D2 /* Plan */ = {
 			isa = PBXGroup;
 			children = (
+				219091C71CFF37A500D59F97 /* DataCenter */,
 				211A46BC1CE8A1B900FDE13A /* Actions */,
 				21C73C5F1CC291D400C6E25F /* Views */,
-				21C73C591CC21BC900C6E25F /* reformers */,
+				21C73C591CC21BC900C6E25F /* Reformers */,
 				21FF250F1CC0CB2900D405D2 /* Controllers */,
 				21FF250B1CC0C4C800D405D2 /* Managers */,
 				21FF25071CC08FCB00D405D2 /* Services */,
@@ -751,6 +815,7 @@
 				213EE2901AFE556B008FB47C /* DHTDoViewController.m in Sources */,
 				210DC4971CFED09100D4EC36 /* DHTPersistanceQueryCommand+SchemaManipulate.m in Sources */,
 				211A46B61CE8775500FDE13A /* DHTMediator.m in Sources */,
+				219091C21CFF32FA00D59F97 /* DHTPersistanceTable+Insert.m in Sources */,
 				210DC49D1CFEEE7100D4EC36 /* DHTPersistanceQueryCommand+DataManipulate.m in Sources */,
 				213EE2EA1AFF95C0008FB47C /* DHTPlanCell.m in Sources */,
 				21F926F51CFC1A8300D68072 /* DHTPersistanceDataBase.m in Sources */,
@@ -763,8 +828,10 @@
 				21F9994D1CC4B5E9005CBF92 /* NSMutableString+DHTNetworkingMethods.m in Sources */,
 				213EE2581AFE1134008FB47C /* AppDelegate.m in Sources */,
 				213EE2551AFE1134008FB47C /* main.m in Sources */,
+				219091CA1CFF37CA00D59F97 /* DHTPlanDataCenter.m in Sources */,
 				21C73C581CBFE7DC00C6E25F /* DHTURLResponse.m in Sources */,
 				21F999501CC4B722005CBF92 /* NSObject+DHTNetworkingMethods.m in Sources */,
+				219091CE1CFF385800D59F97 /* DHTPlanTable.m in Sources */,
 				21C73C551CBFE5CC00C6E25F /* DHTApiProxy.m in Sources */,
 				213EE28A1AFE54DB008FB47C /* DHTPhoneViewController.m in Sources */,
 				213EE2EE1B00DDD2008FB47C /* DHTAddPlanView.m in Sources */,
@@ -775,6 +842,7 @@
 				21D7BD311B0732ED00C4C94F /* DHTCheck.m in Sources */,
 				211A46BB1CE89FB700FDE13A /* DHTMediator+DHTMediatorPlanActions.m in Sources */,
 				213EE2F11B00DE2D008FB47C /* DHTAddPlanViewController.m in Sources */,
+				219091D61CFF403A00D59F97 /* DHTPlanRecord.m in Sources */,
 				213EE2DA1AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld in Sources */,
 				21C73C5C1CC21CF900C6E25F /* DHTPlanListReformer.m in Sources */,
 				21D7BD351B075EA600C4C94F /* DHTDoCell.m in Sources */,
@@ -914,6 +982,7 @@
 			baseConfigurationReference = 36A71913765E461B29C9549A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/EffetivePlan/EffectivePlan-prefix.pch";
 				INFOPLIST_FILE = EffetivePlan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -925,6 +994,7 @@
 			baseConfigurationReference = ABA89D58D8C18068D6387B9F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/EffetivePlan/EffectivePlan-prefix.pch";
 				INFOPLIST_FILE = EffetivePlan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

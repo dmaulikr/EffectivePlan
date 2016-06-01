@@ -156,4 +156,13 @@
     return _database;
 }
 
+- (NSMutableString *)sqlString
+{
+    if (!_sqlString) {
+        _sqlString = [[NSMutableString alloc] init];
+    }
+    
+    return _sqlString;
+}
+
 @end
