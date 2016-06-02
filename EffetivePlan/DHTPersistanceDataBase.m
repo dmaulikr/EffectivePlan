@@ -28,7 +28,7 @@
     if (self) {
         //
         self.databaseName = databaseName;
-        self.databaseFilePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingString:databaseName];
+        self.databaseFilePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:databaseName];
         
         int result = sqlite3_open(self.databaseFilePath.UTF8String, &_database);
         

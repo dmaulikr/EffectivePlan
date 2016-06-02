@@ -15,7 +15,7 @@
 {
     DHTPersistanceQueryCommand *queryCommand = [[DHTPersistanceQueryCommand alloc] initWithDatabaseName:[self.child databaseName]];
     
-    if ([queryCommand insertTable:[self.child tableName] withDataList:@[[record dictionaryRepresentationWithTable:self.child]]]) {
+    if ([[queryCommand insertTable:[self.child tableName] withDataList:@[[record dictionaryRepresentationWithTable:self.child]]] excuteWithError:error]) {
         return YES;
     }
     

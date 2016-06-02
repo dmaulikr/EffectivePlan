@@ -24,7 +24,6 @@
         
         [columnDict enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull columnName, NSString * _Nonnull columnValue, BOOL * _Nonnull stop) {
             [columnNameList addObject:columnName];
-            [columnValueList addObject:columnValue];
             
             if ([columnValue isKindOfClass:[NSString class]]) {
                 [columnValueList addObject:[NSString stringWithFormat:@"'%@'", columnValue]];
