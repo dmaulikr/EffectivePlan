@@ -45,6 +45,11 @@
 - (BOOL)excuteWithError:(NSError *__autoreleasing *)error
 {
     const char *sql = [[NSString stringWithFormat:@"%@;", self.sqlString] UTF8String];
+    
+#ifdef DHTPersistanceShowSqlLog
+    NSLog(@"\n\n\n=====================================\n\n\nSQL string is : \n\n%@\n\n\n=====================================\n\n\n\n\n", [NSString stringWithUTF8String:sql]);
+#endif
+    
     char *errmsg = NULL;
     sqlite3_exec(self.database.database, sql, NULL, NULL, &errmsg);
     
@@ -62,6 +67,10 @@
 {
     NSMutableArray *resultsArray = [NSMutableArray array];
     const char *sql = [[NSString stringWithFormat:@"%@;", self.sqlString] UTF8String];
+    
+#ifdef DHTPersistanceShowSqlLog
+    NSLog(@"\n\n\n=====================================\n\n\nSQL string is : \n\n%@\n\n\n=====================================\n\n\n\n\n", [NSString stringWithUTF8String:sql]);
+#endif
     
     sqlite3_stmt *statement;
     
