@@ -7,7 +7,6 @@
 //
 
 #import "DHTPersistanceTable.h"
-#import "DHTPersistanceTable+Insert.h"
 
 @interface DHTPlanTable : DHTPersistanceTable <DHTPersistanceTableProtocol>
 

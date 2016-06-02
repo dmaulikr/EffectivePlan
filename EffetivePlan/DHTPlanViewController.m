@@ -32,8 +32,9 @@
     // Do any additional setup after loading the view.
     
     [self fetchData];
-    
-    [[[DHTPlanDataCenter alloc] init] insertTest];
+    DHTPlanDataCenter *dataCenter = [[DHTPlanDataCenter alloc] init];
+    [dataCenter insertTest];
+    NSLog(@"%@", [dataCenter findAllTest]);
     
     self.tbvPlan = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     

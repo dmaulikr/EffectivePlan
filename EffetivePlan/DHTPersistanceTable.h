@@ -18,6 +18,8 @@
 
 - (NSDictionary *)columnInfo;
 
+- (Class)recordClass;
+
 @end
 
 @interface DHTPersistanceTable : NSObject

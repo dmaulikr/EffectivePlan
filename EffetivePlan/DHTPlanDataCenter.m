@@ -9,8 +9,26 @@
 #import "DHTPlanDataCenter.h"
 #import "DHTPlanTable.h"
 #import "DHTPlanRecord.h"
+#import "DHTPersistanceTable+Insert.h"
+#import "DHTPersistanceTable+Find.h"
 
+@interface DHTPlanDataCenter ()
+
+@property (nonatomic, strong) DHTPlanTable *planTable;
+
+@end
 @implementation DHTPlanDataCenter
+
+- (instancetype)init
+{
+    self = [super init];
+    
+    if (self) {
+        self.planTable = [[DHTPlanTable alloc] init];
+    }
+    
+    return self;
+}
 
 - (NSArray *)getAllPlans
 {
@@ -19,10 +37,14 @@
 
 - (BOOL)insertTest
 {
-    DHTPlanTable *testTable = [[DHTPlanTable alloc] init];
-    
     NSError *error = nil;
-    return [testTable insertRecord:[[DHTPlanRecord alloc] init] error:&error];
+    return [self.planTable insertRecord:[[DHTPlanRecord alloc] init] error:&error];
+}
+
+- (NSArray *)findAllTest
+{
+    NSError *error = nil;
+    return [self.planTable findAllWithWhereCondition:nil isDistinct:NO error:&error];
 }
 
 @end

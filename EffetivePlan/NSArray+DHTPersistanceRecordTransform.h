@@ -1,5 +1,5 @@
 //
-//  DHTPlanRecord.h
+//  NSArray+DHTPersistanceRecordTransform.h
 //  EffetivePlan
 //
 //  Created by happyo on 16/6/2.
@@ -9,10 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "DHTPersistanceRecordProtocol.h"
 
-@interface DHTPlanRecord : NSObject <DHTPersistanceRecordProtocol>
+@interface NSArray (DHTPersistanceRecordTransform)
 
-@property (nonatomic, copy) NSString *title;
-
-@property (nonatomic, copy) NSString *planDescription;
+- (NSArray *)transfromSqlItemToRecordClass:(Class<DHTPersistanceRecordProtocol>)recordClass;
 
 @end

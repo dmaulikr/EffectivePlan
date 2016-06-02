@@ -12,4 +12,6 @@
 
 - (BOOL)insertTest;
 
+- (NSArray *)findAllTest;
+
 @end

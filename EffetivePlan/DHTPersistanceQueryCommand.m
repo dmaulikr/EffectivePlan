@@ -139,8 +139,8 @@
                     break;
                 }
             }
-            [resultsArray addObject:rowResult];
         }
+        [resultsArray addObject:rowResult];
     }
     sqlite3_finalize(statement);
     

@@ -13,9 +13,16 @@
 - (NSDictionary *)dictionaryRepresentationWithTable:(DHTPersistanceTable<DHTPersistanceTableProtocol> *)table
 {
     return @{
-             @"title" : @"hello",
-             @"description" : @"world"
+             @"title" : self.title ? self.title : @"test title",
+             @"description" : self.planDescription ? self.planDescription : @"dec test"
              };
+}
+
+- (void)objectRepresentationWithDictionary:(NSDictionary *)dict
+{
+    self.title = [dict objectForKey:@"title"];
+    
+    self.planDescription = [dict objectForKey:@"description"];
 }
 
 @end

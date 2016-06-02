@@ -7,6 +7,7 @@
 //
 
 #import "DHTPlanTable.h"
+#import "DHTPlanRecord.h"
 
 @implementation DHTPlanTable
 
@@ -30,6 +31,11 @@
              @"end_date" : @"TEXT",
              @"status" : @"INTEGER",
              };
+}
+
+- (Class)recordClass
+{
+    return [DHTPlanRecord class];
 }
 
 

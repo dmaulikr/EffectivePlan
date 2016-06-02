@@ -14,7 +14,10 @@
 @protocol DHTPersistanceRecordProtocol <NSObject>
 
 @required
+
 - (NSDictionary *)dictionaryRepresentationWithTable:(DHTPersistanceTable <DHTPersistanceTableProtocol> *)table;
+
+- (void)objectRepresentationWithDictionary:(NSDictionary *)dict;
 
 @end
 
