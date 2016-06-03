@@ -10,6 +10,7 @@
 #import "DHTPlanCell.h"
 #import "DHTGetPlanManager.h"
 #import "DHTMediator+DHTMediatorPlanActions.h"
+#import "DHTPlanRecord.h"
 
 NSString * const kPlanListDataKeyTitle = @"title";
 NSString * const kPlanListDataKeyDescription = @"description";
@@ -24,6 +25,17 @@ static NSString *kPlanCellIdentifier = @"DHTPlanCell";
 
 @end
 @implementation DHTPlanListReformer
+
+#pragma mark -- Public Methods --
+
+- (void)transfromRecordsToReformer:(NSArray *)recordsList
+{
+    NSMutableArray *planList = [NSMutableArray array];
+    for (DHTPlanRecord *record in recordsList) {
+        [planList addObject:[record transtromToNormalData]];
+    }
+    self.planList = planList;
+}
 
 #pragma mark -- UITableViewDataSource --
 

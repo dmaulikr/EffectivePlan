@@ -13,4 +13,6 @@
 
 @interface DHTPlanListReformer : NSObject <DHTAPIManagerCallbackDataReformer, UITableViewDataSource, UITableViewDelegate>
 
+- (void)transfromRecordsToReformer:(NSArray *)recordsList;
+
 @end

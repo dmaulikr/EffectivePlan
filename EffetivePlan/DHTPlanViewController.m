@@ -14,6 +14,7 @@
 #import "DHTGetPlanManager.h"
 #import "DHTPlanListReformer.h"
 #import "DHTPlanDataCenter.h"
+#import "DHTPlanRecord.h"
 
 @interface DHTPlanViewController () <DHTAPIManagerApiCallBackDelegate>
 
@@ -22,6 +23,8 @@
 @property (nonatomic, strong) DHTGetPlanManager *getPlanManager;
 
 @property (nonatomic, strong) DHTPlanListReformer *planListReformer;
+
+@property (nonatomic, strong) NSArray *planList;
 
 @end
 
@@ -33,10 +36,12 @@
     
     [self fetchData];
     DHTPlanDataCenter *dataCenter = [[DHTPlanDataCenter alloc] init];
-    [dataCenter insertTest];
-    NSLog(@"%@", [dataCenter findAllTest]);
+//    [dataCenter insertTest];
+//    NSLog(@"%@", [dataCenter findAllTest]);
     
-    self.tbvPlan = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    [self.planListReformer transfromRecordsToReformer:[dataCenter findAllTest]];
+    
+    self.tbvPlan = [[UITableView alloc] initWithFrame:self.view.frame];
     
     self.tbvPlan.dataSource = self.planListReformer;
     self.tbvPlan.delegate = self.planListReformer;
@@ -84,11 +89,7 @@
 
 - (void)fetchData
 {
-//    [[DHTNetworkingClient sharedClient] fetchData];
-    
     NSInteger requestId = [self.getPlanManager loadData];
-    
-//    [self.getPlanManager cancelRequestWithRequestId:requestId];
     
     NSLog(@"request id : %i", (int)requestId);
 }

@@ -13,8 +13,9 @@
 - (NSDictionary *)dictionaryRepresentationWithTable:(DHTPersistanceTable<DHTPersistanceTableProtocol> *)table
 {
     return @{
-             @"title" : self.title ? self.title : @"test title",
-             @"description" : self.planDescription ? self.planDescription : @"dec test"
+             @"title" : self.title,
+             @"description" : self.planDescription,
+             @"create_date" : self.createDate
              };
 }
 
@@ -23,6 +24,17 @@
     self.title = [dict objectForKey:@"title"];
     
     self.planDescription = [dict objectForKey:@"description"];
+    
+    self.createDate = [dict objectForKey:@"create_date"];
+}
+
+- (NSDictionary *)transtromToNormalData
+{
+    return @{
+             kPlanListDataKeyTitle : self.title,
+             kPlanListDataKeyDescription : self.planDescription,
+             kPlanListDataKeyCreatedDate : self.createDate
+             };
 }
 
 @end

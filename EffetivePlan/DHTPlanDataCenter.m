@@ -38,13 +38,17 @@
 - (BOOL)insertTest
 {
     NSError *error = nil;
-    return [self.planTable insertRecord:[[DHTPlanRecord alloc] init] error:&error];
+    DHTPlanRecord *record = [[DHTPlanRecord alloc] init];
+    record.title = @"plan one";
+    record.planDescription = @"desc one";
+    record.createDate = @"2020-10-01";
+    return [self.planTable insertRecord:record error:&error];
 }
 
 - (NSArray *)findAllTest
 {
     NSError *error = nil;
-    return [self.planTable findAllWithWhereCondition:nil isDistinct:NO error:&error];
+    return [self.planTable findAllWithWhereCondition:@"title = 'plan one'" isDistinct:NO error:&error];
 }
 
 @end
