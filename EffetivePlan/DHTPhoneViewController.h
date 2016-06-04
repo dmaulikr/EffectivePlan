@@ -22,7 +22,7 @@ typedef enum {
 
 @interface DHTPhoneViewController : UIViewController
 
-//@property (nonatomic, assign) id<NavBarButtonDelegate> navDelegate;
+@property (nonatomic, weak) id<NavBarButtonDelegate> navDelegate;
 /**
  *  设置navigationBar的右边按钮样式
  *

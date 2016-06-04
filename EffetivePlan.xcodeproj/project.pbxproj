@@ -66,7 +66,7 @@
 		21FF25041CC08C2900D405D2 /* DHTServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF25031CC08C2900D405D2 /* DHTServiceFactory.m */; };
 		21FF250A1CC08FF400D405D2 /* DHTServicePlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF25091CC08FF400D405D2 /* DHTServicePlan.m */; };
 		21FF250E1CC0C55400D405D2 /* DHTGetPlanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF250D1CC0C55400D405D2 /* DHTGetPlanManager.m */; };
-		D5BE7FA370ABA24558D45B14 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBB2382B44E27267FB58F6E /* libPods.a */; };
+		5C489F920F94D938D2950240 /* libPods-EffetivePlan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C97F759027D4410946B84C3C /* libPods-EffetivePlan.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +153,7 @@
 		219091D21CFF3AED00D59F97 /* EffectivePlan-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EffectivePlan-prefix.pch"; sourceTree = "<group>"; };
 		219091D41CFF403A00D59F97 /* DHTPlanRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlanRecord.h; sourceTree = "<group>"; };
 		219091D51CFF403A00D59F97 /* DHTPlanRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlanRecord.m; sourceTree = "<group>"; };
+		21A932DB91A990A8E2B848D4 /* Pods-EffetivePlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EffetivePlan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EffetivePlan/Pods-EffetivePlan.debug.xcconfig"; sourceTree = "<group>"; };
 		21C73C501CBFDE5C00C6E25F /* DHTAPIBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAPIBaseManager.h; sourceTree = "<group>"; };
 		21C73C511CBFDE5C00C6E25F /* DHTAPIBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAPIBaseManager.m; sourceTree = "<group>"; };
 		21C73C531CBFE5CC00C6E25F /* DHTApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTApiProxy.h; sourceTree = "<group>"; };
@@ -203,9 +204,8 @@
 		21FF25091CC08FF400D405D2 /* DHTServicePlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTServicePlan.m; sourceTree = "<group>"; };
 		21FF250C1CC0C55400D405D2 /* DHTGetPlanManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTGetPlanManager.h; sourceTree = "<group>"; };
 		21FF250D1CC0C55400D405D2 /* DHTGetPlanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTGetPlanManager.m; sourceTree = "<group>"; };
-		36A71913765E461B29C9549A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		ABA89D58D8C18068D6387B9F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		BBBB2382B44E27267FB58F6E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C97F759027D4410946B84C3C /* libPods-EffetivePlan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EffetivePlan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7669C0EFF9EF3E15590258D /* Pods-EffetivePlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EffetivePlan.release.xcconfig"; path = "Pods/Target Support Files/Pods-EffetivePlan/Pods-EffetivePlan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,7 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21F926F71CFC1D4A00D68072 /* libsqlite3.tbd in Frameworks */,
-				D5BE7FA370ABA24558D45B14 /* libPods.a in Frameworks */,
+				5C489F920F94D938D2950240 /* libPods-EffetivePlan.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,8 +343,8 @@
 				213EE2511AFE1134008FB47C /* EffetivePlan */,
 				213EE26B1AFE1134008FB47C /* EffetivePlanTests */,
 				213EE2501AFE1134008FB47C /* Products */,
-				FCBB2370E7C2CA92D77716BA /* Pods */,
 				C2C0898AC45E6CD776409958 /* Frameworks */,
+				78342C23DEE79A608EB47807 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -693,22 +693,22 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		78342C23DEE79A608EB47807 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21A932DB91A990A8E2B848D4 /* Pods-EffetivePlan.debug.xcconfig */,
+				F7669C0EFF9EF3E15590258D /* Pods-EffetivePlan.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C2C0898AC45E6CD776409958 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				21F926F61CFC1D4A00D68072 /* libsqlite3.tbd */,
-				BBBB2382B44E27267FB58F6E /* libPods.a */,
+				C97F759027D4410946B84C3C /* libPods-EffetivePlan.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FCBB2370E7C2CA92D77716BA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				36A71913765E461B29C9549A /* Pods.debug.xcconfig */,
-				ABA89D58D8C18068D6387B9F /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -718,12 +718,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 213EE2721AFE1134008FB47C /* Build configuration list for PBXNativeTarget "EffetivePlan" */;
 			buildPhases = (
-				B9A926FDE7C7407D1B048AEB /* Check Pods Manifest.lock */,
+				61F3CF7F951DBCBD9F03B0D8 /* [CP] Check Pods Manifest.lock */,
 				213EE24B1AFE1134008FB47C /* Sources */,
 				213EE24C1AFE1134008FB47C /* Frameworks */,
 				213EE24D1AFE1134008FB47C /* Resources */,
-				3F32360E03381954A61777FA /* Copy Pods Resources */,
-				50FDED5568537E94A703EF8A /* Embed Pods Frameworks */,
+				14421D28B03018D33F08E44B /* [CP] Embed Pods Frameworks */,
+				C62A636C23213F792A6E7729 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -811,49 +811,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3F32360E03381954A61777FA /* Copy Pods Resources */ = {
+		14421D28B03018D33F08E44B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EffetivePlan/Pods-EffetivePlan-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		50FDED5568537E94A703EF8A /* Embed Pods Frameworks */ = {
+		61F3CF7F951DBCBD9F03B0D8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B9A926FDE7C7407D1B048AEB /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C62A636C23213F792A6E7729 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EffetivePlan/Pods-EffetivePlan-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1041,7 +1041,7 @@
 		};
 		213EE2731AFE1134008FB47C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36A71913765E461B29C9549A /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 21A932DB91A990A8E2B848D4 /* Pods-EffetivePlan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/EffetivePlan/EffectivePlan-prefix.pch";
@@ -1058,7 +1058,7 @@
 		};
 		213EE2741AFE1134008FB47C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABA89D58D8C18068D6387B9F /* Pods.release.xcconfig */;
+			baseConfigurationReference = F7669C0EFF9EF3E15590258D /* Pods-EffetivePlan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/EffetivePlan/EffectivePlan-prefix.pch";
