@@ -44,6 +44,7 @@
 		219091D61CFF403A00D59F97 /* DHTPlanRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 219091D51CFF403A00D59F97 /* DHTPlanRecord.m */; };
 		219091DA1D029FCA00D59F97 /* DHTManipulatePlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219091D81D029FCA00D59F97 /* DHTManipulatePlanViewController.m */; };
 		219091DB1D029FCA00D59F97 /* DHTManipulatePlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219091D91D029FCA00D59F97 /* DHTManipulatePlanViewController.xib */; };
+		219091DE1D02BB3600D59F97 /* UIViewController+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 219091DD1D02BB3600D59F97 /* UIViewController+Base.m */; };
 		21C73C521CBFDE5C00C6E25F /* DHTAPIBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C511CBFDE5C00C6E25F /* DHTAPIBaseManager.m */; };
 		21C73C551CBFE5CC00C6E25F /* DHTApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C541CBFE5CC00C6E25F /* DHTApiProxy.m */; };
 		21C73C581CBFE7DC00C6E25F /* DHTURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C571CBFE7DC00C6E25F /* DHTURLResponse.m */; };
@@ -155,6 +156,9 @@
 		219091D71D029FCA00D59F97 /* DHTManipulatePlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTManipulatePlanViewController.h; sourceTree = "<group>"; };
 		219091D81D029FCA00D59F97 /* DHTManipulatePlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTManipulatePlanViewController.m; sourceTree = "<group>"; };
 		219091D91D029FCA00D59F97 /* DHTManipulatePlanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DHTManipulatePlanViewController.xib; sourceTree = "<group>"; };
+		219091DC1D02BB3600D59F97 /* UIViewController+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Base.h"; sourceTree = "<group>"; };
+		219091DD1D02BB3600D59F97 /* UIViewController+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Base.m"; sourceTree = "<group>"; };
+		219091DF1D02C33B00D59F97 /* APPHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPHeader.h; sourceTree = "<group>"; };
 		21A932DB91A990A8E2B848D4 /* Pods-EffetivePlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EffetivePlan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EffetivePlan/Pods-EffetivePlan.debug.xcconfig"; sourceTree = "<group>"; };
 		21C73C501CBFDE5C00C6E25F /* DHTAPIBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAPIBaseManager.h; sourceTree = "<group>"; };
 		21C73C511CBFDE5C00C6E25F /* DHTAPIBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAPIBaseManager.m; sourceTree = "<group>"; };
@@ -366,8 +370,8 @@
 				211A46B31CE8772B00FDE13A /* DHTMediator */,
 				21FF25051CC08FB200D405D2 /* src */,
 				21269A7F1B173D2500B43227 /* Networking */,
-				21D7BD361B07600E00C4C94F /* Category */,
-				21D7BD321B07365700C4C94F /* base */,
+				21D7BD361B07600E00C4C94F /* Categories */,
+				21D7BD321B07365700C4C94F /* Base */,
 				213EE27B1AFE13CE008FB47C /* Store */,
 				213EE27A1AFE13B3008FB47C /* Controller */,
 				213EE2791AFE13A7008FB47C /* View */,
@@ -564,7 +568,7 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		21D7BD321B07365700C4C94F /* base */ = {
+		21D7BD321B07365700C4C94F /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				213EE2881AFE54DB008FB47C /* DHTPhoneViewController.h */,
@@ -572,19 +576,22 @@
 				21D7BD3A1B07762800C4C94F /* DHTPhoneTableViewCell.h */,
 				21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */,
 				21C73C5E1CC28C8F00C6E25F /* APPMacro.h */,
+				219091DF1D02C33B00D59F97 /* APPHeader.h */,
 			);
-			name = base;
+			name = Base;
 			sourceTree = "<group>";
 		};
-		21D7BD361B07600E00C4C94F /* Category */ = {
+		21D7BD361B07600E00C4C94F /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				21D7BD371B0760AF00C4C94F /* UIView+Create.h */,
 				21D7BD381B0760AF00C4C94F /* UIView+Create.m */,
 				212747DC1D01727D00BB87E5 /* NSObjectSafe.h */,
 				212747DD1D01727D00BB87E5 /* NSObjectSafe.m */,
+				219091DC1D02BB3600D59F97 /* UIViewController+Base.h */,
+				219091DD1D02BB3600D59F97 /* UIViewController+Base.m */,
 			);
-			name = Category;
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		21F926F21CFC1A1000D68072 /* DHTPersistance */ = {
@@ -886,6 +893,7 @@
 				21FF24F51CC0810000D405D2 /* DHTRequestGenerator.m in Sources */,
 				21FF250A1CC08FF400D405D2 /* DHTServicePlan.m in Sources */,
 				213EE25B1AFE1134008FB47C /* ViewController.m in Sources */,
+				219091DE1D02BB3600D59F97 /* UIViewController+Base.m in Sources */,
 				213EE2961AFE55AF008FB47C /* DHTActionViewController.m in Sources */,
 				21F999491CC4B1A9005CBF92 /* DHTLogger.m in Sources */,
 				21F999531CC4C962005CBF92 /* DHTUpdatePlan.m in Sources */,

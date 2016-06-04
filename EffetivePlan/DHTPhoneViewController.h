@@ -8,21 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum {
-    NavBarButtonAdd, // add
-    NavBarButtonDone // done
-} NavBarButtonType;
 
-@protocol NavBarButtonDelegate <NSObject>
-
-@optional
-- (void)rightButtonIsTouched;
-
-@end
 
 @interface DHTPhoneViewController : UIViewController
 
-@property (nonatomic, weak) id<NavBarButtonDelegate> navDelegate;
 /**
  *  设置navigationBar的右边按钮样式
  *

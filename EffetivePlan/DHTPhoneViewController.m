@@ -9,7 +9,7 @@
 #import "DHTPhoneViewController.h"
 #import "RDVTabBarController.h"
 
-@interface DHTPhoneViewController () <UINavigationControllerDelegate>
+@interface DHTPhoneViewController () 
 
 @end
 
@@ -30,28 +30,7 @@
 
 #pragma mark -- Public Method --
 
-- (void)setRightNavBarButtonWithType:(NavBarButtonType)buttonType
-{
-    UIBarButtonItem *rightItem = nil;
-    
-    switch (buttonType) {
-        case NavBarButtonAdd:
-            rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(rightBarButtonClicked:)];
-            break;
-        case NavBarButtonDone:
-            rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(rightBarButtonClicked:)];
-        default:
-            break;
-    }
-    
-    self.navigationItem.rightBarButtonItem = rightItem;
-}
 
-
-- (void)rightBarButtonClicked:(id)sender
-{
-    [self.navDelegate rightButtonIsTouched];
-}
 
 
 #pragma mark -- UINavigationControllerDelegate --

@@ -12,7 +12,7 @@
 #import "DHTPlanListReformerKeys.h"
 #import "DHTPhoneViewController.h"
 
-@interface DHTPlanListReformer : NSObject <DHTAPIManagerCallbackDataReformer, UITableViewDataSource, UITableViewDelegate, NavBarButtonDelegate>
+@interface DHTPlanListReformer : NSObject <DHTAPIManagerCallbackDataReformer, UITableViewDataSource, UITableViewDelegate, DHTNavBarButtonDelegate>
 
 - (void)transfromRecordsToReformer:(NSArray *)recordsList;
 
