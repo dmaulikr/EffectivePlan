@@ -16,7 +16,7 @@
 
 @property (nonatomic, copy) NSString *planDescription;
 
-@property (nonatomic, copy) NSString *createDate;
+@property (nonatomic, copy) NSString *createdDate;
 
 - (NSDictionary *)transtromToNormalData;
 

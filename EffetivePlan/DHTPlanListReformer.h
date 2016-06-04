@@ -10,8 +10,9 @@
 #import <UIKit/UIKit.h>
 #import "DHTNetworking.h"
 #import "DHTPlanListReformerKeys.h"
+#import "DHTPhoneViewController.h"
 
-@interface DHTPlanListReformer : NSObject <DHTAPIManagerCallbackDataReformer, UITableViewDataSource, UITableViewDelegate>
+@interface DHTPlanListReformer : NSObject <DHTAPIManagerCallbackDataReformer, UITableViewDataSource, UITableViewDelegate, NavBarButtonDelegate>
 
 - (void)transfromRecordsToReformer:(NSArray *)recordsList;
 

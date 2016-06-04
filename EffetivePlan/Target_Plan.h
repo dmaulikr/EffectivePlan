@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DHTPlanRecord.h"
 
 @interface Target_Plan : NSObject
 
-- (id)Action_showAddPlan;
+- (id)Action_showManipulatePlanWithRecord:(NSDictionary *)planRecord;
 
 @end

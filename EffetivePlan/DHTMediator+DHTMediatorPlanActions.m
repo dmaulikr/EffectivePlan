@@ -10,13 +10,13 @@
 
 NSString * const kDHTMediatorTargetPlan = @"Plan";
 
-NSString * const kDHTMediatorActionShowAddPlan = @"showAddPlan";
+NSString * const kDHTMediatorActionShowAddPlan = @"showManipulatePlanWithRecord:";
 
 @implementation DHTMediator (DHTMediatorPlanActions)
 
-- (void)DHTMediator_showAddPlanViewController
+- (void)DHTMediator_showManipulatePlanViewController:(NSDictionary *)params
 {
-    [self performTarget:kDHTMediatorTargetPlan action:kDHTMediatorActionShowAddPlan params:@{@"key" : @"value"}];
+    [self performTarget:kDHTMediatorTargetPlan action:kDHTMediatorActionShowAddPlan params:params];
 }
 
 @end

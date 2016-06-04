@@ -15,7 +15,7 @@
     return @{
              @"title" : self.title,
              @"description" : self.planDescription,
-             @"create_date" : self.createDate
+             @"create_date" : self.createdDate
              };
 }
 
@@ -25,7 +25,7 @@
     
     self.planDescription = [dict objectForKey:@"description"];
     
-    self.createDate = [dict objectForKey:@"create_date"];
+    self.createdDate = [dict objectForKey:@"create_date"];
 }
 
 - (NSDictionary *)transtromToNormalData
@@ -33,7 +33,7 @@
     return @{
              kPlanListDataKeyTitle : self.title,
              kPlanListDataKeyDescription : self.planDescription,
-             kPlanListDataKeyCreatedDate : self.createDate
+             kPlanListDataKeyCreatedDate : self.createdDate
              };
 }
 

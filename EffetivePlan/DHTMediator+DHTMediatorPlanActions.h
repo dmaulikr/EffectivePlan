@@ -10,6 +10,6 @@
 
 @interface DHTMediator (DHTMediatorPlanActions)
 
-- (void)DHTMediator_showAddPlanViewController;
+- (void)DHTMediator_showManipulatePlanViewController:(NSDictionary *)params;
 
 @end

@@ -65,7 +65,8 @@ static NSString *kPlanCellIdentifier = @"DHTPlanCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[DHTMediator sharedInstance] DHTMediator_showAddPlanViewController];
+    NSDictionary *planDict = self.planList[indexPath.row];
+    [[DHTMediator sharedInstance] DHTMediator_showManipulatePlanViewController:planDict];
 }
 
 #pragma mark -- Private Methods --
@@ -101,6 +102,13 @@ static NSString *kPlanCellIdentifier = @"DHTPlanCell";
     }
     
     return nil;
+}
+
+#pragma mark -- NavBarButtonDelegate --
+
+- (void)rightButtonIsTouched
+{
+    [[DHTMediator sharedInstance] DHTMediator_showManipulatePlanViewController:nil];
 }
 
 #pragma mark -- Getters && Setters --

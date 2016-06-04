@@ -50,8 +50,7 @@
 
 - (void)rightBarButtonClicked:(id)sender
 {
-    NSLog(@"base method clicked");
-//    [self.navDelegate rightButtonIsTouched];
+    [self.navDelegate rightButtonIsTouched];
 }
 
 

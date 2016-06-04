@@ -41,7 +41,7 @@
     DHTPlanRecord *record = [[DHTPlanRecord alloc] init];
     record.title = @"plan one";
     record.planDescription = @"desc one";
-    record.createDate = @"2020-10-01";
+    record.createdDate = @"2020-10-01";
     return [self.planTable insertRecord:record error:&error];
 }
 

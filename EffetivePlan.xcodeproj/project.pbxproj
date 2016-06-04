@@ -35,7 +35,6 @@
 		213EE2EA1AFF95C0008FB47C /* DHTPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2E81AFF95C0008FB47C /* DHTPlanCell.m */; };
 		213EE2EB1AFF95C0008FB47C /* DHTPlanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213EE2E91AFF95C0008FB47C /* DHTPlanCell.xib */; };
 		213EE2EE1B00DDD2008FB47C /* DHTAddPlanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2ED1B00DDD2008FB47C /* DHTAddPlanView.m */; };
-		213EE2F11B00DE2D008FB47C /* DHTAddPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2F01B00DE2D008FB47C /* DHTAddPlanViewController.m */; };
 		214982571B0B92CD00FB032B /* DHTAddDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214982561B0B92CD00FB032B /* DHTAddDoViewController.m */; };
 		215974DC1CFC744A004C62C7 /* DHTPersistanceTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 215974DB1CFC744A004C62C7 /* DHTPersistanceTable.m */; };
 		215974E01CFDBB8A004C62C7 /* DHTPersistanceQueryCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 215974DF1CFDBB8A004C62C7 /* DHTPersistanceQueryCommand.m */; };
@@ -43,6 +42,8 @@
 		219091CA1CFF37CA00D59F97 /* DHTPlanDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 219091C91CFF37CA00D59F97 /* DHTPlanDataCenter.m */; };
 		219091CE1CFF385800D59F97 /* DHTPlanTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 219091CD1CFF385800D59F97 /* DHTPlanTable.m */; };
 		219091D61CFF403A00D59F97 /* DHTPlanRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 219091D51CFF403A00D59F97 /* DHTPlanRecord.m */; };
+		219091DA1D029FCA00D59F97 /* DHTManipulatePlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219091D81D029FCA00D59F97 /* DHTManipulatePlanViewController.m */; };
+		219091DB1D029FCA00D59F97 /* DHTManipulatePlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219091D91D029FCA00D59F97 /* DHTManipulatePlanViewController.xib */; };
 		21C73C521CBFDE5C00C6E25F /* DHTAPIBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C511CBFDE5C00C6E25F /* DHTAPIBaseManager.m */; };
 		21C73C551CBFE5CC00C6E25F /* DHTApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C541CBFE5CC00C6E25F /* DHTApiProxy.m */; };
 		21C73C581CBFE7DC00C6E25F /* DHTURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C73C571CBFE7DC00C6E25F /* DHTURLResponse.m */; };
@@ -135,8 +136,6 @@
 		213EE2E91AFF95C0008FB47C /* DHTPlanCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DHTPlanCell.xib; sourceTree = "<group>"; };
 		213EE2EC1B00DDD2008FB47C /* DHTAddPlanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAddPlanView.h; sourceTree = "<group>"; };
 		213EE2ED1B00DDD2008FB47C /* DHTAddPlanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAddPlanView.m; sourceTree = "<group>"; };
-		213EE2EF1B00DE2D008FB47C /* DHTAddPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAddPlanViewController.h; sourceTree = "<group>"; };
-		213EE2F01B00DE2D008FB47C /* DHTAddPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAddPlanViewController.m; sourceTree = "<group>"; };
 		214982551B0B92CD00FB032B /* DHTAddDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAddDoViewController.h; sourceTree = "<group>"; };
 		214982561B0B92CD00FB032B /* DHTAddDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAddDoViewController.m; sourceTree = "<group>"; };
 		215974DA1CFC744A004C62C7 /* DHTPersistanceTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPersistanceTable.h; sourceTree = "<group>"; };
@@ -153,6 +152,9 @@
 		219091D21CFF3AED00D59F97 /* EffectivePlan-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EffectivePlan-prefix.pch"; sourceTree = "<group>"; };
 		219091D41CFF403A00D59F97 /* DHTPlanRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlanRecord.h; sourceTree = "<group>"; };
 		219091D51CFF403A00D59F97 /* DHTPlanRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlanRecord.m; sourceTree = "<group>"; };
+		219091D71D029FCA00D59F97 /* DHTManipulatePlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTManipulatePlanViewController.h; sourceTree = "<group>"; };
+		219091D81D029FCA00D59F97 /* DHTManipulatePlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTManipulatePlanViewController.m; sourceTree = "<group>"; };
+		219091D91D029FCA00D59F97 /* DHTManipulatePlanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DHTManipulatePlanViewController.xib; sourceTree = "<group>"; };
 		21A932DB91A990A8E2B848D4 /* Pods-EffetivePlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EffetivePlan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EffetivePlan/Pods-EffetivePlan.debug.xcconfig"; sourceTree = "<group>"; };
 		21C73C501CBFDE5C00C6E25F /* DHTAPIBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAPIBaseManager.h; sourceTree = "<group>"; };
 		21C73C511CBFDE5C00C6E25F /* DHTAPIBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAPIBaseManager.m; sourceTree = "<group>"; };
@@ -687,8 +689,9 @@
 			children = (
 				213EE28B1AFE5554008FB47C /* DHTPlanViewController.h */,
 				211A46C01CF1AA6900FDE13A /* DHTPlanViewController.m */,
-				213EE2EF1B00DE2D008FB47C /* DHTAddPlanViewController.h */,
-				213EE2F01B00DE2D008FB47C /* DHTAddPlanViewController.m */,
+				219091D71D029FCA00D59F97 /* DHTManipulatePlanViewController.h */,
+				219091D81D029FCA00D59F97 /* DHTManipulatePlanViewController.m */,
+				219091D91D029FCA00D59F97 /* DHTManipulatePlanViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -796,6 +799,7 @@
 			files = (
 				213EE25E1AFE1134008FB47C /* Main.storyboard in Resources */,
 				213EE2631AFE1134008FB47C /* LaunchScreen.xib in Resources */,
+				219091DB1D029FCA00D59F97 /* DHTManipulatePlanViewController.xib in Resources */,
 				213EE2601AFE1134008FB47C /* Images.xcassets in Resources */,
 				213EE2EB1AFF95C0008FB47C /* DHTPlanCell.xib in Resources */,
 			);
@@ -902,7 +906,6 @@
 				21269A4C1B13694F00B43227 /* DHTAddCheckViewController.m in Sources */,
 				21D7BD311B0732ED00C4C94F /* DHTCheck.m in Sources */,
 				211A46BB1CE89FB700FDE13A /* DHTMediator+DHTMediatorPlanActions.m in Sources */,
-				213EE2F11B00DE2D008FB47C /* DHTAddPlanViewController.m in Sources */,
 				219091D61CFF403A00D59F97 /* DHTPlanRecord.m in Sources */,
 				213EE2DA1AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld in Sources */,
 				21C73C5C1CC21CF900C6E25F /* DHTPlanListReformer.m in Sources */,
@@ -915,6 +918,7 @@
 				213EE2991AFE55EE008FB47C /* DHTPlanStore.m in Sources */,
 				21D7BD2E1B0732ED00C4C94F /* DHTPlan.m in Sources */,
 				21D7BD3C1B07762800C4C94F /* DHTPhoneTableViewCell.m in Sources */,
+				219091DA1D029FCA00D59F97 /* DHTManipulatePlanViewController.m in Sources */,
 				21FF25041CC08C2900D405D2 /* DHTServiceFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

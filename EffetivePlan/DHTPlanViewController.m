@@ -9,7 +9,6 @@
 #import "DHTPlanViewController.h"
 #import "DHTPlanCell.h"
 #import "DHTPlanStore.h"
-#import "DHTAddPlanViewController.h"
 #import "DHTDo.h"
 #import "DHTGetPlanManager.h"
 #import "DHTPlanListReformer.h"
@@ -34,9 +33,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self fetchData];
+//    [self fetchData];
     DHTPlanDataCenter *dataCenter = [[DHTPlanDataCenter alloc] init];
-//    [dataCenter insertTest];
+    [dataCenter insertTest];
 //    NSLog(@"%@", [dataCenter findAllTest]);
     
     [self.planListReformer transfromRecordsToReformer:[dataCenter findAllTest]];
@@ -64,26 +63,14 @@
 {
     self = [super init];
     if (self) {
-        // 设定plan页面的标签名和图片
-//        self.tabBarItem.title = @"P";
-//        UIImage *image = [UIImage imageNamed:@"Time1.png"];
-//        self.tabBarItem.image = image;
-//        self.navigationItem.title = @"plan";
-        
-//        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPlan)];
-//        
-//        self.navigationItem.rightBarButtonItem = bbi;
-//        [self setRightNavBarButtonWithType:NavBarButtonAdd];
-//        self.navDelegate = self;
+        [self setRightNavBarButtonWithType:NavBarButtonAdd];
+        self.navDelegate = self.planListReformer;
     }
     
     return self;
 }
 
-- (void)rightBarButtonClicked:(id)sender{
-    NSLog(@"clicked");
-    [self addNewPlan];
-}
+
 
 #pragma mark -- Private Methods --
 
@@ -94,12 +81,7 @@
     NSLog(@"request id : %i", (int)requestId);
 }
 
-- (void)addNewPlan
-{
-    DHTAddPlanViewController *apVC = [[DHTAddPlanViewController alloc] init];
-    
-    [self.navigationController pushViewController:apVC animated:YES];
-}
+
 
 
 #pragma mark -- DHTAPIManagerApiCallBackDelegate --
