@@ -7,14 +7,20 @@
 //
 
 #import "DHTManipulatePlanViewController.h"
+#import "DHTNavigationControllerDelegate.h"
+#import "DHTPlanDataCenter.h"
 
-@interface DHTManipulatePlanViewController ()
+@interface DHTManipulatePlanViewController () <DHTNavBarButtonDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *lblDate;
 
 @property (weak, nonatomic) IBOutlet UITextField *txfTitle;
 
 @property (weak, nonatomic) IBOutlet UITextField *txfDescription;
+
+@property (nonatomic, strong) DHTNavigationControllerDelegate *navControllerDelegate;
+
+@property (nonatomic, strong) DHTPlanDataCenter *dataCenter;
 
 @end
 
@@ -24,24 +30,40 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.navControllerDelegate = [[DHTNavigationControllerDelegate alloc] init];
+    self.navigationController.delegate = self.navControllerDelegate;
+    
+    [self setRightNavBarButtonWithType:NavBarButtonDone];
+    self.navDelegate = self;
+    
     self.lblDate.text = self.planRecord.createdDate;
     self.txfTitle.text = self.planRecord.title;
     self.txfDescription.text = self.planRecord.planDescription;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark -- DHTNavBarButtonDelegate --
+
+- (void)rightButtonIsTouched
+{
+    DHTPlanRecord *record = [[DHTPlanRecord alloc] init];
+    record.title = self.txfTitle.text;
+    record.planDescription = self.txfDescription.text;
+    record.createdDate = self.lblDate.text;
+    
+    [self.dataCenter insertPlan:record];
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark -- Getters && Setters --
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (DHTPlanDataCenter *)dataCenter
+{
+    if (!_dataCenter) {
+        _dataCenter = [[DHTPlanDataCenter alloc] init];
+    }
+    
+    return _dataCenter;
 }
-*/
 
 @end

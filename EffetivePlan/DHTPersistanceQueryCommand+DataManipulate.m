@@ -47,4 +47,6 @@
     return self;
 }
 
+//- (DHTPersistanceQueryCommand *)update
+
 @end

@@ -27,6 +27,8 @@
 
 @property (nonatomic, strong) DHTNavigationControllerDelegate *navControllerDelegate;
 
+@property (nonatomic, strong) DHTPlanDataCenter *dataCenter;
+
 @end
 
 @implementation DHTPlanViewController
@@ -39,11 +41,8 @@
     self.navigationController.delegate = self.navControllerDelegate;
     
 //    [self fetchData];
-    DHTPlanDataCenter *dataCenter = [[DHTPlanDataCenter alloc] init];
-//    [dataCenter insertTest];
-//    NSLog(@"%@", [dataCenter findAllTest]);
     
-    [self.planListReformer transfromRecordsToReformer:[dataCenter findAllTest]];
+    [self.planListReformer transfromRecordsToReformer:[self.dataCenter findAllPlans]];
     
     self.tbvPlan = [[UITableView alloc] initWithFrame:self.view.frame];
     
@@ -131,5 +130,13 @@
     return _planListReformer;
 }
 
+- (DHTPlanDataCenter *)dataCenter
+{
+    if (!_dataCenter) {
+        _dataCenter = [[DHTPlanDataCenter alloc] init];
+    }
+    
+    return _dataCenter;
+}
 
 @end

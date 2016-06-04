@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+@class DHTPlanRecord;
 
 @interface DHTPlanDataCenter : NSObject
 
-- (BOOL)insertTest;
+- (BOOL)insertPlan:(DHTPlanRecord *)planRecord;
 
-- (NSArray *)findAllTest;
+- (NSArray *)findAllPlans;
 
 @end

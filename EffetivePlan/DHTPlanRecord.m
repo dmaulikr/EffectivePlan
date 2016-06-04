@@ -37,4 +37,33 @@
              };
 }
 
+#pragma mark -- Getters && Setters --
+
+- (NSString *)title
+{
+    if (!_title) {
+        _title = [[NSString alloc] init];
+    }
+    
+    return _title;
+}
+
+- (NSString *)planDescription
+{
+    if (!_planDescription) {
+        _planDescription = [[NSString alloc] init];
+    }
+    
+    return _planDescription;
+}
+
+- (NSString *)createdDate
+{
+    if (!_createdDate) {
+        _createdDate = [[NSString alloc] init];
+    }
+    
+    return _createdDate;
+}
+
 @end

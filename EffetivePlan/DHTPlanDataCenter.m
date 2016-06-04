@@ -30,25 +30,16 @@
     return self;
 }
 
-- (NSArray *)getAllPlans
-{
-    return nil;
-}
-
-- (BOOL)insertTest
+- (BOOL)insertPlan:(DHTPlanRecord *)planRecord
 {
     NSError *error = nil;
-    DHTPlanRecord *record = [[DHTPlanRecord alloc] init];
-    record.title = @"plan one";
-    record.planDescription = @"desc one";
-    record.createdDate = @"2020-10-01";
-    return [self.planTable insertRecord:record error:&error];
+    return [self.planTable insertRecord:planRecord error:&error];
 }
 
-- (NSArray *)findAllTest
+- (NSArray *)findAllPlans
 {
     NSError *error = nil;
-    return [self.planTable findAllWithWhereCondition:@"title = 'plan one'" isDistinct:NO error:&error];
+    return [self.planTable findAllWithWhereCondition:nil isDistinct:NO error:&error];
 }
 
 @end
