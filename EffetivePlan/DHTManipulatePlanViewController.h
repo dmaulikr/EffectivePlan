@@ -6,10 +6,9 @@
 //  Copyright © 2016年 happyo. All rights reserved.
 //
 
-#import "DHTPhoneViewController.h"
 #import "DHTPlanRecord.h"
 
-@interface DHTManipulatePlanViewController : DHTPhoneViewController
+@interface DHTManipulatePlanViewController : UIViewController
 
 @property (nonatomic, strong) DHTPlanRecord *planRecord;
 

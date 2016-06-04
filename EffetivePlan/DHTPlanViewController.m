@@ -25,6 +25,8 @@
 
 @property (nonatomic, strong) NSArray *planList;
 
+@property (nonatomic, strong) DHTNavigationControllerDelegate *navControllerDelegate;
+
 @end
 
 @implementation DHTPlanViewController
@@ -33,9 +35,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navControllerDelegate = [[DHTNavigationControllerDelegate alloc] init];
+    self.navigationController.delegate = self.navControllerDelegate;
+    
 //    [self fetchData];
     DHTPlanDataCenter *dataCenter = [[DHTPlanDataCenter alloc] init];
-    [dataCenter insertTest];
+//    [dataCenter insertTest];
 //    NSLog(@"%@", [dataCenter findAllTest]);
     
     [self.planListReformer transfromRecordsToReformer:[dataCenter findAllTest]];

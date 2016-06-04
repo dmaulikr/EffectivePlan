@@ -6,10 +6,10 @@
 //  Copyright (c) 2015年 happyo. All rights reserved.
 //
 
-#import "DHTPhoneViewController.h"
+#import <UIKit/UIKit.h>
 #import "DHTPlan.h"
 
-@interface DHTAddCheckViewController : DHTPhoneViewController<UITableViewDataSource, UITableViewDelegate>
+@interface DHTAddCheckViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) DHTPlan *planToBeChecked;
 

@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 happyo. All rights reserved.
 //
 
-#import "DHTPhoneViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface DHTDoViewController : DHTPhoneViewController<UITableViewDataSource,UITableViewDelegate>
+@interface DHTDoViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @end

@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 happyo. All rights reserved.
 //
 
-#import "DHTPhoneViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface DHTPlanViewController : DHTPhoneViewController
+@interface DHTPlanViewController : UIViewController
 
 @end

@@ -6,11 +6,10 @@
 //  Copyright (c) 2015年 happyo. All rights reserved.
 //
 
-#import "DHTPhoneViewController.h"
 #import "DHTDo.h"
 
 
-@interface DHTAddDoViewController : DHTPhoneViewController
+@interface DHTAddDoViewController : UIViewController
 
 @property (nonatomic, strong) UITextField *doContent;
 

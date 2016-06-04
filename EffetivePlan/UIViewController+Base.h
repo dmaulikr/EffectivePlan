@@ -24,4 +24,6 @@ typedef enum {
 
 @property (nonatomic, weak) id <DHTNavBarButtonDelegate> navDelegate;
 
+- (void)setRightNavBarButtonWithType:(NavBarButtonType)buttonType;
+
 @end

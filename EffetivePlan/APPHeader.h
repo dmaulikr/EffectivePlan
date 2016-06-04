@@ -11,4 +11,6 @@
 
 #import "UIViewController+Base.h"
 
+#import "DHTNavigationControllerDelegate.h"
+
 #endif /* APPHeader_h */
