@@ -22,6 +22,7 @@
 
 @property (nonatomic, strong) DHTPlanDataCenter *dataCenter;
 
+
 @end
 
 @implementation DHTManipulatePlanViewController
@@ -45,12 +46,19 @@
 
 - (void)rightButtonIsTouched
 {
-    DHTPlanRecord *record = [[DHTPlanRecord alloc] init];
-    record.title = self.txfTitle.text;
-    record.planDescription = self.txfDescription.text;
-    record.createdDate = self.lblDate.text;
-    
-    [self.dataCenter insertPlan:record];
+    if (self.planRecord) {
+        self.planRecord.title = self.txfTitle.text;
+        self.planRecord.planDescription = self.txfDescription.text;
+        self.planRecord.createdDate = self.lblDate.text;
+        
+        [self.dataCenter updatePlan:self.planRecord];
+    } else {
+        DHTPlanRecord *record = [[DHTPlanRecord alloc] init];
+        record.title = self.txfTitle.text;
+        record.planDescription = self.txfDescription.text;
+        record.createdDate = self.lblDate.text;
+        [self.dataCenter insertPlan:record];
+    }
     
     [self.navigationController popViewControllerAnimated:YES];
 }

@@ -9,16 +9,17 @@
 #import "Target_Plan.h"
 #import "RDVTabBarController.h"
 #import "DHTManipulatePlanViewController.h"
+#import "DHTPlanDataCenter.h"
 
 @implementation Target_Plan
 
-- (id)Action_showManipulatePlanWithRecord:(NSDictionary *)planRecord
+- (id)Action_showManipulatePlanWithRecordPrimaryKey:(NSDictionary *)params
 {
-    DHTPlanRecord *record = [[DHTPlanRecord alloc] init];
-    record.title = planRecord[@"title"];
-    record.planDescription = planRecord[@"description"];
-    record.createdDate = planRecord[@"createdDate"];
+    NSString *primaryKey = params[@"primaryKey"];
     
+    DHTPlanDataCenter *dataCenter = [[DHTPlanDataCenter alloc] init];
+    DHTPlanRecord *record = [dataCenter findPlanWithPrimaryKey:primaryKey];
+
     DHTManipulatePlanViewController *manipulatePlanViewController = [[DHTManipulatePlanViewController alloc] init];
     manipulatePlanViewController.planRecord = record;
     manipulatePlanViewController.hidesBottomBarWhenPushed = YES;

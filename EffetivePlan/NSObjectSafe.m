@@ -439,6 +439,9 @@ void SFLog(const char* file, const char* func, int line, NSString* fmt, ...)
     if (object && key) {
         return [self hookDictionaryWithObject:object forKey:key];
     }
+    if (key) {
+        return nil;
+    }
     SFAssert(NO, @"NSDictionary invalid args hookDictionaryWithObject:[%@] forKey:[%@]", object, key);
     return nil;
 }
@@ -490,6 +493,10 @@ void SFLog(const char* file, const char* func, int line, NSString* fmt, ...)
     if (anObject && aKey) {
         [self hookSetObject:anObject forKey:aKey];
     } else {
+        if (aKey) {
+            [self hookSetObject:[NSNull null] forKey:aKey];
+            return ;
+        }
         SFAssert(NO, @"NSMutableDictionary invalid args hookSetObject:[%@] forKey:[%@]", anObject, aKey);
     }
 }

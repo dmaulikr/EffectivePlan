@@ -20,6 +20,8 @@
 
 - (Class)recordClass;
 
+- (NSString *)primaryKeyName;
+
 @end
 
 @interface DHTPersistanceTable : NSObject

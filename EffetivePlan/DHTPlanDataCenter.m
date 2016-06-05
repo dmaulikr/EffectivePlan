@@ -11,6 +11,7 @@
 #import "DHTPlanRecord.h"
 #import "DHTPersistanceTable+Insert.h"
 #import "DHTPersistanceTable+Find.h"
+#import "DHTPersistanceTable+Update.h"
 
 @interface DHTPlanDataCenter ()
 
@@ -33,6 +34,11 @@
 - (BOOL)insertPlan:(DHTPlanRecord *)planRecord
 {
     NSError *error = nil;
+    NSString *whereCondition = [NSString stringWithFormat:@"id = '%@'", planRecord.primaryKey];
+    if ([self.planTable findAllWithWhereCondition:whereCondition isDistinct:NO error:&error].count != 0) {
+        return NO;
+    }
+    
     return [self.planTable insertRecord:planRecord error:&error];
 }
 
@@ -40,6 +46,19 @@
 {
     NSError *error = nil;
     return [self.planTable findAllWithWhereCondition:nil isDistinct:NO error:&error];
+}
+
+- (DHTPlanRecord *)findPlanWithPrimaryKey:(NSString *)primaryKey
+{
+    NSError *error = nil;
+    
+    return (DHTPlanRecord *)[self.planTable findWithPrimaryKey:primaryKey error:&error];
+}
+
+- (BOOL)updatePlan:(DHTPlanRecord *)planRecord
+{
+    NSError *error = nil;
+    return [self.planTable updateRecord:planRecord error:&error];
 }
 
 @end

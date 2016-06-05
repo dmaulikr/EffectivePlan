@@ -12,11 +12,13 @@
 
 - (NSDictionary *)dictionaryRepresentationWithTable:(DHTPersistanceTable<DHTPersistanceTableProtocol> *)table
 {
-    return @{
-             @"title" : self.title,
-             @"description" : self.planDescription,
-             @"create_date" : self.createdDate
-             };
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:self.primaryKey forKey:@"id"];
+    [dict setObject:self.title forKey:@"title"];
+    [dict setObject:self.planDescription forKey:@"description"];
+    [dict setObject:self.createdDate forKey:@"create_date"];
+    
+    return dict;
 }
 
 - (void)objectRepresentationWithDictionary:(NSDictionary *)dict
@@ -26,15 +28,19 @@
     self.planDescription = [dict objectForKey:@"description"];
     
     self.createdDate = [dict objectForKey:@"create_date"];
+    
+    self.primaryKey = [dict objectForKey:@"id"];
 }
 
 - (NSDictionary *)transtromToNormalData
 {
-    return @{
-             kPlanListDataKeyTitle : self.title,
-             kPlanListDataKeyDescription : self.planDescription,
-             kPlanListDataKeyCreatedDate : self.createdDate
-             };
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:self.title forKey:kPlanListDataKeyTitle];
+    [dict setObject:self.planDescription forKey:kPlanListDataKeyDescription];
+    [dict setObject:self.createdDate forKey:kPlanListDataKeyCreatedDate];
+    [dict setObject:self.primaryKey forKey:@"primaryKey"];
+    
+    return dict;
 }
 
 #pragma mark -- Getters && Setters --

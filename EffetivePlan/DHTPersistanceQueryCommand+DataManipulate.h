@@ -12,4 +12,6 @@
 
 - (DHTPersistanceQueryCommand *)insertTable:(NSString *)tableName withDataList:(NSArray *)dataList;
 
+- (DHTPersistanceQueryCommand *)updateTable:(NSString *)tableName withRecord:(NSDictionary *)record whereCondition:(NSString *)whereCondition;
+
 @end

@@ -32,5 +32,11 @@
     return [[queryCommand fetchWithError:error] transfromSqlItemToRecordClass:[self.child recordClass]];
 }
 
+- (NSObject<DHTPersistanceRecordProtocol> *)findWithPrimaryKey:(NSString *)primaryKey error:(NSError *__autoreleasing *)error
+{
+    NSString *whereCondition = [NSString stringWithFormat:@" %@ = '%@'", [self.child primaryKeyName], primaryKey];
+    
+    return [self findAllWithWhereCondition:whereCondition isDistinct:NO error:error].firstObject;
+}
 
 @end

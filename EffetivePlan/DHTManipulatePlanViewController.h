@@ -10,6 +10,8 @@
 
 @interface DHTManipulatePlanViewController : UIViewController
 
+//@property (nonatomic, strong) NSString *planPrimaryKey;
+
 @property (nonatomic, strong) DHTPlanRecord *planRecord;
 
 @end

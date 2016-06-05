@@ -38,5 +38,9 @@
     return [DHTPlanRecord class];
 }
 
+- (NSString *)primaryKeyName
+{
+    return @"id";
+}
 
 @end

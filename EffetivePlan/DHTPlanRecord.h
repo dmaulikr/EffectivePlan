@@ -12,6 +12,8 @@
 
 @interface DHTPlanRecord : NSObject <DHTPersistanceRecordProtocol>
 
+@property (nonatomic, copy) NSString *primaryKey;
+
 @property (nonatomic, copy) NSString *title;
 
 @property (nonatomic, copy) NSString *planDescription;

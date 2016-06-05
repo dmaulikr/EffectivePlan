@@ -57,6 +57,7 @@
 		21D7BD391B0760AF00C4C94F /* UIView+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD381B0760AF00C4C94F /* UIView+Create.m */; };
 		21D7BD3C1B07762800C4C94F /* DHTPhoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */; };
 		21E9278C1CFDDA8A00112E17 /* DHTPersistanceDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E9278B1CFDDA8A00112E17 /* DHTPersistanceDatabasePool.m */; };
+		21F207FB1D03BEAA0008D936 /* DHTPersistanceTable+Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F207FA1D03BEAA0008D936 /* DHTPersistanceTable+Update.m */; };
 		21F926F51CFC1A8300D68072 /* DHTPersistanceDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F926F41CFC1A8300D68072 /* DHTPersistanceDataBase.m */; };
 		21F926F71CFC1D4A00D68072 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F926F61CFC1D4A00D68072 /* libsqlite3.tbd */; };
 		21F999491CC4B1A9005CBF92 /* DHTLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F999481CC4B1A9005CBF92 /* DHTLogger.m */; };
@@ -186,6 +187,8 @@
 		21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPhoneTableViewCell.m; sourceTree = "<group>"; };
 		21E9278A1CFDDA8A00112E17 /* DHTPersistanceDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPersistanceDatabasePool.h; sourceTree = "<group>"; };
 		21E9278B1CFDDA8A00112E17 /* DHTPersistanceDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPersistanceDatabasePool.m; sourceTree = "<group>"; };
+		21F207F91D03BEAA0008D936 /* DHTPersistanceTable+Update.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHTPersistanceTable+Update.h"; sourceTree = "<group>"; };
+		21F207FA1D03BEAA0008D936 /* DHTPersistanceTable+Update.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DHTPersistanceTable+Update.m"; sourceTree = "<group>"; };
 		21F926F31CFC1A8300D68072 /* DHTPersistanceDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPersistanceDataBase.h; sourceTree = "<group>"; };
 		21F926F41CFC1A8300D68072 /* DHTPersistanceDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPersistanceDataBase.m; sourceTree = "<group>"; };
 		21F926F61CFC1D4A00D68072 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -471,6 +474,7 @@
 		215974D91CFC7430004C62C7 /* Table */ = {
 			isa = PBXGroup;
 			children = (
+				21F207F81D03BE8C0008D936 /* Update */,
 				210DC49E1CFFDDDA00D4EC36 /* Find */,
 				219091BF1CFF32CB00D59F97 /* Insert */,
 				215974DA1CFC744A004C62C7 /* DHTPersistanceTable.h */,
@@ -592,6 +596,15 @@
 				219091DD1D02BB3600D59F97 /* UIViewController+Base.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		21F207F81D03BE8C0008D936 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				21F207F91D03BEAA0008D936 /* DHTPersistanceTable+Update.h */,
+				21F207FA1D03BEAA0008D936 /* DHTPersistanceTable+Update.m */,
+			);
+			name = Update;
 			sourceTree = "<group>";
 		};
 		21F926F21CFC1A1000D68072 /* DHTPersistance */ = {
@@ -904,6 +917,7 @@
 				219091CA1CFF37CA00D59F97 /* DHTPlanDataCenter.m in Sources */,
 				21C73C581CBFE7DC00C6E25F /* DHTURLResponse.m in Sources */,
 				21F999501CC4B722005CBF92 /* NSObject+DHTNetworkingMethods.m in Sources */,
+				21F207FB1D03BEAA0008D936 /* DHTPersistanceTable+Update.m in Sources */,
 				219091E21D02C4D200D59F97 /* DHTNavigationControllerDelegate.m in Sources */,
 				219091CE1CFF385800D59F97 /* DHTPlanTable.m in Sources */,
 				21C73C551CBFE5CC00C6E25F /* DHTApiProxy.m in Sources */,

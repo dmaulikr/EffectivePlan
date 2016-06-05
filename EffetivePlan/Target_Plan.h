@@ -11,6 +11,6 @@
 
 @interface Target_Plan : NSObject
 
-- (id)Action_showManipulatePlanWithRecord:(NSDictionary *)planRecord;
+- (id)Action_showManipulatePlanWithRecordPrimaryKey:(NSDictionary *)params;
 
 @end

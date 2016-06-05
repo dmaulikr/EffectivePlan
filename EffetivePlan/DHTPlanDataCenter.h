@@ -15,4 +15,8 @@
 
 - (NSArray *)findAllPlans;
 
+- (DHTPlanRecord *)findPlanWithPrimaryKey:(NSString *)primaryKey;
+
+- (BOOL)updatePlan:(DHTPlanRecord *)planRecord;
+
 @end

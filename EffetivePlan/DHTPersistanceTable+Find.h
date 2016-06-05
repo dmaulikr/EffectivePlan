@@ -16,4 +16,6 @@
 
 - (NSArray <NSObject <DHTPersistanceRecordProtocol> *> *)findAllWithCriteria:(DHTPersistanceCriteria *)criteria error:(NSError **)error;
 
+- (NSObject <DHTPersistanceRecordProtocol> *)findWithPrimaryKey:(NSString *)primaryKey error:(NSError **)error;
+
 @end

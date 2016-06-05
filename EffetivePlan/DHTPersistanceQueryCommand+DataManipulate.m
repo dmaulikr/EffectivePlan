@@ -7,6 +7,7 @@
 //
 
 #import "DHTPersistanceQueryCommand+DataManipulate.h"
+#import "DHTPersistanceQueryCommand+ReadingManipulate.h"
 
 @implementation DHTPersistanceQueryCommand (DataManipulate)
 
@@ -47,6 +48,26 @@
     return self;
 }
 
-//- (DHTPersistanceQueryCommand *)update
+- (DHTPersistanceQueryCommand *)updateTable:(NSString *)tableName withRecord:(NSDictionary *)record whereCondition:(NSString *)whereCondition
+{
+    [self resetQueryCommand];
+    
+    NSMutableArray *columnValueList = [NSMutableArray array];
+    
+    [record enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull columnName, NSString * _Nonnull columnValue, BOOL * _Nonnull stop) {
+        if ([columnValue isKindOfClass:[NSString class]]) {
+            [columnValueList addObject:[NSString stringWithFormat:@"%@ = '%@'", columnName, columnValue]];
+        } else if ([columnValue isKindOfClass:[NSNull class]]) {
+            [columnValueList addObject:[NSString stringWithFormat:@"%@ = NULL", columnName]];
+        } else {
+            [columnValueList addObject:[NSString stringWithFormat:@"%@ = '%@'", columnName, columnValue]];
+        }
+    }];
+    
+    NSString *valueString = [columnValueList componentsJoinedByString:@","];
+    [self.sqlString appendFormat:@"UPDATE %@ SET %@", tableName, valueString];
+    
+    return [self where:whereCondition];
+}
 
 @end
