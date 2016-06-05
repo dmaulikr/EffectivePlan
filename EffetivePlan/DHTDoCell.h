@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DHTPhoneTableViewCell.h"
 
-@interface DHTDoCell : DHTPhoneTableViewCell
+@interface DHTDoCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *doNumberLabel;
 

@@ -7,7 +7,6 @@
 //
 
 #import "DHTCheckViewController.h"
-#import "DHTPhoneTableViewCell.h"
 #import "DHTPlan.h"
 #import "DHTPlanStore.h"
 #import "DHTAddCheckViewController.h"
@@ -37,7 +36,7 @@
     
     [refreshControl addTarget:self action:@selector(planRefresh:) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:refreshControl];
-    [self.tableView registerClass:[DHTPhoneTableViewCell class] forCellReuseIdentifier:[DHTPhoneTableViewCell cellReuseIdentifier]];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:[UITableViewCell cellReuseIdentifier]];
     [self.view addSubview:self.tableView];
 }
 
@@ -78,7 +77,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DHTPhoneTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[DHTPhoneTableViewCell cellReuseIdentifier]];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[UITableViewCell cellReuseIdentifier]];
     
     DHTPlan *plan = self.planList[indexPath.row];
     cell.textLabel.text = plan.title;

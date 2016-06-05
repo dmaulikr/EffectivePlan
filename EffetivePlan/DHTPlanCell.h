@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DHTPhoneTableViewCell.h"
 
-@interface DHTPlanCell : DHTPhoneTableViewCell
+@interface DHTPlanCell : UITableViewCell
 
 - (void)configureCellWithData:(NSDictionary *)dict;
 

@@ -27,7 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
@@ -41,7 +41,7 @@
 {
     [super viewWillAppear:animated];
     
-    self.planInDoList = [NSMutableArray arrayWithArray:[[DHTPlanStore sharedStore] allPlans]];
+//    self.planInDoList = [NSMutableArray arrayWithArray:[[DHTPlanStore sharedStore] allPlans]];
     [self.tableView reloadData];
 }
 

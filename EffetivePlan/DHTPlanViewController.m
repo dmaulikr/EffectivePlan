@@ -42,19 +42,20 @@
     
 //    [self fetchData];
     
-    [self.planListReformer transfromRecordsToReformer:[self.dataCenter findAllPlans]];
-    
-    self.tbvPlan = [[UITableView alloc] initWithFrame:self.view.frame];
-    
-    self.tbvPlan.dataSource = self.planListReformer;
-    self.tbvPlan.delegate = self.planListReformer;
-    
     [self.view addSubview:self.tbvPlan];
+    [self.tbvPlan mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top);
+        make.leading.equalTo(self.view.mas_leading);
+        make.trailing.equalTo(self.view.mas_trailing);
+        make.bottom.equalTo(self.view.mas_bottom).offset(49);
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.planListReformer transfromRecordsToReformer:[self.dataCenter findAllPlans]];
+    [self.tbvPlan performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -109,6 +110,17 @@
 //}
 
 #pragma mark -- Getters && Setters --
+
+- (UITableView *)tbvPlan
+{
+    if (!_tbvPlan) {
+        _tbvPlan = [[UITableView alloc] init];
+        _tbvPlan.dataSource = self.planListReformer;
+        _tbvPlan.delegate = self.planListReformer;
+    }
+    
+    return _tbvPlan;
+}
 
 - (DHTGetPlanManager *)getPlanManager
 {

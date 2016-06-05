@@ -37,7 +37,18 @@
     [self setRightNavBarButtonWithType:NavBarButtonDone];
     self.navDelegate = self;
     
-    self.lblDate.text = self.planRecord.createdDate;
+    NSString *dateString = nil;
+    if (self.planRecord) {
+        dateString = self.planRecord.createdDate;
+    } else {
+        NSDate *date = [NSDate date];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+        
+        dateString = [dateFormatter stringFromDate:date];
+    }
+    
+    self.lblDate.text = dateString;
     self.txfTitle.text = self.planRecord.title;
     self.txfDescription.text = self.planRecord.planDescription;
 }

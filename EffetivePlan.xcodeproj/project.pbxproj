@@ -19,6 +19,7 @@
 		211A46C11CF1AA6900FDE13A /* DHTPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 211A46C01CF1AA6900FDE13A /* DHTPlanViewController.m */; };
 		21269A4C1B13694F00B43227 /* DHTAddCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21269A4B1B13694F00B43227 /* DHTAddCheckViewController.m */; };
 		212747DE1D01727D00BB87E5 /* NSObjectSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 212747DD1D01727D00BB87E5 /* NSObjectSafe.m */; };
+		212B42481D042A07000A9A7A /* UITableViewCell+Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 212B42471D042A07000A9A7A /* UITableViewCell+Identifier.m */; };
 		213EE2551AFE1134008FB47C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2541AFE1134008FB47C /* main.m */; };
 		213EE2581AFE1134008FB47C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2571AFE1134008FB47C /* AppDelegate.m */; };
 		213EE25B1AFE1134008FB47C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE25A1AFE1134008FB47C /* ViewController.m */; };
@@ -33,7 +34,6 @@
 		213EE2DA1AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2D81AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld */; };
 		213EE2EA1AFF95C0008FB47C /* DHTPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2E81AFF95C0008FB47C /* DHTPlanCell.m */; };
 		213EE2EB1AFF95C0008FB47C /* DHTPlanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213EE2E91AFF95C0008FB47C /* DHTPlanCell.xib */; };
-		213EE2EE1B00DDD2008FB47C /* DHTAddPlanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 213EE2ED1B00DDD2008FB47C /* DHTAddPlanView.m */; };
 		214982571B0B92CD00FB032B /* DHTAddDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214982561B0B92CD00FB032B /* DHTAddDoViewController.m */; };
 		215974DC1CFC744A004C62C7 /* DHTPersistanceTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 215974DB1CFC744A004C62C7 /* DHTPersistanceTable.m */; };
 		215974E01CFDBB8A004C62C7 /* DHTPersistanceQueryCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 215974DF1CFDBB8A004C62C7 /* DHTPersistanceQueryCommand.m */; };
@@ -55,7 +55,6 @@
 		21D7BD311B0732ED00C4C94F /* DHTCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD301B0732ED00C4C94F /* DHTCheck.m */; };
 		21D7BD351B075EA600C4C94F /* DHTDoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD341B075EA600C4C94F /* DHTDoCell.m */; };
 		21D7BD391B0760AF00C4C94F /* UIView+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD381B0760AF00C4C94F /* UIView+Create.m */; };
-		21D7BD3C1B07762800C4C94F /* DHTPhoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */; };
 		21E9278C1CFDDA8A00112E17 /* DHTPersistanceDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E9278B1CFDDA8A00112E17 /* DHTPersistanceDatabasePool.m */; };
 		21F207FB1D03BEAA0008D936 /* DHTPersistanceTable+Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F207FA1D03BEAA0008D936 /* DHTPersistanceTable+Update.m */; };
 		21F926F51CFC1A8300D68072 /* DHTPersistanceDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F926F41CFC1A8300D68072 /* DHTPersistanceDataBase.m */; };
@@ -108,6 +107,8 @@
 		21269A4B1B13694F00B43227 /* DHTAddCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAddCheckViewController.m; sourceTree = "<group>"; };
 		212747DC1D01727D00BB87E5 /* NSObjectSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectSafe.h; sourceTree = "<group>"; };
 		212747DD1D01727D00BB87E5 /* NSObjectSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectSafe.m; sourceTree = "<group>"; };
+		212B42461D042A07000A9A7A /* UITableViewCell+Identifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Identifier.h"; sourceTree = "<group>"; };
+		212B42471D042A07000A9A7A /* UITableViewCell+Identifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Identifier.m"; sourceTree = "<group>"; };
 		213EE24F1AFE1134008FB47C /* EffetivePlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffetivePlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		213EE2531AFE1134008FB47C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		213EE2541AFE1134008FB47C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -134,8 +135,6 @@
 		213EE2E71AFF95C0008FB47C /* DHTPlanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPlanCell.h; sourceTree = "<group>"; };
 		213EE2E81AFF95C0008FB47C /* DHTPlanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPlanCell.m; sourceTree = "<group>"; };
 		213EE2E91AFF95C0008FB47C /* DHTPlanCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DHTPlanCell.xib; sourceTree = "<group>"; };
-		213EE2EC1B00DDD2008FB47C /* DHTAddPlanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAddPlanView.h; sourceTree = "<group>"; };
-		213EE2ED1B00DDD2008FB47C /* DHTAddPlanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAddPlanView.m; sourceTree = "<group>"; };
 		214982551B0B92CD00FB032B /* DHTAddDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTAddDoViewController.h; sourceTree = "<group>"; };
 		214982561B0B92CD00FB032B /* DHTAddDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTAddDoViewController.m; sourceTree = "<group>"; };
 		215974DA1CFC744A004C62C7 /* DHTPersistanceTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPersistanceTable.h; sourceTree = "<group>"; };
@@ -183,8 +182,6 @@
 		21D7BD341B075EA600C4C94F /* DHTDoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTDoCell.m; sourceTree = "<group>"; };
 		21D7BD371B0760AF00C4C94F /* UIView+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Create.h"; sourceTree = "<group>"; };
 		21D7BD381B0760AF00C4C94F /* UIView+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Create.m"; sourceTree = "<group>"; };
-		21D7BD3A1B07762800C4C94F /* DHTPhoneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPhoneTableViewCell.h; sourceTree = "<group>"; };
-		21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPhoneTableViewCell.m; sourceTree = "<group>"; };
 		21E9278A1CFDDA8A00112E17 /* DHTPersistanceDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPersistanceDatabasePool.h; sourceTree = "<group>"; };
 		21E9278B1CFDDA8A00112E17 /* DHTPersistanceDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPersistanceDatabasePool.m; sourceTree = "<group>"; };
 		21F207F91D03BEAA0008D936 /* DHTPersistanceTable+Update.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHTPersistanceTable+Update.h"; sourceTree = "<group>"; };
@@ -346,6 +343,15 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
+		212B42491D042B92000A9A7A /* Do */ = {
+			isa = PBXGroup;
+			children = (
+				213EE28E1AFE556B008FB47C /* DHTDoViewController.h */,
+				213EE28F1AFE556B008FB47C /* DHTDoViewController.m */,
+			);
+			name = Do;
+			sourceTree = "<group>";
+		};
 		213EE2461AFE1134008FB47C = {
 			isa = PBXGroup;
 			children = (
@@ -437,8 +443,6 @@
 		213EE2791AFE13A7008FB47C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				213EE2EC1B00DDD2008FB47C /* DHTAddPlanView.h */,
-				213EE2ED1B00DDD2008FB47C /* DHTAddPlanView.m */,
 				21D7BD331B075EA600C4C94F /* DHTDoCell.h */,
 				21D7BD341B075EA600C4C94F /* DHTDoCell.m */,
 			);
@@ -448,8 +452,6 @@
 		213EE27A1AFE13B3008FB47C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				213EE28E1AFE556B008FB47C /* DHTDoViewController.h */,
-				213EE28F1AFE556B008FB47C /* DHTDoViewController.m */,
 				213EE2911AFE559A008FB47C /* DHTCheckViewController.h */,
 				213EE2921AFE559A008FB47C /* DHTCheckViewController.m */,
 				213EE2941AFE55AF008FB47C /* DHTActionViewController.h */,
@@ -575,8 +577,6 @@
 		21D7BD321B07365700C4C94F /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				21D7BD3A1B07762800C4C94F /* DHTPhoneTableViewCell.h */,
-				21D7BD3B1B07762800C4C94F /* DHTPhoneTableViewCell.m */,
 				21C73C5E1CC28C8F00C6E25F /* APPMacro.h */,
 				219091DF1D02C33B00D59F97 /* APPHeader.h */,
 				219091E01D02C4D200D59F97 /* DHTNavigationControllerDelegate.h */,
@@ -594,6 +594,8 @@
 				212747DD1D01727D00BB87E5 /* NSObjectSafe.m */,
 				219091DC1D02BB3600D59F97 /* UIViewController+Base.h */,
 				219091DD1D02BB3600D59F97 /* UIViewController+Base.m */,
+				212B42461D042A07000A9A7A /* UITableViewCell+Identifier.h */,
+				212B42471D042A07000A9A7A /* UITableViewCell+Identifier.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -665,6 +667,7 @@
 		21FF25051CC08FB200D405D2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				212B42491D042B92000A9A7A /* Do */,
 				21FF25061CC08FC000D405D2 /* Plan */,
 			);
 			name = src;
@@ -786,6 +789,7 @@
 				TargetAttributes = {
 					213EE24E1AFE1134008FB47C = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 3BWVR75GAG;
 					};
 					213EE2671AFE1134008FB47C = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -895,6 +899,7 @@
 				21D7BD391B0760AF00C4C94F /* UIView+Create.m in Sources */,
 				213EE2901AFE556B008FB47C /* DHTDoViewController.m in Sources */,
 				210DC4971CFED09100D4EC36 /* DHTPersistanceQueryCommand+SchemaManipulate.m in Sources */,
+				212B42481D042A07000A9A7A /* UITableViewCell+Identifier.m in Sources */,
 				210DC4A91D000B8D00D4EC36 /* DHTPersistanceQueryCommand+ReadingManipulate.m in Sources */,
 				210DC4AD1D00135000D4EC36 /* NSArray+DHTPersistanceRecordTransform.m in Sources */,
 				211A46B61CE8775500FDE13A /* DHTMediator.m in Sources */,
@@ -921,7 +926,6 @@
 				219091E21D02C4D200D59F97 /* DHTNavigationControllerDelegate.m in Sources */,
 				219091CE1CFF385800D59F97 /* DHTPlanTable.m in Sources */,
 				21C73C551CBFE5CC00C6E25F /* DHTApiProxy.m in Sources */,
-				213EE2EE1B00DDD2008FB47C /* DHTAddPlanView.m in Sources */,
 				21FF25011CC0898800D405D2 /* DHTService.m in Sources */,
 				214982571B0B92CD00FB032B /* DHTAddDoViewController.m in Sources */,
 				21C73C521CBFDE5C00C6E25F /* DHTAPIBaseManager.m in Sources */,
@@ -939,7 +943,6 @@
 				212747DE1D01727D00BB87E5 /* NSObjectSafe.m in Sources */,
 				213EE2991AFE55EE008FB47C /* DHTPlanStore.m in Sources */,
 				21D7BD2E1B0732ED00C4C94F /* DHTPlan.m in Sources */,
-				21D7BD3C1B07762800C4C94F /* DHTPhoneTableViewCell.m in Sources */,
 				219091DA1D029FCA00D59F97 /* DHTManipulatePlanViewController.m in Sources */,
 				21FF25041CC08C2900D405D2 /* DHTServiceFactory.m in Sources */,
 			);
@@ -1070,6 +1073,7 @@
 			baseConfigurationReference = 21A932DB91A990A8E2B848D4 /* Pods-EffetivePlan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/EffetivePlan/EffectivePlan-prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -1087,6 +1091,7 @@
 			baseConfigurationReference = F7669C0EFF9EF3E15590258D /* Pods-EffetivePlan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/EffetivePlan/EffectivePlan-prefix.pch";
 				INFOPLIST_FILE = EffetivePlan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

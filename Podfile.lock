@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Masonry (1.0.1)
   - RDVTabBarController (1.1.9)
   - REFormattedNumberField (1.1.6)
   - RETableViewManager (1.7):
@@ -23,16 +24,18 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - Masonry
   - RDVTabBarController
   - RETableViewManager (~> 1.6)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   REFormattedNumberField: 70fc5fb1218ebd5ee9983820defd12806d5c6ec6
   RETableViewManager: 0f24d796c42c0890d38c79cc9aeb3871e186726e
   REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
 
-PODFILE CHECKSUM: 319df8fc9f2c38af917df2e8a9d10a72c151652b
+PODFILE CHECKSUM: 5d060936c0e8e4dcef9d2899e0b299ac88f75e94
 
 COCOAPODS: 1.0.1
