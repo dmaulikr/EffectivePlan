@@ -58,7 +58,7 @@
 }
 
 #pragma mark - init method -
-- (instancetype)init
+- (instancetype)init 
 {
     self = [super init];
     if (self) {

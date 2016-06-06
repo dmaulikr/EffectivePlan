@@ -42,7 +42,7 @@
     [super viewWillAppear:animated];
     
 //    self.planInDoList = [NSMutableArray arrayWithArray:[[DHTPlanStore sharedStore] allPlans]];
-    [self.tableView reloadData];
+//    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,93 +66,93 @@
 }
 
 #pragma mark - UITableViewDataSource/Delegate -
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return self.planInDoList.count;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    DHTPlan *plan = [self.planInDoList objectAtIndex:section];
-    NSInteger rowNum = plan.planToDo.count;
-    return rowNum;
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    DHTDoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DHTDoCell" forIndexPath:indexPath];
-    
-    DHTPlan *plan = [self.planInDoList objectAtIndex:indexPath.section];
-    NSSet *doSet = plan.planToDo;
-    NSArray *doList = doSet.allObjects;
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"doId" ascending:YES];
-    NSArray *sortArray = [[NSArray alloc] initWithObjects:&sort count:1];
-    doList = [doList sortedArrayUsingDescriptors:sortArray];
-    DHTDo *doplan = doList[indexPath.row];
-    cell.doNumberLabel.text = [NSString stringWithFormat:@"%li", (long)indexPath.row];
-    cell.doContentLabel.text = doplan.content;
-    
-    return cell;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    DHTPlan *plan = [self.planInDoList objectAtIndex:section];
-    return plan.title;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 30)];
-    view.backgroundColor = [UIColor blueColor];
-    
-    UIButton *btn = [[UIButton alloc] initWithFrame:view.frame];
-    [btn addTarget:self action:@selector(addNewDo:) forControlEvents:UIControlEventTouchUpInside];
-    btn.tag = section;
-    btn.backgroundColor = [UIColor clearColor];
-    
-    [view addSubview:btn];
-    
-    return view;
-}
-
-/**
- *  指定section footer的高度
- *  只有这个方法被实现后，titleForHeaderInSection才会被调用
- */
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 30.0;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    DHTPlan *plan = [self.planInDoList objectAtIndex:indexPath.section];
-    NSSet *doSet = plan.planToDo;
-    NSArray *doList = doSet.allObjects;
-    DHTDo *selectedDo = doList[indexPath.row];
-    
-    DHTAddDoViewController *adVC = [[DHTAddDoViewController alloc] init];
-    adVC.doplan = selectedDo;
-    [self presentViewController:adVC animated:YES completion:nil];
-}
-
-#pragma mark - private method -
-
-- (void)addNewDo:(UIButton *)sender
-{
-    DHTAddDoViewController *adVC = [[DHTAddDoViewController alloc] init];
-    
-    adVC.doplan = [[DHTPlanStore sharedStore] getNewDo];
-    DHTPlan *plan = [self.planInDoList objectAtIndex:sender.tag];
-    [plan addPlanToDoObject:adVC.doplan];
-
-    [self presentViewController:adVC animated:YES completion:nil];
-    
-    NSLog(@"%li", sender.tag);
-}
+//
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    return self.planInDoList.count;
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    DHTPlan *plan = [self.planInDoList objectAtIndex:section];
+//    NSInteger rowNum = plan.planToDo.count;
+//    return rowNum;
+//}
+//
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    DHTDoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DHTDoCell" forIndexPath:indexPath];
+//    
+//    DHTPlan *plan = [self.planInDoList objectAtIndex:indexPath.section];
+//    NSSet *doSet = plan.planToDo;
+//    NSArray *doList = doSet.allObjects;
+//    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"doId" ascending:YES];
+//    NSArray *sortArray = [[NSArray alloc] initWithObjects:&sort count:1];
+//    doList = [doList sortedArrayUsingDescriptors:sortArray];
+//    DHTDo *doplan = doList[indexPath.row];
+//    cell.doNumberLabel.text = [NSString stringWithFormat:@"%li", (long)indexPath.row];
+//    cell.doContentLabel.text = doplan.content;
+//    
+//    return cell;
+//}
+//
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    DHTPlan *plan = [self.planInDoList objectAtIndex:section];
+//    return plan.title;
+//}
+//
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+//{
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 30)];
+//    view.backgroundColor = [UIColor blueColor];
+//    
+//    UIButton *btn = [[UIButton alloc] initWithFrame:view.frame];
+//    [btn addTarget:self action:@selector(addNewDo:) forControlEvents:UIControlEventTouchUpInside];
+//    btn.tag = section;
+//    btn.backgroundColor = [UIColor clearColor];
+//    
+//    [view addSubview:btn];
+//    
+//    return view;
+//}
+//
+///**
+// *  指定section footer的高度
+// *  只有这个方法被实现后，titleForHeaderInSection才会被调用
+// */
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+//{
+//    return 30.0;
+//}
+//
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    DHTPlan *plan = [self.planInDoList objectAtIndex:indexPath.section];
+//    NSSet *doSet = plan.planToDo;
+//    NSArray *doList = doSet.allObjects;
+//    DHTDo *selectedDo = doList[indexPath.row];
+//    
+//    DHTAddDoViewController *adVC = [[DHTAddDoViewController alloc] init];
+//    adVC.doplan = selectedDo;
+//    [self presentViewController:adVC animated:YES completion:nil];
+//}
+//
+//#pragma mark - private method -
+//
+//- (void)addNewDo:(UIButton *)sender
+//{
+//    DHTAddDoViewController *adVC = [[DHTAddDoViewController alloc] init];
+//    
+//    adVC.doplan = [[DHTPlanStore sharedStore] getNewDo];
+//    DHTPlan *plan = [self.planInDoList objectAtIndex:sender.tag];
+//    [plan addPlanToDoObject:adVC.doplan];
+//
+//    [self presentViewController:adVC animated:YES completion:nil];
+//    
+//    NSLog(@"%li", sender.tag);
+//}
 
 /*
 #pragma mark - Navigation
