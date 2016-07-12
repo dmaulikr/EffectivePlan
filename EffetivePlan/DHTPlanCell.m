@@ -17,7 +17,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lblDate;
 
-
 @end
 @implementation DHTPlanCell
 

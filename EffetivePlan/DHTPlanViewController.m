@@ -40,8 +40,6 @@
     self.navControllerDelegate = [[DHTNavigationControllerDelegate alloc] init];
     self.navigationController.delegate = self.navControllerDelegate;
     
-//    [self fetchData];
-    
     [self.view addSubview:self.tbvPlan];
     [self.tbvPlan mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top);
@@ -114,9 +112,12 @@
 - (UITableView *)tbvPlan
 {
     if (!_tbvPlan) {
-        _tbvPlan = [[UITableView alloc] init];
+        _tbvPlan = [UITableView autolayoutView];
         _tbvPlan.dataSource = self.planListReformer;
         _tbvPlan.delegate = self.planListReformer;
+        _tbvPlan.estimatedRowHeight = 123;
+        _tbvPlan.rowHeight = UITableViewAutomaticDimension;
+        _tbvPlan.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     
     return _tbvPlan;
