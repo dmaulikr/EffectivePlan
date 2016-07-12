@@ -16,6 +16,13 @@ PODS:
     - AFNetworking/NSURLSession
   - Masonry (1.0.1)
   - RDVTabBarController (1.1.9)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
   - REFormattedNumberField (1.1.6)
   - RETableViewManager (1.7):
     - REFormattedNumberField (~> 1.1.5)
@@ -26,16 +33,18 @@ DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - Masonry
   - RDVTabBarController
+  - ReactiveCocoa
   - RETableViewManager (~> 1.6)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   REFormattedNumberField: 70fc5fb1218ebd5ee9983820defd12806d5c6ec6
   RETableViewManager: 0f24d796c42c0890d38c79cc9aeb3871e186726e
   REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
 
-PODFILE CHECKSUM: 5d060936c0e8e4dcef9d2899e0b299ac88f75e94
+PODFILE CHECKSUM: 02308c5383300aa2bf3628a24626c39ce18e0441
 
 COCOAPODS: 1.0.1

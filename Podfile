@@ -5,4 +5,5 @@ target ‘EffetivePlan’ do
     pod 'RDVTabBarController'
     pod 'RETableViewManager', '~> 1.6'
     pod 'Masonry'
+    pod 'ReactiveCocoa'
 end
