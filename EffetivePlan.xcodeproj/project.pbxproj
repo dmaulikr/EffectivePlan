@@ -37,6 +37,12 @@
 		214982571B0B92CD00FB032B /* DHTAddDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214982561B0B92CD00FB032B /* DHTAddDoViewController.m */; };
 		215974DC1CFC744A004C62C7 /* DHTPersistanceTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 215974DB1CFC744A004C62C7 /* DHTPersistanceTable.m */; };
 		215974E01CFDBB8A004C62C7 /* DHTPersistanceQueryCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 215974DF1CFDBB8A004C62C7 /* DHTPersistanceQueryCommand.m */; };
+		216D365E1D34EA0E001A024F /* DHTTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 216D365D1D34EA0E001A024F /* DHTTableViewManager.m */; };
+		216D36611D34EB2C001A024F /* DHTTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 216D36601D34EB2C001A024F /* DHTTableViewSection.m */; };
+		216D36641D34EBA2001A024F /* DHTTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 216D36631D34EBA2001A024F /* DHTTableViewItem.m */; };
+		216D36671D35E733001A024F /* DHTTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 216D36661D35E733001A024F /* DHTTestCell.m */; };
+		216D366B1D361251001A024F /* DHTTestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 216D366A1D361251001A024F /* DHTTestItem.m */; };
+		216D366E1D36151E001A024F /* DHTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 216D366D1D36151E001A024F /* DHTTestViewController.m */; };
 		219091C21CFF32FA00D59F97 /* DHTPersistanceTable+Insert.m in Sources */ = {isa = PBXBuildFile; fileRef = 219091C11CFF32FA00D59F97 /* DHTPersistanceTable+Insert.m */; };
 		219091CA1CFF37CA00D59F97 /* DHTPlanDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 219091C91CFF37CA00D59F97 /* DHTPlanDataCenter.m */; };
 		219091CE1CFF385800D59F97 /* DHTPlanTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 219091CD1CFF385800D59F97 /* DHTPlanTable.m */; };
@@ -141,6 +147,19 @@
 		215974DB1CFC744A004C62C7 /* DHTPersistanceTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPersistanceTable.m; sourceTree = "<group>"; };
 		215974DE1CFDBB8A004C62C7 /* DHTPersistanceQueryCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTPersistanceQueryCommand.h; sourceTree = "<group>"; };
 		215974DF1CFDBB8A004C62C7 /* DHTPersistanceQueryCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTPersistanceQueryCommand.m; sourceTree = "<group>"; };
+		216D365C1D34EA0E001A024F /* DHTTableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTTableViewManager.h; sourceTree = "<group>"; };
+		216D365D1D34EA0E001A024F /* DHTTableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTTableViewManager.m; sourceTree = "<group>"; };
+		216D365F1D34EB2C001A024F /* DHTTableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTTableViewSection.h; sourceTree = "<group>"; };
+		216D36601D34EB2C001A024F /* DHTTableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTTableViewSection.m; sourceTree = "<group>"; };
+		216D36621D34EBA2001A024F /* DHTTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTTableViewItem.h; sourceTree = "<group>"; };
+		216D36631D34EBA2001A024F /* DHTTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTTableViewItem.m; sourceTree = "<group>"; };
+		216D36651D35E733001A024F /* DHTTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTTestCell.h; sourceTree = "<group>"; };
+		216D36661D35E733001A024F /* DHTTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTTestCell.m; sourceTree = "<group>"; };
+		216D36681D35E906001A024F /* DHTTableViewCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTTableViewCellProtocol.h; sourceTree = "<group>"; };
+		216D36691D361251001A024F /* DHTTestItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTTestItem.h; sourceTree = "<group>"; };
+		216D366A1D361251001A024F /* DHTTestItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTTestItem.m; sourceTree = "<group>"; };
+		216D366C1D36151E001A024F /* DHTTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTTestViewController.h; sourceTree = "<group>"; };
+		216D366D1D36151E001A024F /* DHTTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTTestViewController.m; sourceTree = "<group>"; };
 		219091C01CFF32FA00D59F97 /* DHTPersistanceTable+Insert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHTPersistanceTable+Insert.h"; sourceTree = "<group>"; };
 		219091C11CFF32FA00D59F97 /* DHTPersistanceTable+Insert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DHTPersistanceTable+Insert.m"; sourceTree = "<group>"; };
 		219091C51CFF33F400D59F97 /* DHTPersistanceRecordProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTPersistanceRecordProtocol.h; sourceTree = "<group>"; };
@@ -375,6 +394,7 @@
 		213EE2511AFE1134008FB47C /* EffetivePlan */ = {
 			isa = PBXGroup;
 			children = (
+				216D365B1D34E9D3001A024F /* DHTTableViewManager */,
 				21F926F21CFC1A1000D68072 /* DHTPersistance */,
 				211A46B31CE8772B00FDE13A /* DHTMediator */,
 				21FF25051CC08FB200D405D2 /* src */,
@@ -445,6 +465,10 @@
 			children = (
 				21D7BD331B075EA600C4C94F /* DHTDoCell.h */,
 				21D7BD341B075EA600C4C94F /* DHTDoCell.m */,
+				216D36651D35E733001A024F /* DHTTestCell.h */,
+				216D36661D35E733001A024F /* DHTTestCell.m */,
+				216D36691D361251001A024F /* DHTTestItem.h */,
+				216D366A1D361251001A024F /* DHTTestItem.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -506,6 +530,20 @@
 				21E9278B1CFDDA8A00112E17 /* DHTPersistanceDatabasePool.m */,
 			);
 			name = DataBase;
+			sourceTree = "<group>";
+		};
+		216D365B1D34E9D3001A024F /* DHTTableViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				216D365C1D34EA0E001A024F /* DHTTableViewManager.h */,
+				216D365D1D34EA0E001A024F /* DHTTableViewManager.m */,
+				216D365F1D34EB2C001A024F /* DHTTableViewSection.h */,
+				216D36601D34EB2C001A024F /* DHTTableViewSection.m */,
+				216D36621D34EBA2001A024F /* DHTTableViewItem.h */,
+				216D36631D34EBA2001A024F /* DHTTableViewItem.m */,
+				216D36681D35E906001A024F /* DHTTableViewCellProtocol.h */,
+			);
+			name = DHTTableViewManager;
 			sourceTree = "<group>";
 		};
 		219091BF1CFF32CB00D59F97 /* Insert */ = {
@@ -715,6 +753,8 @@
 				219091D71D029FCA00D59F97 /* DHTManipulatePlanViewController.h */,
 				219091D81D029FCA00D59F97 /* DHTManipulatePlanViewController.m */,
 				219091D91D029FCA00D59F97 /* DHTManipulatePlanViewController.xib */,
+				216D366C1D36151E001A024F /* DHTTestViewController.h */,
+				216D366D1D36151E001A024F /* DHTTestViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -899,9 +939,12 @@
 				21D7BD391B0760AF00C4C94F /* UIView+Create.m in Sources */,
 				213EE2901AFE556B008FB47C /* DHTDoViewController.m in Sources */,
 				210DC4971CFED09100D4EC36 /* DHTPersistanceQueryCommand+SchemaManipulate.m in Sources */,
+				216D36611D34EB2C001A024F /* DHTTableViewSection.m in Sources */,
 				212B42481D042A07000A9A7A /* UITableViewCell+Identifier.m in Sources */,
+				216D36671D35E733001A024F /* DHTTestCell.m in Sources */,
 				210DC4A91D000B8D00D4EC36 /* DHTPersistanceQueryCommand+ReadingManipulate.m in Sources */,
 				210DC4AD1D00135000D4EC36 /* NSArray+DHTPersistanceRecordTransform.m in Sources */,
+				216D366E1D36151E001A024F /* DHTTestViewController.m in Sources */,
 				211A46B61CE8775500FDE13A /* DHTMediator.m in Sources */,
 				219091C21CFF32FA00D59F97 /* DHTPersistanceTable+Insert.m in Sources */,
 				210DC4A11D00072A00D4EC36 /* DHTPersistanceTable+Find.m in Sources */,
@@ -924,6 +967,7 @@
 				21F999501CC4B722005CBF92 /* NSObject+DHTNetworkingMethods.m in Sources */,
 				21F207FB1D03BEAA0008D936 /* DHTPersistanceTable+Update.m in Sources */,
 				219091E21D02C4D200D59F97 /* DHTNavigationControllerDelegate.m in Sources */,
+				216D36641D34EBA2001A024F /* DHTTableViewItem.m in Sources */,
 				219091CE1CFF385800D59F97 /* DHTPlanTable.m in Sources */,
 				21C73C551CBFE5CC00C6E25F /* DHTApiProxy.m in Sources */,
 				21FF25011CC0898800D405D2 /* DHTService.m in Sources */,
@@ -936,6 +980,8 @@
 				213EE2DA1AFF8D4A008FB47C /* EffectivePlan.xcdatamodeld in Sources */,
 				21C73C5C1CC21CF900C6E25F /* DHTPlanListReformer.m in Sources */,
 				21D7BD351B075EA600C4C94F /* DHTDoCell.m in Sources */,
+				216D366B1D361251001A024F /* DHTTestItem.m in Sources */,
+				216D365E1D34EA0E001A024F /* DHTTableViewManager.m in Sources */,
 				215974DC1CFC744A004C62C7 /* DHTPersistanceTable.m in Sources */,
 				215974E01CFDBB8A004C62C7 /* DHTPersistanceQueryCommand.m in Sources */,
 				21FF250E1CC0C55400D405D2 /* DHTGetPlanManager.m in Sources */,

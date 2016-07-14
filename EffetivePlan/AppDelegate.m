@@ -14,6 +14,7 @@
 #import "DHTPlanStore.h"
 #import "RDVTabBarController.h"
 #import "RDVTabBarItem.h"
+#import "DHTTestViewController.h"
 
 @interface AppDelegate ()
 
@@ -27,7 +28,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     // plan
-    DHTPlanViewController *planVC = [[DHTPlanViewController alloc] init];
+    DHTTestViewController *planVC = [[DHTTestViewController alloc] init];
     UINavigationController *navPlanController = [[UINavigationController alloc] initWithRootViewController:planVC];
     
     // do
